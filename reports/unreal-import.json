@@ -1,0 +1,120 @@
+{
+  "status": "Imported assets and native transmission materials; visual and walking verification pending",
+  "engine": "5.8.2-56702186+++UE5+Release-5.8",
+  "meshComponents": 11516,
+  "uniqueMeshes": 9811,
+  "nativeTransmissionAssignments": {
+    "Clear_4mm_glass": 79,
+    "Pool_water_IOR": 1
+  },
+  "interactiveDoors": [
+    {
+      "hinge": "basement_garden_door_hinge_1",
+      "positionCm": [
+        -490.49997329711914,
+        -1127.7600288391113,
+        -272.00000286102295
+      ]
+    },
+    {
+      "hinge": "dining_porch_doors_hinge_0",
+      "positionCm": [
+        -279.50000762939453,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "hinge": "dining_porch_doors_hinge_1",
+      "positionCm": [
+        -456.17899894714355,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "hinge": "front_door_hinge_0",
+      "positionCm": [
+        -59.28500294685364,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "hinge": "kitchen_rear_door_hinge_1",
+      "positionCm": [
+        -275.0,
+        -1016.4999961853027,
+        0.0
+      ]
+    },
+    {
+      "hinge": "living_porch_doors_hinge_0",
+      "positionCm": [
+        358.50000381469727,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "hinge": "living_porch_doors_hinge_1",
+      "positionCm": [
+        225.5000114440918,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "hinge": "study_rear_door_hinge_0",
+      "positionCm": [
+        355.3619861602783,
+        -1127.7600288391113,
+        0.0
+      ]
+    },
+    {
+      "hinge": "study_rear_door_hinge_1",
+      "positionCm": [
+        238.3620023727417,
+        -1127.7600288391113,
+        0.0
+      ]
+    },
+    {
+      "hinge": "upper_opening_08_00_hinge_0",
+      "positionCm": [
+        -332.78400897979736,
+        -761.9999885559082,
+        311.9999885559082
+      ]
+    },
+    {
+      "hinge": "upper_opening_08_00_hinge_1",
+      "positionCm": [
+        -510.07699966430664,
+        -761.9999885559082,
+        311.9999885559082
+      ]
+    }
+  ],
+  "animatedFans": [
+    "Blue_bedroom_fan_0",
+    "Primary_ceiling_fan_0",
+    "Sunroom_ceiling_fan_0"
+  ],
+  "foliage": {
+    "assignments": 14,
+    "materials": [
+      "/Game/Cleveland/Materials/Native/MI_Cutout_MI_fir_tree_01_twig_0_TwoSided.MI_Cutout_MI_fir_tree_01_twig_0_TwoSided",
+      "/Game/Cleveland/Materials/Native/MI_Cutout_MI_tree_small_02_leaves_001_0_TwoSided_0.MI_Cutout_MI_tree_small_02_leaves_001_0_TwoSided_0"
+    ],
+    "rayTracingFallbackTriangles": {
+      "SM_NurbsPath_004": 1100000,
+      "SM_BezierCurve_001": 2062487
+    },
+    "breeze": "Sub-centimeter procedural leaf movement; not a measured wind simulation"
+  },
+  "seconds": 12.9,
+  "map": "/Game/Cleveland/Maps/ImportStaging/Cleveland_20260908T034749",
+  "lighting": "Review sun; not yet geographically calibrated"
+}

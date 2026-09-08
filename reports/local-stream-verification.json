@@ -1,0 +1,25 @@
+{
+  "observedAtUtc": "2026-09-08T04:47:27Z",
+  "browser": "Google Chrome",
+  "source": "Epic frontend Session Stats, observed through browser accessibility",
+  "scope": "Same-PC loopback video only; not remote-phone delivery or input verification",
+  "renderer": "Unreal 5.8.2, RTX 2060 Max-Q, DX12 hardware ray tracing",
+  "profile": "Laptop",
+  "framesDecoded": 272,
+  "framesDropped": 0,
+  "packetsLost": 0,
+  "resolution": "960x540",
+  "fps": 11,
+  "codec": "H264",
+  "videoBitrateKbps": 7001,
+  "decodeTimeMs": 2,
+  "reportedTotalLatencyMs": 251,
+  "durationSeconds": 23,
+  "captureFix": "PixelStreamingUseMediaCapture=false selects Epic's internal backbuffer capture; GPU fences remain enabled",
+  "limitations": [
+    "11 FPS is below the 30 FPS target",
+    "No 5090 hardware available for verification",
+    "Native screenshot still shows excessive brightness and incomplete reference matching",
+    "Cloudflare authentication and remote-phone access for this Unreal build remain unfinished"
+  ]
+}

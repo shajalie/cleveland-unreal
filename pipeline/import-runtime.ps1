@@ -1,4 +1,4 @@
-param([string]$EngineRoot)
+param([string]$EngineRoot, [switch]$Resume)
 $ErrorActionPreference = 'Stop'
 $projectRoot = Split-Path $PSScriptRoot -Parent
 if (-not $EngineRoot) {
@@ -10,14 +10,23 @@ if (-not $EngineRoot) {
 $commandlet = Join-Path $EngineRoot 'Engine\Binaries\Win64\UnrealEditor-Cmd.exe'
 $project = Join-Path $projectRoot 'runtime\ClevelandReal\ClevelandReal.uproject'
 $script = Join-Path $PSScriptRoot 'unreal\import_scene.py'
+if ($Resume) { $script = Join-Path $PSScriptRoot 'unreal\finalize_scene.py' }
 $usd = Join-Path $projectRoot 'SourceAssets\UnrealTransfer\Cleveland.usdc'
 $report = Join-Path $projectRoot 'reports\unreal-import.json'
 if (-not (Test-Path -LiteralPath $usd)) { throw 'Export the authoring scene using export_unreal.py first.' }
 New-Item -ItemType Directory -Path (Join-Path $projectRoot '.local') -Force | Out-Null
 $log = Join-Path $projectRoot '.local\unreal-import.log'
 $started = [DateTime]::UtcNow
-& $commandlet $project -run=pythonscript "-script=$script" -unattended -NullRHI -nosplash -stdout -FullStdOutLogOutput *> $log
-$exitCode = $LASTEXITCODE
+$previousCompatibility = $env:__COMPAT_LAYER
+try {
+    # Phone RDP scaling can report a logical width below Unreal's startup minimum.
+    # Apply DPI awareness to this child process without changing display settings.
+    $env:__COMPAT_LAYER = (($previousCompatibility + ' HIGHDPIAWARE').Trim())
+    & $commandlet $project -run=pythonscript "-script=$script" -unattended -NullRHI -nosplash -stdout -FullStdOutLogOutput *> $log
+    $exitCode = $LASTEXITCODE
+} finally {
+    $env:__COMPAT_LAYER = $previousCompatibility
+}
 $freshReport = (Test-Path -LiteralPath $report) -and (Get-Item -LiteralPath $report).LastWriteTimeUtc -gt $started
 if ($exitCode -ne 0 -or -not $freshReport) {
     $failure = if (Select-String -LiteralPath $log -Pattern 'ResolutionTooLow' -Quiet) {

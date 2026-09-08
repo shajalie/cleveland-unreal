@@ -1,0 +1,9 @@
+{
+  "repository": "https://github.com/EpicGamesExt/PixelStreamingInfrastructure.git",
+  "branch": "UE5.8",
+  "commit": "ef9401784832fbc735a387a20902b746b638adae",
+  "license": "MIT",
+  "installDirectory": ".local/pixel-streaming-infrastructure",
+  "purpose": "Version-matched WebRTC signalling and browser video player",
+  "exposure": "Localhost preview only; authenticated remote access is not yet integrated"
+}

@@ -112,7 +112,7 @@ return normalize(float3(-slope, 1.0));
 
 
 def replace_transmission(actors):
-    replacements = {"Clear_4mm_glass": glass(), "Pool_water_IOR_1_333": pool_water()}
+    replacements = {"Clear_4mm_glass": glass(), "Pool_water_IOR": pool_water()}
     counts = dict.fromkeys(replacements, 0)
     for actor in actors:
         for component in actor.get_components_by_class(unreal.StaticMeshComponent):
@@ -120,7 +120,7 @@ def replace_transmission(actors):
                 if not original:
                     continue
                 for name, material in replacements.items():
-                    if name.lower() in original.get_name().lower():
+                    if name.lower() in original.get_name().lower() or original == material:
                         component.set_material(index, material)
                         counts[name] += 1
     if not all(counts.values()):

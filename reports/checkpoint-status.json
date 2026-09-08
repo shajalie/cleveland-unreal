@@ -1,14 +1,21 @@
 {
   "status": "Furnished authoring checkpoint; not a finished photoreal Unreal application",
   "engineInstalled": "Unreal Engine 5.8.2",
-  "nativeBuild": "Development Win64 editor module succeeded",
+  "nativeBuild": "Development Win64 editor module and standalone game compilation succeeded",
   "blenderGeometryChecks": 115,
   "usdChecks": 16,
   "gpuReview": "Blender Cycles OptiX on NVIDIA RTX 2060 Max-Q",
   "unrealRuntimeVerified": false,
   "phoneStreamReplaced": false,
-  "blocker": "Unreal exits during Windows PlatformPreInit.ResolutionTooLow; Windows UI capture also fails",
+  "blocker": "RTX 2060 local streaming works at about 11 FPS, below the 30 FPS target. Remote phone delivery and full navigation/reference accuracy remain unfinished.",
   "sourceSceneSha256": "a5928975be5f3c6a026e1b4032b3d4c17169091c824f9d2d3d2c9939b5e21c7a",
   "preservedProject": "../cleveland-sun-study",
-  "remainingReferenceWork": "design/room-reference-coverage.json"
+  "remainingReferenceWork": "design/room-reference-coverage.json",
+  "nativeImportVerified": true,
+  "gpuAdapterVerified": "NVIDIA GeForce RTX 2060 with Max-Q Design; DX12 ray tracing enabled",
+  "displayStartupFix": "HIGHDPIAWARE child-process compatibility setting, restoring previous environment after launch",
+  "networkPermission": "UnrealEditor inbound allowed on Private and Public profiles, verified after user approval",
+  "nativeShortWalkVerified": true,
+  "localBrowserVideoVerified": true,
+  "gpuSettings": "Selectable RTX 2060 / RTX 5090 presets and custom pools; per-PC settings excluded from archives; full source geometry retained"
 }

@@ -1,0 +1,10 @@
+{
+  "sampleFrames": 110,
+  "averageFps": 10.95,
+  "walkDistanceCm": 167.07,
+  "grounded": true,
+  "actorZCm": 92.65,
+  "viewPitch": 0.00,
+  "viewYaw": -90.00,
+  "scope": "One local forward-walk sample after 300 warmup ticks; does not verify browser input or all circulation paths"
+}

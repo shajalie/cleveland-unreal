@@ -1,6 +1,7 @@
 """Wire modeled fan assemblies to their compiled, pausable runtime actor."""
 
 import unreal
+import re
 
 
 def configure_fans(actors):
@@ -14,7 +15,13 @@ def configure_fans(actors):
         for component in actor.get_components_by_class(unreal.SceneComponent):
             if component.get_class() != unreal.SceneComponent.static_class():
                 continue
-            if not any(component.get_name() == name for name in names):
+            if not any(
+                re.fullmatch(re.escape(name) + r"(?:_\d+)?", component.get_name()) for name in names
+            ):
+                continue
+            parent = component.get_attach_parent()
+            if parent and parent.get_owner().get_class() == fan_class:
+                result.append(component.get_name())
                 continue
             fan = actor_api.spawn_actor_from_class(fan_class, component.get_world_location())
             fan.set_actor_transform(component.get_world_transform(), False, True)
@@ -22,7 +29,7 @@ def configure_fans(actors):
             for child in [component, *component.get_children_components(True)]:
                 child.set_mobility(unreal.ComponentMobility.MOVABLE)
             component.attach_to_component(
-                fan.get_root_component(),
+                fan.get_editor_property("root_component"),
                 "",
                 unreal.AttachmentRule.KEEP_WORLD,
                 unreal.AttachmentRule.KEEP_WORLD,
@@ -30,4 +37,6 @@ def configure_fans(actors):
                 False,
             )
             result.append(component.get_name())
+    if len(result) != 3:
+        raise RuntimeError(f"Expected three modeled fan assemblies, found {result}")
     return result

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "profiles": {
+    "Laptop": {
+      "label": "RTX 2060 / 6 GB",
+      "texturePoolMB": 768,
+      "nanitePoolMB": 128,
+      "width": 960,
+      "height": 540,
+      "screenPercentage": 67,
+      "maxFPS": 30,
+      "maxBitrateMbps": 8,
+      "lightingQuality": 2,
+      "virtualShadows": false
+    },
+    "RTX5090": {
+      "label": "RTX 5090 / 32 GB",
+      "texturePoolMB": 8192,
+      "nanitePoolMB": 1024,
+      "width": 1920,
+      "height": 1080,
+      "screenPercentage": 100,
+      "maxFPS": 60,
+      "maxBitrateMbps": 20,
+      "lightingQuality": 3,
+      "virtualShadows": true
+    }
+  }
+}

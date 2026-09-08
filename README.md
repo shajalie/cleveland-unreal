@@ -3,23 +3,23 @@
 This folder is a new reconstruction of 3014 Cleveland Avenue NW. It does not
 replace the preserved Cleveland Sun Study build, running host, or published site.
 
-**Current checkpoint:** Unreal Engine **5.8.2 is installed** on the authoring PC.
-The C++ walking, hinged-door and ceiling-fan module compiles successfully.
-The editable Blender scene now contains kitchen appliances and cabinetry,
-four bathrooms/laundry fixtures, three furnished bedrooms, the sunroom office
-and a populated lower library. GPU review renders remain approximations, with
-photo matching still in progress. This is not a finished photoreal walkthrough.
+**Current checkpoint:** a packaged Unreal 5.8.2 walkthrough and mobile streaming
+dashboard are running. The UI includes room shortcuts, Washington, DC date/time,
+exposure, touch movement, quality/FPS and memory settings. Chrome has decoded
+roughly 18–24 FPS with the 2060 More FPS preset. Furniture, photo matching,
+lighting calibration and full circulation still need work. This is an early
+furnished reconstruction, not a finished photoreal digital twin.
 
 The scene import now succeeds: 11,516 mesh components, 11 operable door
 assemblies, three fan assemblies, native glass/water and 14 cutout tree-material
 assignments. A DPI-aware child-process launch fixes the narrow logical screen
 reported by a scaled phone RDP session. Windows network access is allowed.
 
-The corrected native runtime renders and completed a short grounded walk. Chrome
-decoded 272 H.264 frames at 960x540 with no dropped frames in a 23-second local
-sample. It ran at approximately 11 FPS on the RTX 2060, below the 30 FPS target.
-This is not yet a working remote walkthrough. See `reports/local-stream-verification.json`
-and `reports/unreal-living-review.png`; excessive brightness and photo matching need work.
+Use the standalone Windows ZIP for another PC; it needs neither Blender nor the
+Unreal editor. Extract it and double-click `Start-Walkthrough.cmd`. Tailscale phone
+streaming is working. Cloudflare email protection is configured, but reliable
+video without Tailscale still needs the separately billed TURN service activated
+and verified. See [streaming setup and limitations](docs/streaming.md).
 
 The new runtime target is Unreal Engine 5.8. Native Path Tracer output is the
 reference for stills and pre-rendered sequences; the navigable version uses the
@@ -62,6 +62,7 @@ python -m unittest discover -s tests -v
 blender -b --python-exit-code 1 --python pipeline/build_scene.py -- --samples 128
 blender -b --python-exit-code 1 --python pipeline/validate_scene.py
 ./pipeline/doctor.ps1
+python pipeline/prepare_encoder.py --engine C:/Unreal/UE_5.8
 ./pipeline/build-runtime.ps1
 blender -b --python-exit-code 1 --python pipeline/export_unreal.py
 blender -b --python-exit-code 1 --python pipeline/verify_usd.py
@@ -70,8 +71,8 @@ blender -b --python-exit-code 1 --python pipeline/verify_usd.py
 
 The build requires an NVIDIA OptiX device and explicitly excludes CPU rendering.
 The editable result is `SourceAssets/Cleveland-Reconstruction.blend`. Open that
-file in Blender to inspect collections, materials and door pivots. Camera views
-are saved in `reports/*-review.png`; this is not a packaged walkthrough.
+file in Blender to inspect collections, materials and door pivots. Blender camera
+reviews are saved in `reports/*-review.png`; the standalone game is packaged separately.
 
 `build-runtime.ps1` uses an installed VS2022 toolchain, or a supplied portable
 MSVC directory through Unreal's supported AutoSDK discovery. Compiler packages
@@ -79,28 +80,12 @@ and account state stay in ignored local storage. See `reports/toolchain.json`.
 Generated Unreal Content, binaries and large scene files are excluded from Git;
 they must accompany a source checkpoint archive or be regenerated.
 
-After a successful scene import, `pipeline/launch.ps1 -Walk` requests DirectX 12
-and the NVIDIA adapter. A short native walk and local video decode are verified;
-whole-house circulation, interactive input and remote access remain pending.
-The walking controls are WASD/mouse or gamepad, E to interact, B to toggle subtle
-camera sway. Phone touch controls and authenticated streaming are pending.
+After importing the scene, `pipeline/stream.ps1` runs the game offscreen and serves
+the dashboard at http://127.0.0.1:5190/. Use Chrome. The sun follows the selected
+Washington, DC date/time and the saved plan orientation. Intensity and seasonal
+foliage remain approximations. See [streaming architecture, access setup and
+encoder stability](docs/streaming.md). The original study remains separate.
 
-The sky is a review setup, not a calibrated date/time simulation. Interior views
-use +2.1 exposure stops; the rear view uses -0.2. Photograph exposure and measured
-daylight must not be confused. The current geometry tests do not establish
-lighting accuracy or validate an Unreal runtime.
-
-## Local video preview
-
-Install Node.js and run `pipeline/setup-streaming.ps1` to build the pinned Epic
-UE5.8 streaming dependency. After a completed import, `pipeline/stream.ps1`
-starts an offscreen Unreal process and a loopback-only video player at
-http://127.0.0.1:5190/. Use Chrome. The browser receives WebRTC video; it does
-not load or render the house geometry. Local decoded frames are verified. Epic's
-internal backbuffer capture avoids the MediaCapture GPU-fence timeouts seen here.
-
-The current preview is local only. Cloudflare allow-list access and the new
-phone link remain unfinished. The original Sun Study host and site are untouched.
 `pipeline/import-runtime.ps1 -Resume` retries native material/motion setup from
 the latest saved staging map without repeating the mesh import. Completed maps
 are selected by reports/unreal-import.json, preserving previous map versions.

@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover"
+    />
+    <title>Cleveland · Unreal walkthrough</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header>
+      <strong>◒ CLEVELAND <span>UNREAL WALKTHROUGH</span></strong
+      ><button id="connections">Connection options</button>
+    </header>
+    <main>
+      <section id="stage" aria-label="Live house walkthrough">
+        <div id="video"></div>
+        <div id="look" aria-label="Drag to look around"></div>
+        <div class="overlay">
+          <b id="location">Living room</b
+          ><small id="stream-stats">Connecting to the rendering PC…</small>
+        </div>
+        <div id="waiting">
+          <p id="waiting-message">Loading the walkthrough…</p>
+          <button id="play">Start / resume video</button>
+        </div>
+        <div id="move" aria-label="Walking controls">
+          <button data-key="87" aria-label="Walk forward">↑</button
+          ><button data-key="65" aria-label="Walk left">←</button
+          ><button data-key="83" aria-label="Walk backward">↓</button
+          ><button data-key="68" aria-label="Walk right">→</button>
+        </div>
+        <button id="interact">Open / close door</button>
+      </section>
+      <div class="host">
+        <span id="gpu">Rendering PC</span
+        ><small
+          >Video is rendered on the PC. Your phone sends the controls.</small
+        >
+      </div>
+      <div class="toolbar">
+        <button id="start">Start walkthrough</button
+        ><button id="fullscreen">Full screen</button
+        ><button id="sway">Camera sway</button
+        ><button id="stop">Stop renderer</button>
+      </div>
+      <p id="notice" role="status"></p>
+      <section class="controls">
+        <div>
+          <h2>Explore the house</h2>
+          <p class="hint">
+            Hold the arrows to walk. Drag the picture to look around. On a
+            computer, use WASD and your mouse; press E at a door.
+          </p>
+          <div id="scene-controls"></div>
+          <a
+            href="https://laptop-m80g5pom.tailf4c6ea.ts.net:5182/"
+            target="_blank"
+            rel="noreferrer"
+            id="previous"
+            >Open the previous sun study ↗</a
+          >
+        </div>
+        <div>
+          <h2>Quality & performance</h2>
+          <label for="profile">Rendering PC</label
+          ><select id="profile">
+            <option value="Laptop">RTX 2060 / 6 GB</option>
+            <option value="RTX5090">RTX 5090 / 32 GB</option></select
+          ><label for="quality">Picture quality</label
+          ><select id="quality">
+            <option value="balanced">Balanced</option>
+            <option value="performance">More FPS</option>
+            <option value="detail">More detail</option>
+            <option value="custom">Custom</option></select
+          ><label for="maxFPS">Frame-rate limit</label
+          ><select id="maxFPS">
+            <option>15</option>
+            <option>30</option>
+            <option>60</option>
+            <option>90</option>
+            <option>120</option>
+          </select>
+          <details>
+            <summary>Memory and video settings</summary>
+            <div id="advanced"></div>
+            <p class="hint">
+              Memory pools do not cap total GPU memory. Both GPU presets keep
+              the complete house and tree models. The 5090 preset is a starting
+              point; it has not been tested on a 5090.
+            </p>
+          </details>
+          <button id="apply">Apply and restart renderer</button
+          ><small>Changing these settings briefly interrupts the video.</small>
+        </div>
+      </section>
+    </main>
+    <dialog id="sharing">
+      <button id="close-sharing">Close</button>
+      <h2>Connection options</h2>
+      <p>Keep this PC running to view and control the house from your phone.</p>
+      <section>
+        <h3>Website with email sign-in</h3>
+        <p>
+          Approved people can use a normal browser. No Tailscale app needed.
+        </p>
+        <a id="cloudflare-link" target="_blank" rel="noreferrer"></a
+        ><label for="emails">Allowed email addresses</label
+        ><textarea id="emails" rows="3" autocomplete="off"></textarea>
+        <div class="row">
+          <button id="save-emails">Save allowed emails</button
+          ><button id="enable-cloudflare">Enable</button
+          ><button id="disable-cloudflare">Turn off</button>
+        </div>
+        <p id="cloudflare-status" role="status"></p>
+        <details>
+          <summary>Connect another PC to Cloudflare</summary>
+          <p>
+            Each PC needs its own unused website hostname. Credentials stay on
+            that PC and are excluded from the ZIP.
+          </p>
+          <label for="accountId">Cloudflare account ID</label
+          ><input id="accountId" /><label for="zoneId">Domain zone ID</label
+          ><input id="zoneId" /><label for="hostname">Website hostname</label
+          ><input id="hostname" placeholder="house.yourdomain.com" /><label
+            for="apiToken"
+            >API token</label
+          ><input id="apiToken" type="password" autocomplete="off" /><button
+            id="configure-cloudflare"
+          >
+            Connect Cloudflare
+          </button>
+        </details>
+      </section>
+      <section>
+        <h3>Tailscale · optional</h3>
+        <a id="tail-link" target="_blank" rel="noreferrer"></a>
+        <p>
+          Use Tailscale on both this PC and the phone. Moonlight can be used
+          separately.
+        </p>
+        <div class="row">
+          <button id="enable-tail">Enable private link</button
+          ><button id="disable-tail">Turn off</button>
+        </div>
+      </section>
+    </dialog>
+    <script src="/vendor/player.js"></script>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

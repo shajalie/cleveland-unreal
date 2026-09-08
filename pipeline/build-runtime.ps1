@@ -15,6 +15,11 @@ if (-not $EngineRoot) {
 }
 $builder = Join-Path $EngineRoot 'Engine\Build\BatchFiles\Build.bat'
 if (-not (Test-Path -LiteralPath $builder)) { throw "Unreal build script missing: $builder" }
+$encoderSource = Join-Path $projectRoot 'runtime/ClevelandReal/Plugins/NVCodecs/Source/NVENC/Private/Video/Encoders/VideoEncoderNVENC.cpp'
+if (-not (Test-Path -LiteralPath $encoderSource)) {
+    & python (Join-Path $PSScriptRoot 'prepare_encoder.py') --engine $EngineRoot
+    if ($LASTEXITCODE -ne 0) { throw 'Could not prepare the project encoder workaround.' }
+}
 if (-not $PortableToolchain) {
     $candidate = [IO.Path]::GetFullPath((Join-Path $projectRoot '..\..\tools\msvc-2022'))
     if (Test-Path -LiteralPath $candidate) { $PortableToolchain = $candidate }

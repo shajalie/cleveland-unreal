@@ -1,0 +1,100 @@
+{
+  "date": "2026-09-08",
+  "engine": "5.8.2",
+  "gpu": "NVIDIA RTX 2060 / 6 GB",
+  "player": "Chrome through Tailscale Serve HTTPS, port 5190",
+  "video": {
+    "codec": "H264",
+    "resolution": [
+      768,
+      432
+    ],
+    "observedFpsRange": [
+      18,
+      24
+    ],
+    "internalResolutionPercent": 50,
+    "fpsCap": 60,
+    "scope": "Browser decoded native Unreal video; not a benchmark on a separate mobile network or a 5090"
+  },
+  "input": {
+    "walkStartCm": [
+      300,
+      -815,
+      95.35
+    ],
+    "walkEndCm": [
+      296.86,
+      -1102.55,
+      90.15
+    ],
+    "walkDistanceCm": 287.57,
+    "yawBeforeDegrees": -90,
+    "yawAfterDegrees": -12.96,
+    "method": "Browser D-pad pointer drag, then drag on the streamed view; native scene acknowledgements read back",
+    "doorButton": "Sent from browser at rear study door; hinge state not independently instrumented"
+  },
+  "scene": {
+    "roomShortcutsChecked": [
+      "living",
+      "foyer",
+      "dining",
+      "kitchen",
+      "breakfast",
+      "study",
+      "powder",
+      "primary",
+      "sunroom",
+      "yellow",
+      "blue",
+      "primary-bath",
+      "hall-bath",
+      "lower",
+      "porch",
+      "garden",
+      "pool"
+    ],
+    "viewpointCorrections": [
+      "foyer cleared the staircase",
+      "garden cleared patio furniture"
+    ],
+    "date": "2026-09-08",
+    "at1300Eastern": {
+      "elevation": 56.5459,
+      "azimuth": 177.352
+    },
+    "at1800Eastern": {
+      "elevation": 16.1783,
+      "azimuth": 263.8049
+    },
+    "lightingScope": "Epic solar position, saved plan basis, approximate clear-sky intensity; seasonal foliage and measured photometry pending"
+  },
+  "encoder": {
+    "defaultD3D12Failure": "Private commit reached approximately 72 GB while working set stayed around 3.6 GB",
+    "cudaCompatibility": "2060 streamed with approximately 6.4 GB private commit in a short test; not the portable default",
+    "portableWorkaround": "Project-local NVENC rate guard; fixed encoding rates while streaming",
+    "sampleFile": ".local/encoder-memory-samples.jsonl",
+    "sampleCount": 16,
+    "limitations": "Several minutes with one Chrome viewer, not an indefinite soak or test of every driver",
+    "privateMemoryMB": {
+      "min": 6364.0,
+      "max": 6721.0,
+      "last": 6407.0
+    },
+    "sampleStartUtc": "2026-09-08T05:53:05.6601122Z",
+    "sampleEndUtc": "2026-09-08T05:58:12.3093722Z"
+  },
+  "access": {
+    "tailscale": "HTTPS dashboard and decoded video verified; process firewall allows this packaged app",
+    "cloudflare": "Separate Access app, email policy, DNS and app-only tunnel configured; TURN activation and no-Tailscale media test pending billing approval",
+    "automatedChecks": [
+      "signed JWT issuer/audience/email",
+      "revocation and disabled sharing",
+      "origin rejection",
+      "loopback binding",
+      "settings limits",
+      "DC standard/daylight-saving conversion"
+    ]
+  },
+  "visualStatus": "Furnished reconstruction in progress; further photo matching, full circulation, seasonal trees and lighting calibration remain"
+}

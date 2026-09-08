@@ -1,0 +1,304 @@
+* {
+  box-sizing: border-box;
+}
+[hidden] {
+  display: none !important;
+}
+body {
+  margin: 0;
+  background: #111c22;
+  color: #e7eef0;
+  font:
+    16px system-ui,
+    sans-serif;
+}
+header {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 22px;
+  border-bottom: 1px solid #40515a;
+}
+header strong {
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+header span,
+a {
+  color: #f3c16e;
+}
+header span {
+  font-weight: 400;
+}
+button,
+select,
+input,
+textarea {
+  font: inherit;
+  color: inherit;
+  background: #253740;
+  border: 1px solid #59707c;
+  border-radius: 7px;
+  min-height: 44px;
+  padding: 9px 12px;
+}
+button {
+  cursor: pointer;
+}
+button:active {
+  background: #f3c16e;
+  color: #17232a;
+}
+button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid #f3c16e;
+  outline-offset: 2px;
+}
+main {
+  max-width: 1320px;
+  margin: auto;
+}
+#stage {
+  position: relative;
+  margin: auto;
+  aspect-ratio: 16/9;
+  max-height: 76vh;
+  background: #080f13;
+  overflow: hidden;
+}
+#video,
+#look {
+  position: absolute;
+  inset: 0;
+  touch-action: none;
+}
+#look {
+  pointer-events: none;
+}
+#video video {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain;
+  position: absolute;
+  inset: 0;
+}
+#video audio {
+  display: none;
+}
+.overlay {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  background: #15252be6;
+  padding: 9px 12px;
+  border-radius: 6px;
+  pointer-events: none;
+}
+.overlay small {
+  display: block;
+  margin-top: 4px;
+}
+#waiting {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  background: #081217ba;
+  padding: 24px;
+  text-align: center;
+}
+#move {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  display: grid;
+  grid-template-columns: repeat(3, 46px);
+  gap: 5px;
+}
+#move button {
+  background: #14232bdf;
+  font-size: 24px;
+  touch-action: none;
+  user-select: none;
+}
+#move button:first-child {
+  grid-column: 2;
+}
+#move button:nth-child(2) {
+  grid-column: 1;
+}
+#interact {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background: #14232bdf;
+  font-size: 13px;
+}
+.host {
+  padding: 12px 18px;
+  background: #1b2a31;
+  color: #f3c16e;
+  font-size: 13px;
+}
+.host small {
+  display: block;
+  margin-top: 5px;
+}
+.toolbar,
+.row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.toolbar {
+  padding: 12px 18px;
+}
+.controls {
+  padding: 0 18px 28px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+h2 {
+  font-size: 18px;
+}
+h3 {
+  font-size: 16px;
+}
+label {
+  display: block;
+  font-size: 14px;
+  color: #b7cad4;
+  margin: 14px 0 7px;
+}
+select,
+input,
+textarea {
+  width: 100%;
+}
+small,
+.hint {
+  color: #b7c7ce;
+  font-size: 13px;
+  line-height: 1.6;
+}
+.hint {
+  max-width: 540px;
+}
+#notice {
+  color: #ffc67b;
+  min-height: 20px;
+  padding: 0 18px;
+  font-size: 14px;
+}
+#apply {
+  margin: 16px 0 8px;
+  display: block;
+  background: #f3c16e;
+  color: #17232a;
+  font-weight: 600;
+}
+details {
+  margin-top: 20px;
+}
+summary {
+  cursor: pointer;
+  color: #c7d8df;
+}
+dialog {
+  max-width: 520px;
+  width: 94vw;
+  max-height: 90dvh;
+  overflow: auto;
+  background: #17272f;
+  color: #e7eef0;
+  border: 1px solid #59707c;
+  border-radius: 12px;
+  padding: 20px;
+}
+dialog::backdrop {
+  background: #000b;
+}
+dialog section {
+  border-top: 1px solid #40515a;
+  margin-top: 20px;
+  padding-top: 8px;
+}
+dialog a {
+  display: block;
+  overflow-wrap: anywhere;
+  margin: 12px 0;
+}
+dialog p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+#close-sharing {
+  float: right;
+}
+.row {
+  margin: 12px 0;
+}
+#stage:fullscreen {
+  width: 100vw;
+  height: 100dvh;
+  max-height: none;
+  aspect-ratio: auto;
+}
+.scene-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 10px 0;
+}
+@media (pointer: coarse) {
+  #look {
+    pointer-events: auto;
+    bottom: 0;
+  }
+}
+@media (max-width: 700px) {
+  header {
+    padding: 12px;
+  }
+  header strong {
+    font-size: 11px;
+  }
+  header button {
+    font-size: 12px;
+  }
+  .controls {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  #stage {
+    aspect-ratio: 4/3;
+    min-height: 260px;
+  }
+  .overlay {
+    max-width: 80%;
+  }
+  .overlay b {
+    font-size: 13px;
+  }
+  .toolbar button {
+    font-size: 13px;
+  }
+  .host {
+    font-size: 12px;
+  }
+  #move button {
+    min-height: 46px;
+  }
+  .controls h2 {
+    margin-bottom: 8px;
+  }
+}

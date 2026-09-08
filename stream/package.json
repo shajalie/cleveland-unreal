@@ -1,0 +1,6 @@
+{
+  "name": "cleveland-host",
+  "private": true,
+  "version": "0.1.0",
+  "dependencies": { "jose": "6.2.12" }
+}

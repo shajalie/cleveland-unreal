@@ -41,11 +41,15 @@ if ($Walk) {
     $arguments = @($completed.map, '-dx12', '-preferNvidia', '-log')
     if (-not $isPackaged) { $arguments = @(('"' + $project + '"')) + $arguments }
     $arguments += @('-game','-windowed')
+    $arguments += ('-ClevelandViews="' + (Join-Path $projectRoot 'Config/scene-views.json') + '"')
     $arguments += @("-ResX=$($gpu.width)","-ResY=$($gpu.height)")
     $commands = "r.ScreenPercentage $($gpu.screenPercentage),t.MaxFPS $($gpu.maxFPS)"
     $commands += ",sg.GlobalIlluminationQuality $($gpu.lightingQuality),sg.ReflectionQuality $($gpu.lightingQuality)"
     $commands += ",r.Streaming.PoolSize $($gpu.texturePoolMB),r.Nanite.Streaming.StreamingPoolSize $($gpu.nanitePoolMB)"
     $commands += ",r.Shadow.Virtual.Enable $([int]$gpu.virtualShadows),r.RayTracing.Shadows 1"
+    $commands += ",r.RayTracing.ResidentGeometryMemoryPoolSizeInMB $($gpu.rayTracingPoolMB)"
+    # Let unused RT geometry leave the 6 GB GPU; preserve full mesh detail.
+    $commands += ",r.RayTracing.NumAlwaysResidentLODs $(if ($gpu.profile -eq 'Laptop') { 0 } else { 1 })"
     $arguments += ('-ExecCmds="' + $commands + '"')
 }
 if ($Stream) {
@@ -54,6 +58,7 @@ if ($Stream) {
         '-PixelStreamingConnectionURL=ws://127.0.0.1:5191', '-PixelStreamingID=Cleveland',
         '-PixelStreamingEncoderCodec=H264', "-PixelStreamingWebRTCFps=$($gpu.maxFPS)",
         "-PixelStreamingWebRTCMaxBitrate=$($gpu.maxBitrateMbps * 1000000)")
+    $arguments += @('-ClevelandStableEncoder', "-PixelStreamingEncoderTargetBitrate=$($gpu.maxBitrateMbps * 1000000)")
 }
 if ($Verify) { $arguments += '-ClevelandVerify' }
 $previousCompatibility = $env:__COMPAT_LAYER

@@ -1,4 +1,4 @@
-param([string]$EngineRoot, [switch]$SkipBuild)
+param([string]$EngineRoot, [switch]$SkipBuild, [switch]$SkipCook)
 $ErrorActionPreference = 'Stop'
 $projectRoot = Split-Path $PSScriptRoot -Parent
 $project = Join-Path $projectRoot 'runtime/ClevelandReal/ClevelandReal.uproject'
@@ -20,7 +20,8 @@ try {
     if (Test-Path -LiteralPath $portableSdk) { $env:UE_SDKS_ROOT = $portableSdk }
     $env:__COMPAT_LAYER = (($priorCompatibility + ' HIGHDPIAWARE').Trim())
     $automation = Join-Path $EngineRoot 'Engine/Build/BatchFiles/RunUAT.bat'
-    & $automation BuildCookRun "-project=$project" -noP4 -platform=Win64 -clientconfig=Development -skipbuild -cook -stage -pak -archive "-archivedirectory=$archive" "-map=$($completed.map)" -prereqs -unattended -utf8output -nocompileeditor -skipbuildeditor
+    $cookOption = if ($SkipCook) { '-skipcook' } else { '-cook' }
+    & $automation BuildCookRun "-project=$project" -noP4 -platform=Win64 -clientconfig=Development -skipbuild $cookOption -stage -pak -archive "-archivedirectory=$archive" "-map=$($completed.map)" -prereqs -unattended -utf8output -nocompileeditor -skipbuildeditor
     if ($LASTEXITCODE -ne 0) { throw "Unreal packaging failed ($LASTEXITCODE)." }
     $executable = Join-Path $archive 'Windows/ClevelandReal.exe'
     if (-not (Test-Path -LiteralPath $executable)) { throw 'Packaging did not produce a runnable executable.' }

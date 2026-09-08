@@ -16,3 +16,7 @@ SourceAssets/
 *.bundle
 node_modules/
 runtime/ClevelandReal/Content/
+runtime/ClevelandReal/Samples/
+runtime/Windows/
+tools/
+runtime/ClevelandReal/Plugins/NVCodecs/

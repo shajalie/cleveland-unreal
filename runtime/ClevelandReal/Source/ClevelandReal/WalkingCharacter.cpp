@@ -8,11 +8,13 @@
 #include "Kismet/GameplayStatics.h"
 #include "OperableDoor.h"
 #include "WalkthroughProbe.h"
+#include "SceneControls.h"
 
 AWalkingCharacter::AWalkingCharacter()
 {
     PrimaryActorTick.bCanEverTick = true;
     CreateDefaultSubobject<UWalkthroughProbe>(TEXT("OptInRuntimeProbe"));
+    CreateDefaultSubobject<USceneControls>(TEXT("SceneControls"));
     GetCapsuleComponent()->InitCapsuleSize(23.f, 88.f);
     GetCharacterMovement()->MaxWalkSpeed = 140.f;
     GetCharacterMovement()->MaxStepHeight = 20.f;

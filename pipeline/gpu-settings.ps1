@@ -2,6 +2,7 @@ param(
     [ValidateSet('Saved','Laptop','RTX5090')][string]$Profile = 'Saved',
     [ValidateRange(256,24576)][int]$TexturePoolMB,
     [ValidateRange(64,4096)][int]$NanitePoolMB,
+    [ValidateRange(256,8192)][int]$RayTracingPoolMB,
     [ValidateRange(640,3840)][int]$Width,
     [ValidateRange(360,2160)][int]$Height,
     [ValidateRange(25,100)][int]$ScreenPercentage,
@@ -19,14 +20,17 @@ if ($Profile -eq 'Saved' -and (Test-Path -LiteralPath $settingsPath)) {
     $saved = Get-Content -LiteralPath $settingsPath -Raw | ConvertFrom-Json
     $Profile = $saved.profile
 }
-if ($Profile -eq 'Saved') { $Profile = 'Laptop' }
+if ($Profile -eq 'Saved') {
+    $adapters = Get-CimInstance Win32_VideoController -ErrorAction SilentlyContinue
+    $Profile = if ($adapters.Name -match 'RTX 5090') { 'RTX5090' } else { 'Laptop' }
+}
 if ($Profile -notin @('Laptop','RTX5090')) { throw 'Unknown saved GPU profile.' }
 $settings = [ordered]@{ profile = $Profile }
 foreach ($property in $catalog.profiles.$Profile.PSObject.Properties) { $settings[$property.Name] = $property.Value }
 $ranges = @{
-    texturePoolMB = @(256,24576); nanitePoolMB = @(64,4096)
+    texturePoolMB = @(256,24576); nanitePoolMB = @(64,4096); rayTracingPoolMB = @(256,8192)
     width = @(640,3840); height = @(360,2160); screenPercentage = @(25,100)
-    maxFPS = @(15,120); maxBitrateMbps = @(2,80)
+    maxFPS = @(15,120); maxBitrateMbps = @(2,80); lightingQuality = @(2,3)
 }
 foreach ($key in $ranges.Keys) {
     if ($saved -and $null -ne $saved.$key) { $settings[$key] = $saved.$key }

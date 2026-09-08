@@ -4,6 +4,7 @@
   "Category": "Architecture",
   "Description": "Reference-based Cleveland house reconstruction and streamed walkthrough",
   "Plugins": [
+    { "Name": "SunPosition", "Enabled": true },
     {
       "Name": "PythonScriptPlugin",
       "Enabled": true

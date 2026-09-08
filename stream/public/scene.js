@@ -89,6 +89,7 @@ export function installSceneControls({ stream, container, say }) {
     <input id="study-time" type="range" min="300" max="1320" step="15" value="780">
     <div class="row times"><button data-time="540">9 AM</button><button data-time="720">Noon</button><button data-time="900">3 PM</button><button data-time="1080">6 PM</button></div>
     <p id="sun-status" class="hint" role="status">Waiting for scene controls…</p>
+    <p id="lighting-version" class="hint"></p>
     <details><summary>View brightness</summary><label for="exposure">Exposure compensation · <output id="exposure-label">−0.5 stops</output></label><input id="exposure" type="range" min="-3" max="3" value="-0.5" step="0.25"></details>
     <p class="hint">Clear-sky lighting preview. Date and time move the sun; trees currently retain their modeled foliage. The reconstruction is still being checked against the photos.</p>`;
   const $ = (id) => document.getElementById(id);
@@ -101,7 +102,7 @@ export function installSceneControls({ stream, container, say }) {
   }
   let ready = false,
     editingUntil = 0,
-    pending = false,
+    pendingUtc = null,
     lastState;
   const send = (action, args = {}) => {
     if (action !== "status" && !ready) {
@@ -123,9 +124,12 @@ export function installSceneControls({ stream, container, say }) {
   const applyTime = () => {
     try {
       editingUntil = Date.now() + 2000;
-      pending = true;
+      pendingUtc = studyUtc(
+        $("study-date").value,
+        Number($("study-time").value),
+      );
       send("time", {
-        utc: studyUtc($("study-date").value, Number($("study-time").value)),
+        utc: pendingUtc,
       });
       labelTime();
     } catch (error) {
@@ -166,13 +170,17 @@ export function installSceneControls({ stream, container, say }) {
     }
     if (state.protocol !== "cleveland.scene.v1") return;
     ready = true;
+    $("lighting-version").textContent =
+      state.lightingVersion === 2 && state.extendedExposureRange
+        ? "Lighting v2 · automatic indoor/outdoor brightness"
+        : "";
     $("location").textContent = names.get(state.room) || "Walkthrough";
     if (state.error) say(state.error);
     else if (lastState && lastState.room !== state.room)
       say(`Viewing ${names.get(state.room) || state.room}.`);
-    else if (pending) {
+    else if (pendingUtc !== null && state.utc === pendingUtc) {
       say("Lighting updated on the rendering PC.");
-      pending = false;
+      pendingUtc = null;
     }
     if (
       Date.now() >= editingUntil &&

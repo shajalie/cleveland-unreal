@@ -54,12 +54,18 @@ def main():
         "reports/local-stream-verification.json",
         "reports/dashboard-verification.json",
         "docs/streaming.md",
+        "docs/lighting-v2.md",
     ]
     for name in files:
         dest = target / name
         dest.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(ROOT / name, dest)
-    for name in ["stream/public", "stream/cloudflare", "stream/node_modules/jose"]:
+    for name in [
+        "stream/public",
+        "stream/cloudflare",
+        "stream/node_modules/jose",
+        "reports/lighting-v2",
+    ]:
         copy_tree(ROOT / name, target / name)
     (target / "tools").mkdir(exist_ok=True)
     shutil.copy2(ROOT / "tools/cloudflared.exe", target / "tools/cloudflared.exe")
@@ -100,7 +106,7 @@ def main():
     shutil.copy2(node, node_target / "node.exe")
     shutil.copy2(ROOT / ".local/node-LICENSE", node_target / "LICENSE")
     (target / "READ-ME-FIRST.txt").write_text(
-        "Cleveland Unreal - early native walkthrough\n\n"
+        "Cleveland Unreal - Lighting v2\n\n"
         "1. Extract the whole ZIP to a local folder. Do not run inside the ZIP.\n"
         "2. Double-click Start-Walkthrough.cmd.\n"
         "3. Chrome opens http://127.0.0.1:5190/. The first load can take a minute.\n"
@@ -117,6 +123,8 @@ def main():
         "Hosting credentials and email lists are NOT included; connect each new PC once.\n"
         "Moonlight can separately show the PC. Only this app is exposed by its tunnel.\n"
         "The original Sun Study site is unchanged.\n\n"
+        "Lighting v2 corrects outdoor exposure and Lumen/sky lighting-cache range.\n"
+        "See docs/lighting-v2.md and reports/lighting-v2 for the visual review.\n\n"
         "This is a furnished reconstruction in progress, not a photometrically calibrated\n"
         "digital twin. Layout/material/reference matching and full circulation need review.\n"
         "The RTX 5090 preset is untested on that GPU. H.264 video uses a fixed bitrate\n"

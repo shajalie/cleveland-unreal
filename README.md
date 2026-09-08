@@ -3,12 +3,19 @@
 This folder is a new reconstruction of 3014 Cleveland Avenue NW. It does not
 replace the preserved Cleveland Sun Study build, running host, or published site.
 
-**Current checkpoint:** a packaged Unreal 5.8.2 walkthrough and mobile streaming
+**Current checkpoint: Lighting v2.** A packaged Unreal 5.8.2 walkthrough and mobile streaming
 dashboard are running. The UI includes room shortcuts, Washington, DC date/time,
 exposure, touch movement, quality/FPS and memory settings. Chrome has decoded
 roughly 18–24 FPS with the 2060 More FPS preset. Furniture, photo matching,
 lighting calibration and full circulation still need work. This is an early
 furnished reconstruction, not a finished photoreal digital twin.
+
+Lighting v2 fixes the white backyard/sky by extending camera metering to daylight
+and preserving bright values in Lumen’s lighting caches. Room/time jumps reset
+exposure history, and fast time changes are applied reliably. See the
+[lighting change and visual review](docs/lighting-v2.md). The
+[previous build](https://github.com/shajalie/cleveland-unreal/releases/tag/streamed-walkthrough-2026-09-08)
+is retained for rollback.
 
 The scene import now succeeds: 11,516 mesh components, 11 operable door
 assemblies, three fan assemblies, native glass/water and 14 cutout tree-material

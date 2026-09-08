@@ -1,0 +1,3 @@
+# Optional tools for measuring the saved lighting-review screenshots.
+Pillow==12.3.0
+numpy==2.5.3

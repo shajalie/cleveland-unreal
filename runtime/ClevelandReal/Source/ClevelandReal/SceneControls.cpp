@@ -1,4 +1,5 @@
 #include "SceneControls.h"
+#include "DaylightExposure.h"
 #include "WalkingCharacter.h"
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
@@ -9,6 +10,7 @@
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/Controller.h"
 #include "HAL/FileManager.h"
+#include "HAL/IConsoleManager.h"
 #include "Misc/FileHelper.h"
 #include "Misc/Paths.h"
 #include "Misc/CommandLine.h"
@@ -67,8 +69,7 @@ void USceneControls::BeginPlay()
     if (Sun) Sun->GetLightComponent()->SetMobility(EComponentMobility::Movable);
     if (auto* Walker = Cast<AWalkingCharacter>(GetOwner()))
     {
-        Walker->Camera->PostProcessSettings.bOverride_AutoExposureBias = true;
-        Walker->Camera->PostProcessSettings.AutoExposureBias = Exposure;
+        DaylightExposure::Configure(*Walker->Camera, Exposure);
     }
     SetSun(Time);
     Respond();
@@ -83,8 +84,13 @@ void USceneControls::HandleCommand(const FString& Descriptor)
     if (!Input->TryGetStringField(TEXT("protocol"), Protocol) || Protocol != TEXT("cleveland.scene.v1") ||
         !Input->TryGetStringField(TEXT("action"), Action)) return;
     const double Now = FPlatformTime::Seconds();
-    if (Now - LastCommand < 0.08) return;
-    LastCommand = Now;
+    // Status polling must not discard a slider change arriving in the same
+    // frame. Apply every bounded scene edit in order; throttle only polls.
+    if (Action == TEXT("status"))
+    {
+        if (Now - LastStatus < 0.25) return;
+        LastStatus = Now;
+    }
     FString Error;
     if (Action == TEXT("room"))
     {
@@ -161,6 +167,7 @@ bool USceneControls::GoToRoom(const FString& Id)
             Walker->GetCharacterMovement()->StopMovementImmediately();
             Walker->GetController()->SetControlRotation(View);
             Room = Id;
+            DaylightExposure::ResetAfterJump(Walker);
             return true;
         }
         return false;
@@ -194,6 +201,7 @@ void USceneControls::SetSun(int64 UtcSeconds)
         const float AirMass = 1.f / FMath::Max(0.08f, FMath::Sin(static_cast<float>(Alt)));
         Light->SetIntensity(Elevation > 0 ? 110000.f * FMath::Exp(-0.14f * AirMass) : 0.f);
     }
+    DaylightExposure::ResetAfterJump(GetOwner());
 }
 
 void USceneControls::Respond(const FString& Error)
@@ -205,6 +213,12 @@ void USceneControls::Respond(const FString& Error)
     State->SetNumberField(TEXT("elevation"), Elevation);
     State->SetNumberField(TEXT("azimuth"), Azimuth);
     State->SetNumberField(TEXT("exposure"), Exposure);
+    State->SetNumberField(TEXT("lightingVersion"), DaylightExposure::Version);
+    const auto* Extended = IConsoleManager::Get().FindConsoleVariable(TEXT("r.DefaultFeature.AutoExposure.ExtendDefaultLuminanceRange"));
+    State->SetBoolField(TEXT("extendedExposureRange"), Extended && Extended->GetInt() == 1);
+    State->SetNumberField(TEXT("minEV100"), DaylightExposure::MinEV100);
+    State->SetNumberField(TEXT("maxEV100"), DaylightExposure::MaxEV100);
+    if (Sun) State->SetNumberField(TEXT("sunIlluminanceLux"), Sun->GetLightComponent()->Intensity);
     State->SetStringField(TEXT("error"), Error);
     const FVector Location = GetOwner()->GetActorLocation();
     State->SetNumberField(TEXT("x"), Location.X);

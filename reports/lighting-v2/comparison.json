@@ -1,0 +1,50 @@
+{
+  "comparison": "Pool terrace, 2026-09-08 11:00 America/New_York",
+  "utc": 1788879600,
+  "sunElevationDegrees": 46.134,
+  "sunAzimuthDegrees": 131.417,
+  "estimatedDirectNormalLux": 90585.633,
+  "exposureCompensationStops": -0.5,
+  "nativeView": {
+    "xCm": -80,
+    "yCm": -1700,
+    "zCm": -71.85,
+    "yawDegrees": -160
+  },
+  "settings": {
+    "gpu": "RTX 2060",
+    "output": [
+      768,
+      432
+    ],
+    "screenPercentage": 50
+  },
+  "roiPixelsXYXY": [
+    0,
+    142,
+    533,
+    340
+  ],
+  "nearWhiteDefinition": "All three decoded 8-bit RGB channels >= 250",
+  "before": {
+    "image": "before-pool-11am.png",
+    "sha256": "4839bacc4275733c35e81d10722af41f16d4fa3ed33a61e8697e2990b86825c6",
+    "nearWhitePercent": 62.832,
+    "medianRgb": [
+      254.0,
+      254.0,
+      254.0
+    ]
+  },
+  "after": {
+    "image": "after-pool-11am.png",
+    "sha256": "6e1a85e8fb5675cb98c22480c67e8970a83a15716cc9681a81f96294073f02a5",
+    "nearWhitePercent": 0.0,
+    "medianRgb": [
+      108.0,
+      115.0,
+      123.0
+    ]
+  },
+  "scope": "One matched pool view. Measures displayed clipping, not lux, color accuracy or every possible viewpoint. Indoor comparison has slightly different yaw and is qualitative only."
+}

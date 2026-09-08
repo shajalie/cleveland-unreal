@@ -31,5 +31,5 @@ private:
     float Elevation = 0.f;
     float Azimuth = 0.f;
     float Exposure = -0.5f;
-    double LastCommand = 0;
+    double LastStatus = 0;
 };

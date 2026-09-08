@@ -13,6 +13,8 @@ RNG = random.Random(3014)
 
 
 def group(name, objects, position, angle=0):
+    # Flush newly assigned scales/transforms before preserving child world matrices.
+    bpy.context.view_layer.update()
     parent = bpy.data.objects.new(name, None)
     bpy.context.collection.objects.link(parent)
     for obj in objects:
@@ -218,9 +220,17 @@ def living_room(m):
 
 
 def dining_room(m):
+    from .rooms.fixtures import lathe, cabinet
+
     center = (-3.55, 2.10)
     box("Dining rug", (*center, 0.013), (2.75, 3.15, 0.025), m["rug"])
-    box("Dining table", (*center, 0.755), (1.05, 1.90, 0.065), m["wood"], 0.025)
+    lathe(
+        "Oval dining table",
+        [(0, -0.03), (0.97, -0.03), (1, -0.012), (1, 0.012), (0.97, 0.03), (0, 0.03)],
+        (*center, 0.755),
+        (0.57, 1.03),
+        m["wood"],
+    )
     for x in [-3.97, -3.13]:
         for y in [1.40, 2.80]:
             cylinder_between("Dining table leg", (x, y, 0.02), (x, y, 0.74), 0.041, m["wood"])
@@ -233,31 +243,19 @@ def dining_room(m):
         (-3.55, 3.45, 0),
     ]:
         import_asset("dining_chair_02", (x, y, 0), angle, 0.97)
-    box("Dining sideboard", (-5.02, 3.0, 0.48), (0.60, 1.6, 0.96), m["wood"], 0.015)
-    for y in [2.44, 2.97, 3.50]:
-        box("Raised sideboard door", (-4.702, y, 0.47), (0.035, 0.49, 0.79), m["wood"], 0.008)
-
-
-def kitchen(m):
-    for x in [-5.05, -2.04]:
-        for i in range(4):
-            y = 4.70 + i * 0.58
-            box("Kitchen base cabinet", (x, y, 0.44), (0.62, 0.56, 0.86), m["ivory"], 0.009)
-            box("Stone countertop", (x, y, 0.91), (0.66, 0.59, 0.045), m["concrete"], 0.007)
-            box("Upper cabinet", (x, y, 1.97), (0.36, 0.55, 0.73), m["ivory"], 0.008)
-            front = x + (0.32 if x < -3 else -0.32)
-            box("Recessed cabinet panel", (front, y, 0.48), (0.025, 0.44, 0.62), m["ivory"], 0.006)
-            cylinder_between(
-                "Cabinet handle",
-                (front + 0.015, y - 0.12, 0.72),
-                (front + 0.015, y + 0.12, 0.72),
-                0.008,
-                m["iron"],
-                16,
-            )
-    box("Breakfast table", (-4.12, 9.16, 0.75), (1.0, 1.0, 0.05), m["wood"], 0.024)
-    for y, angle in [(8.36, math.pi), (9.96, 0)]:
-        import_asset("dining_chair_02", (-4.12, y, 0), angle, 0.95)
+    box("Dining sideboard", (-4.65, 3.82, 0.48), (1.35, 0.50, 0.96), m["wood"], 0.015)
+    for x in [-5.10, -4.65, -4.20]:
+        box("Raised sideboard door", (x, 3.557, 0.47), (0.43, 0.035, 0.79), m["wood"], 0.008)
+    cabinet(
+        "Dining glazed china hutch",
+        (-4.65, 3.87, 0.98),
+        1.35,
+        0.36,
+        1.16,
+        dict(m, ivory=m["wood"]),
+        0,
+        glazed=True,
+    )
 
 
 def study(m):

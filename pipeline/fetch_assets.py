@@ -18,6 +18,7 @@ ASSETS = [
     "book_encyclopedia_set_01",
     "Rockingchair_01",
     "dining_chair_02",
+    "tree_small_02",
 ]
 
 

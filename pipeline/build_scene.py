@@ -19,7 +19,15 @@ from geometry.layout import build_layout
 from geometry.materials import palette
 from geometry.architecture import build_house, build_terraces, roof
 from geometry.site import build_site
-from geometry.furnishings import living_room, dining_room, kitchen, study, patio
+from geometry.furnishings import living_room, dining_room, study, patio
+from geometry.rooms.kitchen import build as kitchen
+from geometry.rooms.bathrooms import build as bathrooms
+from geometry.rooms.bedrooms import build as bedrooms
+from geometry.rooms.library import build as library
+from geometry.rooms.finishes import build as room_finishes
+from geometry.rooms.textiles import build as textiles
+from geometry.rooms.living_details import build as living_details
+from geometry.rooms.reference_details import build as reference_details
 from geometry.primitives import box
 
 
@@ -173,6 +181,7 @@ def main():
     devices = configure_render(scene, options.samples)
     m = palette()
     model = build_layout()
+    (ROOT / "design/spatial-model.json").write_text(json.dumps(model, indent=2))
     for name, build in [
         ("01 Architecture", lambda: build_house(model, m)),
         ("02 Garden levels", lambda: (build_terraces(model, m), pool(m))),
@@ -183,6 +192,13 @@ def main():
         ("07 Patio furnishings", lambda: patio(m)),
         ("08 Roof", lambda: roof(m)),
         ("09 Site context", lambda: build_site(model, m)),
+        ("10 Bathrooms and laundry", lambda: bathrooms(m)),
+        ("11 Bedrooms and sunroom", lambda: bedrooms(m)),
+        ("12 Lower library", lambda: library(m)),
+        ("13 Room paint", lambda: room_finishes(model, m)),
+        ("14 Patterned textiles", lambda: textiles(m)),
+        ("15 Living and study details", lambda: living_details(m)),
+        ("16 Reference decor", lambda: reference_details(m)),
     ]:
         print("BUILD_STAGE", name, flush=True)
         collection(name)
@@ -194,6 +210,15 @@ def main():
         "rear": camera("rear", (-1.8, 17.1, 0.30), (0.65, 10.75, 1.1), 24),
         "stair": camera("stair", (-0.71, 0.56, 1.57), (0.08, 4.74, 1.69), 23),
         "study": camera("study", (3.22, 8.13, 1.57), (2.96, 12.6, 1.20), 24),
+        "kitchen": camera("kitchen", (-3.72, 8.10, 1.56), (-4.57, 5.27, 1.32), 22),
+        "dining": camera("dining", (-1.85, 0.65, 1.57), (-4.1, 3.59, 1.29), 22),
+        "powder": camera("powder", (-0.55, 6.30, 1.49), (-1.10, 7.27, 1.11), 19),
+        "primary_bath": camera("primary_bath", (-1.25, 1.38, 4.62), (0.52, 1.41, 4.29), 18),
+        "hall_bath": camera("hall_bath", (1.08, 6.96, 4.64), (3.58, 5.45, 4.30), 20),
+        "primary": camera("primary", (-1.89, 5.42, 4.70), (-4.38, 4.22, 4.14), 23),
+        "sunroom": camera("sunroom", (-4.22, 7.89, 4.70), (-4.14, 10.46, 4.31), 23),
+        "blue_bedroom": camera("blue_bedroom", (1.53, 10.09, 4.69), (3.49, 8.69, 4.21), 22),
+        "yellow_bedroom": camera("yellow_bedroom", (1.14, 2.58, 4.68), (3.48, 3.65, 4.35), 23),
     }
     scene.camera = cameras["living"]
     checks = mesh_checks(model)
@@ -210,9 +235,9 @@ def main():
         "objects": len(bpy.data.objects),
         "meshChecks": checks,
         "renders": [],
-        "status": "Authoring review; Unreal runtime is not installed.",
+        "status": "Authoring review; see unreal-import.json for the separate engine integration status.",
         "knownIncomplete": [
-            "Upper-floor furnishings",
+            "Exact furniture shapes, decorative objects, artwork and textile patterns",
             "Neighbor facade detailing and verified vegetation species",
             "Photo-calibrated cameras and materials",
             "Internal basement stair",

@@ -1,0 +1,62 @@
+{
+  "trees": [
+    {
+      "tree": 0,
+      "crownRadiusMeters": 2.1336042672085345
+    },
+    {
+      "tree": 1,
+      "crownRadiusMeters": 3.048006096012192
+    },
+    {
+      "tree": 10,
+      "crownRadiusMeters": 3.352806705613411
+    },
+    {
+      "tree": 11,
+      "crownRadiusMeters": 4.5720091440182875
+    },
+    {
+      "tree": 12,
+      "crownRadiusMeters": 4.5720091440182875
+    },
+    {
+      "tree": 13,
+      "crownRadiusMeters": 6.096012192024384
+    },
+    {
+      "tree": 2,
+      "crownRadiusMeters": 2.86694533858289
+    },
+    {
+      "tree": 3,
+      "crownRadiusMeters": 3.65760731521463
+    },
+    {
+      "tree": 4,
+      "crownRadiusMeters": 4.5720091440182875
+    },
+    {
+      "tree": 5,
+      "crownRadiusMeters": 3.65760731521463
+    },
+    {
+      "tree": 6,
+      "crownRadiusMeters": 3.65760731521463
+    },
+    {
+      "tree": 7,
+      "crownRadiusMeters": 4.049089894347249
+    },
+    {
+      "tree": 8,
+      "crownRadiusMeters": 5.486410972821945
+    },
+    {
+      "tree": 9,
+      "crownRadiusMeters": 3.65760731521463
+    }
+  ],
+  "opacity": "Original Poly Haven 2k masks; JPG alpha connection removed",
+  "limits": "Species and crown measurements remain estimates; this is a geometry/material repair"
+}

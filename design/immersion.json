@@ -1,0 +1,29 @@
+{
+  "status": "Implementation targets; not validated runtime features",
+  "walking": {
+    "eyeHeightMeters": 1.65,
+    "speedMetersPerSecond": 1.4,
+    "capsuleRadiusMeters": 0.23,
+    "maxStepMeters": 0.20,
+    "cameraSway": "Subtle, speed-dependent, optional; disabled in still inspection mode",
+    "controls": ["Keyboard and mouse", "Phone twin-stick touch", "Gamepad"]
+  },
+  "wind": {
+    "interpretation": "User's 'window' interpreted as wind, pending correction",
+    "calmMetersPerSecond": 0.6,
+    "breezeMetersPerSecond": 2.4,
+    "gustVariation": "Slow coherent variation shared by trees, leaves and water",
+    "indoor": "Sheltered; curtain response only near an open exterior opening"
+  },
+  "sound": {
+    "footsteps": "Distance-triggered, surface-specific and spatial",
+    "outside": "Wind in foliage, restrained birds and pool circulation",
+    "inside": "Exterior ambience attenuated through walls and closed doors",
+    "controls": ["Master volume", "Ambient sound", "Footsteps"]
+  },
+  "water": {
+    "form": "Contained pool with small wind ripples and circulation",
+    "stillCapture": "Freeze animation time while accumulating a path-traced still"
+  },
+  "accuracy": "Animation must not alter architectural dimensions or invent missing house features."
+}

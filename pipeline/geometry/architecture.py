@@ -42,7 +42,7 @@ def curve_tube(name, points, radius, material):
 
 
 def portal(wall, hole, base, m):
-    if not wall["ext"]:
+    if not wall["ext"] and not hole.get("floorGlass"):
         return
     if hole["id"] == "front_door":
         front_door(hole, base, m)
@@ -57,6 +57,8 @@ def portal(wall, hole, base, m):
     radius = length / 2
     spring = head - radius
     frame = m["iron"] if hole.get("operable") else m["wood"]
+    if hole.get("frame_finish") == "white":
+        frame = m["ivory"]
 
     def pt(t, z, offset=0):
         p = a + direction * t + normal * offset
@@ -228,7 +230,7 @@ def build_house(model, m):
             difference(cap, "Stair headroom opening", (0.13, 4.53, z + ceiling), (1.24, 3.46, 0.8))
         if fid == "main":
             for room in floor["rooms"]:
-                if room["name"] in ["Foyer", "Stairs / hall", "Kitchen / breakfast"]:
+                if room["name"] in ["Foyer", "Stairs / hall"]:
                     extrusion(
                         room["name"] + " limestone floor", room["poly"], 0.001, 0.009, m["concrete"]
                     )

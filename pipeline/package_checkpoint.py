@@ -1,6 +1,7 @@
 """Build a transferable authoring checkpoint from explicit, credential-free inputs."""
 
 import hashlib
+import datetime
 import json
 import subprocess
 import zipfile
@@ -14,24 +15,31 @@ def main():
     files = {ROOT / name for name in tracked if name}
     files.add(ROOT / "SourceAssets/Cleveland-Reconstruction.blend")
     files.add(ROOT / ".local/realism-assets.blend")
+    files.add(ROOT / ".local/broadleaf-source.blend")
     files.update((ROOT / ".local/model-assets").rglob("*"))
     files = sorted(p for p in files if p.is_file())
     for path in files:
         relative = path.relative_to(ROOT).as_posix()
         if relative.startswith(".local/") and not (
-            relative.startswith(".local/model-assets/") or relative == ".local/realism-assets.blend"
+            relative.startswith(".local/model-assets/")
+            or relative in [".local/realism-assets.blend", ".local/broadleaf-source.blend"]
         ):
             raise ValueError(f"Local account/runtime state cannot enter the package: {relative}")
         if ".env" in path.name or ".runtime" in path.parts or ".git" in path.parts:
             raise ValueError(f"Unexpected private state in package input: {relative}")
-    output = ROOT / ".local/release-payload"
+    stamp = datetime.datetime.now(datetime.UTC).strftime("%Y%m%dT%H%M%SZ")
+    output = ROOT / ".local/release-payload" / stamp
     output.mkdir(parents=True, exist_ok=True)
     archive = output / "cleveland-reconstruction-checkpoint.zip"
     manifest = {
         "kind": "Editable authoring checkpoint; not a packaged Unreal application",
+        "sourceCommit": subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT)
+        .decode()
+        .strip(),
         "requires": [
             "Blender 4.5 LTS to open the scene",
             "NVIDIA OptiX GPU to run the render script",
+            "Unreal 5.8 and supported MSVC/Windows SDK to compile the separate runtime",
         ],
         "files": [],
     }

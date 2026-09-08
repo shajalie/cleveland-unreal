@@ -452,11 +452,11 @@
           "holes": [
             {
               "a": [
-                -1.45529,
+                -0.97,
                 7.62
               ],
               "b": [
-                -0.60779,
+                -0.16,
                 7.62
               ],
               "window": true,
@@ -464,7 +464,12 @@
               "head": 2.25,
               "type": "Photo-inferred powder window",
               "id": "main_opening_04_00",
-              "operable": false
+              "operable": false,
+              "frame_finish": "white",
+              "evidence": [
+                23,
+                24
+              ]
             }
           ],
           "id": "main_wall_04"
@@ -503,6 +508,7 @@
             },
             {
               "id": "kitchen_court_window",
+              "frame_finish": "white",
               "a": [
                 -2.75,
                 8.2
@@ -545,7 +551,8 @@
               "window": true,
               "type": "Breakfast rear window",
               "id": "main_opening_06_00",
-              "operable": false
+              "operable": false,
+              "frame_finish": "white"
             }
           ],
           "id": "main_wall_06"
@@ -572,20 +579,29 @@
               ],
               "window": true,
               "id": "main_opening_07_00",
-              "operable": false
+              "operable": false,
+              "frame_finish": "white"
             },
             {
               "a": [
                 -5.5,
-                7.37294
+                6.86
               ],
               "b": [
                 -5.5,
-                5.23498
+                5.5
               ],
               "window": true,
               "id": "main_opening_07_01",
-              "operable": false
+              "operable": false,
+              "sill": 1.0,
+              "head": 2.3,
+              "evidence": [
+                18,
+                19,
+                22
+              ],
+              "frame_finish": "white"
             },
             {
               "a": [
@@ -616,16 +632,22 @@
           "holes": [
             {
               "a": [
-                -3.64398,
+                -2.46,
                 4.166
               ],
               "b": [
-                -2.03324,
+                -1.57,
                 4.166
               ],
               "window": false,
               "id": "main_opening_08_00",
-              "operable": false
+              "operable": false,
+              "evidence": [
+                15,
+                16,
+                18,
+                19
+              ]
             }
           ],
           "id": "main_wall_08"
@@ -1046,7 +1068,8 @@
               ],
               "window": true,
               "id": "upper_opening_00_00",
-              "operable": false
+              "operable": false,
+              "frame_finish": "white"
             },
             {
               "a": [
@@ -1059,7 +1082,8 @@
               ],
               "window": true,
               "id": "upper_opening_00_01",
-              "operable": false
+              "operable": false,
+              "frame_finish": "white"
             },
             {
               "a": [
@@ -1075,7 +1099,8 @@
               "head": 2.3,
               "type": "Photo-inferred primary bathroom window",
               "id": "upper_opening_00_02",
-              "operable": false
+              "operable": false,
+              "frame_finish": "white"
             }
           ],
           "id": "upper_wall_00"
@@ -1102,7 +1127,8 @@
               ],
               "window": true,
               "id": "upper_opening_01_00",
-              "operable": false
+              "operable": false,
+              "frame_finish": "white"
             },
             {
               "a": [
@@ -1115,7 +1141,8 @@
               ],
               "window": true,
               "id": "upper_opening_01_01",
-              "operable": false
+              "operable": false,
+              "frame_finish": "white"
             },
             {
               "a": [
@@ -1131,7 +1158,8 @@
               "head": 2.3,
               "type": "Photo-inferred hall bathroom window",
               "id": "upper_opening_01_02",
-              "operable": false
+              "operable": false,
+              "frame_finish": "white"
             }
           ],
           "id": "upper_wall_01"
@@ -1158,7 +1186,8 @@
               ],
               "window": true,
               "id": "upper_opening_02_00",
-              "operable": false
+              "operable": false,
+              "frame_finish": "white"
             }
           ],
           "id": "upper_wall_02"
@@ -1202,7 +1231,8 @@
               "arch": true,
               "type": "Photo-inferred arched landing window",
               "id": "upper_opening_04_00",
-              "operable": false
+              "operable": false,
+              "frame_finish": "white"
             }
           ],
           "id": "upper_wall_04"
@@ -1231,7 +1261,8 @@
               "sill": 0.65,
               "head": 2.58,
               "id": "upper_opening_05_00",
-              "operable": false
+              "operable": false,
+              "frame_finish": "white"
             }
           ],
           "id": "upper_wall_05"
@@ -1261,7 +1292,8 @@
               "head": 2.58,
               "type": "Photo-inferred sunroom glazing",
               "id": "upper_opening_06_00",
-              "operable": false
+              "operable": false,
+              "frame_finish": "white"
             }
           ],
           "id": "upper_wall_06"
@@ -1290,7 +1322,8 @@
               "sill": 0.65,
               "head": 2.58,
               "id": "upper_opening_07_00",
-              "operable": false
+              "operable": false,
+              "frame_finish": "white"
             },
             {
               "a": [
@@ -1305,7 +1338,8 @@
               "sill": 0.65,
               "head": 2.58,
               "id": "upper_opening_07_01",
-              "operable": false
+              "operable": false,
+              "frame_finish": "white"
             },
             {
               "a": [
@@ -1320,7 +1354,8 @@
               "sill": 0.65,
               "head": 2.58,
               "id": "upper_opening_07_02",
-              "operable": false
+              "operable": false,
+              "frame_finish": "white"
             }
           ],
           "id": "upper_wall_07"
@@ -1349,7 +1384,11 @@
               "floorGlass": true,
               "type": "Sunroom glass doors",
               "id": "upper_opening_08_00",
-              "operable": true
+              "operable": true,
+              "frame_finish": "white",
+              "sill": 0,
+              "head": 2.25,
+              "leaf_count": 2
             }
           ],
           "id": "upper_wall_08"
@@ -1376,7 +1415,8 @@
               ],
               "window": false,
               "id": "upper_opening_09_00",
-              "operable": false
+              "operable": false,
+              "frame_finish": "white"
             },
             {
               "a": [
@@ -1389,7 +1429,8 @@
               ],
               "window": false,
               "id": "upper_opening_09_01",
-              "operable": false
+              "operable": false,
+              "frame_finish": "white"
             }
           ],
           "id": "upper_wall_09"
@@ -1404,21 +1445,7 @@
             2.8
           ],
           "ext": false,
-          "holes": [
-            {
-              "a": [
-                -0.6831,
-                2.8
-              ],
-              "b": [
-                0.3059,
-                2.8
-              ],
-              "window": false,
-              "id": "upper_opening_10_00",
-              "operable": false
-            }
-          ],
+          "holes": [],
           "id": "upper_wall_10"
         },
         {
@@ -1443,7 +1470,8 @@
               ],
               "window": false,
               "id": "upper_opening_11_00",
-              "operable": false
+              "operable": false,
+              "frame_finish": "white"
             }
           ],
           "id": "upper_wall_11"
@@ -1483,7 +1511,8 @@
               ],
               "window": false,
               "id": "upper_opening_13_00",
-              "operable": false
+              "operable": false,
+              "frame_finish": "white"
             },
             {
               "a": [
@@ -1496,7 +1525,8 @@
               ],
               "window": false,
               "id": "upper_opening_13_01",
-              "operable": false
+              "operable": false,
+              "frame_finish": "white"
             }
           ],
           "id": "upper_wall_13"
@@ -1634,6 +1664,65 @@
           ],
           "ext": true,
           "holes": []
+        },
+        {
+          "id": "lower_bath_west",
+          "a": [
+            -4.4,
+            6.35
+          ],
+          "b": [
+            -4.4,
+            8.6
+          ],
+          "ext": false,
+          "holes": []
+        },
+        {
+          "id": "lower_bath_north",
+          "a": [
+            -4.4,
+            8.6
+          ],
+          "b": [
+            -1.46,
+            8.6
+          ],
+          "ext": false,
+          "holes": []
+        },
+        {
+          "id": "lower_bath_south",
+          "a": [
+            -4.4,
+            6.35
+          ],
+          "b": [
+            -1.46,
+            6.35
+          ],
+          "ext": false,
+          "holes": [
+            {
+              "id": "lower_bath_door",
+              "a": [
+                -3.85,
+                6.35
+              ],
+              "b": [
+                -2.99,
+                6.35
+              ],
+              "sill": 0,
+              "head": 2.04,
+              "window": false,
+              "operable": false,
+              "evidence": [
+                42,
+                55
+              ]
+            }
+          ]
         }
       ]
     }

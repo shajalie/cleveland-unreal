@@ -1,6 +1,454 @@
 {
   "checks": [
     {
+      "check": "opacity_has_real_mask",
+      "material": "fir_tree_01_twig",
+      "pass": true
+    },
+    {
+      "check": "opacity_has_real_mask",
+      "material": "tree_small_02_leaves.001",
+      "pass": true
+    },
+    {
+      "check": "tree_crown_extent",
+      "tree": "Estimated tree 0",
+      "diameterMeters": 4.267,
+      "pass": true
+    },
+    {
+      "check": "tree_crown_extent",
+      "tree": "Estimated tree 1",
+      "diameterMeters": 5.095,
+      "pass": true
+    },
+    {
+      "check": "tree_crown_extent",
+      "tree": "Estimated tree 10",
+      "diameterMeters": 5.164,
+      "pass": true
+    },
+    {
+      "check": "tree_crown_extent",
+      "tree": "Estimated tree 11",
+      "diameterMeters": 7.9,
+      "pass": true
+    },
+    {
+      "check": "tree_crown_extent",
+      "tree": "Estimated tree 12",
+      "diameterMeters": 7.583,
+      "pass": true
+    },
+    {
+      "check": "tree_crown_extent",
+      "tree": "Estimated tree 13",
+      "diameterMeters": 10.861,
+      "pass": true
+    },
+    {
+      "check": "tree_crown_extent",
+      "tree": "Estimated tree 2",
+      "diameterMeters": 5.432,
+      "pass": true
+    },
+    {
+      "check": "tree_crown_extent",
+      "tree": "Estimated tree 3",
+      "diameterMeters": 6.061,
+      "pass": true
+    },
+    {
+      "check": "tree_crown_extent",
+      "tree": "Estimated tree 4",
+      "diameterMeters": 8.29,
+      "pass": true
+    },
+    {
+      "check": "tree_crown_extent",
+      "tree": "Estimated tree 5",
+      "diameterMeters": 6.053,
+      "pass": true
+    },
+    {
+      "check": "tree_crown_extent",
+      "tree": "Estimated tree 6",
+      "diameterMeters": 6.405,
+      "pass": true
+    },
+    {
+      "check": "tree_crown_extent",
+      "tree": "Estimated tree 7",
+      "diameterMeters": 6.745,
+      "pass": true
+    },
+    {
+      "check": "tree_crown_extent",
+      "tree": "Estimated tree 8",
+      "diameterMeters": 8.727,
+      "pass": true
+    },
+    {
+      "check": "tree_crown_extent",
+      "tree": "Estimated tree 9",
+      "diameterMeters": 5.724,
+      "pass": true
+    },
+    {
+      "check": "fixture_scale",
+      "object": "Blue bedroom wardrobe door knob",
+      "largestDimensionMeters": 0.026,
+      "pass": true
+    },
+    {
+      "check": "fixture_scale",
+      "object": "Blue bedroom wardrobe door knob.001",
+      "largestDimensionMeters": 0.026,
+      "pass": true
+    },
+    {
+      "check": "fixture_scale",
+      "object": "Blue bedroom wardrobe door knob.002",
+      "largestDimensionMeters": 0.026,
+      "pass": true
+    },
+    {
+      "check": "fixture_scale",
+      "object": "Blue bedroom wardrobe door knob.003",
+      "largestDimensionMeters": 0.026,
+      "pass": true
+    },
+    {
+      "check": "fixture_scale",
+      "object": "Blue bedroom wardrobe door knob.004",
+      "largestDimensionMeters": 0.026,
+      "pass": true
+    },
+    {
+      "check": "fixture_scale",
+      "object": "Blue bedroom wardrobe door knob.005",
+      "largestDimensionMeters": 0.026,
+      "pass": true
+    },
+    {
+      "check": "fixture_scale",
+      "object": "Cupboard above microwave door knob",
+      "largestDimensionMeters": 0.026,
+      "pass": true
+    },
+    {
+      "check": "fixture_scale",
+      "object": "Cupboard above microwave door knob.001",
+      "largestDimensionMeters": 0.026,
+      "pass": true
+    },
+    {
+      "check": "fixture_scale",
+      "object": "Dining glazed china hutch door knob",
+      "largestDimensionMeters": 0.026,
+      "pass": true
+    },
+    {
+      "check": "fixture_scale",
+      "object": "Dining glazed china hutch door knob.001",
+      "largestDimensionMeters": 0.026,
+      "pass": true
+    },
+    {
+      "check": "fixture_scale",
+      "object": "East counter base door knob",
+      "largestDimensionMeters": 0.026,
+      "pass": true
+    },
+    {
+      "check": "fixture_scale",
+      "object": "East glass crockery cupboard door knob",
+      "largestDimensionMeters": 0.026,
+      "pass": true
+    },
+    {
+      "check": "fixture_scale",
+      "object": "East pantry cupboard door knob",
+      "largestDimensionMeters": 0.026,
+      "pass": true
+    },
+    {
+      "check": "fixture_scale",
+      "object": "East pantry cupboard door knob.001",
+      "largestDimensionMeters": 0.026,
+      "pass": true
+    },
+    {
+      "check": "fixture_scale",
+      "object": "East pantry cupboard door knob.002",
+      "largestDimensionMeters": 0.026,
+      "pass": true
+    },
+    {
+      "check": "fixture_scale",
+      "object": "East pantry cupboard door knob.003",
+      "largestDimensionMeters": 0.026,
+      "pass": true
+    },
+    {
+      "check": "fixture_scale",
+      "object": "East pantry cupboard door knob.004",
+      "largestDimensionMeters": 0.026,
+      "pass": true
+    },
+    {
+      "check": "fixture_scale",
+      "object": "East pantry cupboard door knob.005",
+      "largestDimensionMeters": 0.026,
+      "pass": true
+    },
+    {
+      "check": "fixture_scale",
+      "object": "Farmhouse sink cabinet door knob",
+      "largestDimensionMeters": 0.026,
+      "pass": true
+    },
+    {
+      "check": "fixture_scale",
+      "object": "Farmhouse sink cabinet door knob.001",
+      "largestDimensionMeters": 0.026,
+      "pass": true
+    },
+    {
+      "check": "fixture_scale",
+      "object": "Kitchen west base door knob",
+      "largestDimensionMeters": 0.026,
+      "pass": true
+    },
+    {
+      "check": "fixture_scale",
+      "object": "Kitchen west base door knob.001",
+      "largestDimensionMeters": 0.026,
+      "pass": true
+    },
+    {
+      "check": "fixture_scale",
+      "object": "Kitchen west base door knob.002",
+      "largestDimensionMeters": 0.026,
+      "pass": true
+    },
+    {
+      "check": "fixture_scale",
+      "object": "Kitchen west base door knob.003",
+      "largestDimensionMeters": 0.026,
+      "pass": true
+    },
+    {
+      "check": "fixture_scale",
+      "object": "Range left base door knob",
+      "largestDimensionMeters": 0.026,
+      "pass": true
+    },
+    {
+      "check": "fixture_scale",
+      "object": "Range right drawers door knob",
+      "largestDimensionMeters": 0.026,
+      "pass": true
+    },
+    {
+      "check": "fixture_scale",
+      "object": "Range wall upper door knob",
+      "largestDimensionMeters": 0.026,
+      "pass": true
+    },
+    {
+      "check": "fixture_scale",
+      "object": "Range wall upper door knob.001",
+      "largestDimensionMeters": 0.026,
+      "pass": true
+    },
+    {
+      "check": "fixture_scale",
+      "object": "Range wall upper door knob.002",
+      "largestDimensionMeters": 0.026,
+      "pass": true
+    },
+    {
+      "check": "fixture_scale",
+      "object": "Range wall upper door knob.003",
+      "largestDimensionMeters": 0.026,
+      "pass": true
+    },
+    {
+      "check": "fixture_scale",
+      "object": "Vanity lamp bulb",
+      "largestDimensionMeters": 0.066,
+      "pass": true
+    },
+    {
+      "check": "fixture_scale",
+      "object": "Vanity lamp bulb.001",
+      "largestDimensionMeters": 0.066,
+      "pass": true
+    },
+    {
+      "check": "fixture_scale",
+      "object": "Vanity lamp bulb.002",
+      "largestDimensionMeters": 0.066,
+      "pass": true
+    },
+    {
+      "check": "fixture_scale",
+      "object": "Vanity lamp bulb.003",
+      "largestDimensionMeters": 0.066,
+      "pass": true
+    },
+    {
+      "check": "fixture_scale",
+      "object": "Vanity lamp bulb.004",
+      "largestDimensionMeters": 0.066,
+      "pass": true
+    },
+    {
+      "check": "fixture_scale",
+      "object": "Vanity lamp bulb.005",
+      "largestDimensionMeters": 0.066,
+      "pass": true
+    },
+    {
+      "check": "fixture_scale",
+      "object": "Vanity lamp bulb.006",
+      "largestDimensionMeters": 0.066,
+      "pass": true
+    },
+    {
+      "check": "fixture_scale",
+      "object": "Vanity lamp bulb.007",
+      "largestDimensionMeters": 0.066,
+      "pass": true
+    },
+    {
+      "check": "fixture_scale",
+      "object": "Vanity lamp bulb.008",
+      "largestDimensionMeters": 0.066,
+      "pass": true
+    },
+    {
+      "check": "fixture_scale",
+      "object": "Vanity lamp bulb.009",
+      "largestDimensionMeters": 0.066,
+      "pass": true
+    },
+    {
+      "check": "fixture_scale",
+      "object": "Vanity lamp bulb.010",
+      "largestDimensionMeters": 0.066,
+      "pass": true
+    },
+    {
+      "check": "fixture_scale",
+      "object": "Vanity lamp bulb.011",
+      "largestDimensionMeters": 0.066,
+      "pass": true
+    },
+    {
+      "check": "fixture_scale",
+      "object": "Vanity paneled door knob",
+      "largestDimensionMeters": 0.026,
+      "pass": true
+    },
+    {
+      "check": "fixture_scale",
+      "object": "Vanity paneled door knob.001",
+      "largestDimensionMeters": 0.026,
+      "pass": true
+    },
+    {
+      "check": "fixture_scale",
+      "object": "Vanity paneled door knob.002",
+      "largestDimensionMeters": 0.026,
+      "pass": true
+    },
+    {
+      "check": "fixture_scale",
+      "object": "Vanity paneled door knob.003",
+      "largestDimensionMeters": 0.026,
+      "pass": true
+    },
+    {
+      "check": "fixture_scale",
+      "object": "Vanity paneled door knob.004",
+      "largestDimensionMeters": 0.026,
+      "pass": true
+    },
+    {
+      "check": "fixture_scale",
+      "object": "Vanity paneled door knob.005",
+      "largestDimensionMeters": 0.026,
+      "pass": true
+    },
+    {
+      "check": "fixture_scale",
+      "object": "Vanity paneled door knob.006",
+      "largestDimensionMeters": 0.026,
+      "pass": true
+    },
+    {
+      "check": "fixture_scale",
+      "object": "Vanity paneled door knob.007",
+      "largestDimensionMeters": 0.026,
+      "pass": true
+    },
+    {
+      "check": "fixture_scale",
+      "object": "Vanity top drawer knob",
+      "largestDimensionMeters": 0.026,
+      "pass": true
+    },
+    {
+      "check": "fixture_scale",
+      "object": "Vanity top drawer knob.001",
+      "largestDimensionMeters": 0.026,
+      "pass": true
+    },
+    {
+      "check": "fixture_scale",
+      "object": "Vanity top drawer knob.002",
+      "largestDimensionMeters": 0.026,
+      "pass": true
+    },
+    {
+      "check": "fixture_scale",
+      "object": "Vanity top drawer knob.003",
+      "largestDimensionMeters": 0.026,
+      "pass": true
+    },
+    {
+      "check": "fixture_scale",
+      "object": "West glass crockery cupboard door knob",
+      "largestDimensionMeters": 0.026,
+      "pass": true
+    },
+    {
+      "check": "fixture_scale",
+      "object": "West glass crockery cupboard door knob.001",
+      "largestDimensionMeters": 0.026,
+      "pass": true
+    },
+    {
+      "check": "duvet_above_mattress",
+      "bed": "Primary upholstered bed",
+      "minimumClearanceMeters": 0.0575,
+      "pass": true
+    },
+    {
+      "check": "duvet_above_mattress",
+      "bed": "Blue bedroom bed",
+      "minimumClearanceMeters": 0.0585,
+      "pass": true
+    },
+    {
+      "check": "duvet_above_mattress",
+      "bed": "Yellow bedroom storage bed",
+      "minimumClearanceMeters": 0.0585,
+      "pass": true
+    },
+    {
       "check": "stair_headroom_2m",
       "step": 1,
       "pass": true,
@@ -206,9 +654,31 @@
       "check": "door_leaf_moves_about_hinge",
       "door": "study_rear_door_hinge_1",
       "pass": true
+    },
+    {
+      "check": "door_leaf_registered",
+      "door": "upper_opening_08_00_hinge_0",
+      "distanceFromPortalMeters": 0.429,
+      "pass": true
+    },
+    {
+      "check": "door_leaf_moves_about_hinge",
+      "door": "upper_opening_08_00_hinge_0",
+      "pass": true
+    },
+    {
+      "check": "door_leaf_registered",
+      "door": "upper_opening_08_00_hinge_1",
+      "distanceFromPortalMeters": 0.429,
+      "pass": true
+    },
+    {
+      "check": "door_leaf_moves_about_hinge",
+      "door": "upper_opening_08_00_hinge_1",
+      "pass": true
     }
   ],
-  "passed": 36,
+  "passed": 115,
   "failed": 0,
   "scope": "Geometry-only checks; not a runtime navigation, collision or lighting validation."
 }

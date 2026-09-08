@@ -1,0 +1,14 @@
+{
+  "status": "Furnished authoring checkpoint; not a finished photoreal Unreal application",
+  "engineInstalled": "Unreal Engine 5.8.2",
+  "nativeBuild": "Development Win64 editor module succeeded",
+  "blenderGeometryChecks": 115,
+  "usdChecks": 16,
+  "gpuReview": "Blender Cycles OptiX on NVIDIA RTX 2060 Max-Q",
+  "unrealRuntimeVerified": false,
+  "phoneStreamReplaced": false,
+  "blocker": "Unreal exits during Windows PlatformPreInit.ResolutionTooLow; Windows UI capture also fails",
+  "sourceSceneSha256": "a5928975be5f3c6a026e1b4032b3d4c17169091c824f9d2d3d2c9939b5e21c7a",
+  "preservedProject": "../cleveland-sun-study",
+  "remainingReferenceWork": "design/room-reference-coverage.json"
+}

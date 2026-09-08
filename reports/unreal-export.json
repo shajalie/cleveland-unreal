@@ -1,0 +1,33 @@
+{
+  "file": "SourceAssets/UnrealTransfer/Cleveland.usdc",
+  "bytes": 694735246,
+  "metersPerUnit": 1.0,
+  "upAxis": "Z",
+  "meshPrims": 11504,
+  "instances": 12,
+  "sharedTreePrototypes": 2,
+  "doorPivots": [
+    "/Cleveland/living_porch_doors_hinge_0",
+    "/Cleveland/upper_opening_08_00_hinge_0",
+    "/Cleveland/basement_garden_door_hinge_0",
+    "/Cleveland/study_rear_door_hinge_1",
+    "/Cleveland/dining_porch_doors_hinge_1",
+    "/Cleveland/study_rear_door_hinge_0",
+    "/Cleveland/kitchen_rear_door_hinge_0",
+    "/Cleveland/front_door_hinge",
+    "/Cleveland/upper_opening_08_00_hinge_1",
+    "/Cleveland/dining_porch_doors_hinge_0",
+    "/Cleveland/living_porch_doors_hinge_1"
+  ],
+  "materialCount": 117,
+  "textures": 69,
+  "nativeMaterialRequired": [
+    "Clear 4mm glass",
+    "Pool water IOR 1.333"
+  ],
+  "materialLimitations": [
+    "USD Preview Surface does not preserve Principled transmission; reconstruct glass and water in Unreal.",
+    "Procedural water normals and foliage animation require native runtime materials."
+  ],
+  "status": "Export validated; Unreal import and visual parity still require verification"
+}

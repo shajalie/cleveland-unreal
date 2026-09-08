@@ -1,0 +1,805 @@
+{
+  "source": "https://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Urban_Tree_Canopy/FeatureServer/23",
+  "queriedUtc": "2026-09-08T03:29:31.097466+00:00",
+  "query": {
+    "f": "json",
+    "geometry": "-77.06033745,38.92485352",
+    "geometryType": "esriGeometryPoint",
+    "inSR": 4326,
+    "distance": 75,
+    "units": "esriSRUnit_Meter",
+    "spatialRel": "esriSpatialRelIntersects",
+    "outSR": 4326,
+    "outFields": "FACILITYID,SCI_NM,CMMN_NM,GENUS_NAME,DBH,MAX_CROWN_HEIGHT,LAST_EDITED_DATE",
+    "returnGeometry": "true"
+  },
+  "response": {
+    "objectIdFieldName": "OBJECTID",
+    "globalIdFieldName": "GLOBALID",
+    "geometryType": "esriGeometryPoint",
+    "spatialReference": {
+      "wkid": 4326,
+      "latestWkid": 4326
+    },
+    "fields": [
+      {
+        "name": "FACILITYID",
+        "alias": "Facility Identifier",
+        "type": "esriFieldTypeString",
+        "length": 30
+      },
+      {
+        "name": "SCI_NM",
+        "alias": "Scientific Name",
+        "type": "esriFieldTypeString",
+        "length": 60
+      },
+      {
+        "name": "CMMN_NM",
+        "alias": "Common Name",
+        "type": "esriFieldTypeString",
+        "length": 60
+      },
+      {
+        "name": "GENUS_NAME",
+        "alias": "Genus Name",
+        "type": "esriFieldTypeString",
+        "length": 50
+      },
+      {
+        "name": "DBH",
+        "alias": "DBH",
+        "type": "esriFieldTypeDouble"
+      },
+      {
+        "name": "MAX_CROWN_HEIGHT",
+        "alias": "Crown Height Max",
+        "type": "esriFieldTypeDouble"
+      },
+      {
+        "name": "LAST_EDITED_DATE",
+        "alias": "Last Editied Date",
+        "type": "esriFieldTypeDate",
+        "length": 8
+      }
+    ],
+    "features": [
+      {
+        "attributes": {
+          "FACILITYID": "12392-300-3001-0444-000",
+          "SCI_NM": "Acer buergeranum",
+          "CMMN_NM": "Trident maple",
+          "GENUS_NAME": "Acer",
+          "DBH": 3.2,
+          "MAX_CROWN_HEIGHT": 61.92737813,
+          "LAST_EDITED_DATE": 1749594381000
+        },
+        "geometry": {
+          "x": -77.06055832963132,
+          "y": 38.92531182348412
+        }
+      },
+      {
+        "attributes": {
+          "FACILITYID": "12392-300-3001-0513-000",
+          "SCI_NM": "Quercus rubra",
+          "CMMN_NM": "Red oak",
+          "GENUS_NAME": "Quercus",
+          "DBH": 14.2,
+          "MAX_CROWN_HEIGHT": 42.37320669,
+          "LAST_EDITED_DATE": 1764973117000
+        },
+        "geometry": {
+          "x": -77.0606968090627,
+          "y": 38.92541985148714
+        }
+      },
+      {
+        "attributes": {
+          "FACILITYID": "12392-300-3001-0063-000",
+          "SCI_NM": "Cornus florida var . rubra",
+          "CMMN_NM": "Pink-Flowering Dogwood",
+          "GENUS_NAME": "Cornus",
+          "DBH": 5.7,
+          "MAX_CROWN_HEIGHT": 44.39169284,
+          "LAST_EDITED_DATE": 1749595084000
+        },
+        "geometry": {
+          "x": -77.05957744567057,
+          "y": 38.9245466203694
+        }
+      },
+      {
+        "attributes": {
+          "FACILITYID": "12392-300-3003-0408-000",
+          "SCI_NM": "Prunus yedoensis",
+          "CMMN_NM": "Prunus x yedoensis",
+          "GENUS_NAME": "Prunus",
+          "DBH": 6.7,
+          "MAX_CROWN_HEIGHT": 16.89931043,
+          "LAST_EDITED_DATE": 1675383222000
+        },
+        "geometry": {
+          "x": -77.06036224266325,
+          "y": 38.9252668833298
+        }
+      },
+      {
+        "attributes": {
+          "FACILITYID": "19412-300-3001-0327-000",
+          "SCI_NM": null,
+          "CMMN_NM": null,
+          "GENUS_NAME": null,
+          "DBH": null,
+          "MAX_CROWN_HEIGHT": null,
+          "LAST_EDITED_DATE": 1384534590000
+        },
+        "geometry": {
+          "x": -77.06097274470444,
+          "y": 38.92443780082977
+        }
+      },
+      {
+        "attributes": {
+          "FACILITYID": "19412-300-3005-0325-000",
+          "SCI_NM": "Ulmus parvifolia",
+          "CMMN_NM": "Chinese elm",
+          "GENUS_NAME": "Ulmus",
+          "DBH": 6.6,
+          "MAX_CROWN_HEIGHT": null,
+          "LAST_EDITED_DATE": 1748885016000
+        },
+        "geometry": {
+          "x": -77.06091515324704,
+          "y": 38.92451890576214
+        }
+      },
+      {
+        "attributes": {
+          "FACILITYID": "19412-300-3001-0293-000",
+          "SCI_NM": null,
+          "CMMN_NM": null,
+          "GENUS_NAME": null,
+          "DBH": null,
+          "MAX_CROWN_HEIGHT": null,
+          "LAST_EDITED_DATE": 1384534521000
+        },
+        "geometry": {
+          "x": -77.06086891696677,
+          "y": 38.924392813346074
+        }
+      },
+      {
+        "attributes": {
+          "FACILITYID": "12392-300-3003-0475-000",
+          "SCI_NM": "Prunus serrulata 'Kwanzan'",
+          "CMMN_NM": "Kwanzan cherry",
+          "GENUS_NAME": "Prunus",
+          "DBH": 10.3,
+          "MAX_CROWN_HEIGHT": 15.68106181,
+          "LAST_EDITED_DATE": 1675383048000
+        },
+        "geometry": {
+          "x": -77.06050072171031,
+          "y": 38.92537491156609
+        }
+      },
+      {
+        "attributes": {
+          "FACILITYID": "12392-300-3003-0328-000",
+          "SCI_NM": "Prunus x yedoensis",
+          "CMMN_NM": "Yoshino cherry",
+          "GENUS_NAME": "Lagerstroemia",
+          "DBH": 2.0,
+          "MAX_CROWN_HEIGHT": 20.95471794,
+          "LAST_EDITED_DATE": 1695058478000
+        },
+        "geometry": {
+          "x": -77.06016606473145,
+          "y": 38.925113843043775
+        }
+      },
+      {
+        "attributes": {
+          "FACILITYID": null,
+          "SCI_NM": "Other (See Notes)",
+          "CMMN_NM": "Other (See Notes)",
+          "GENUS_NAME": "Other",
+          "DBH": null,
+          "MAX_CROWN_HEIGHT": 53.48109513,
+          "LAST_EDITED_DATE": 1518142854000
+        },
+        "geometry": {
+          "x": -77.0599004445524,
+          "y": 38.924663563434976
+        }
+      },
+      {
+        "attributes": {
+          "FACILITYID": null,
+          "SCI_NM": "Prunus serrulata 'Kwanzan'",
+          "CMMN_NM": "Kwanzan cherry",
+          "GENUS_NAME": "Prunus",
+          "DBH": 8.7,
+          "MAX_CROWN_HEIGHT": 66.41493255,
+          "LAST_EDITED_DATE": 1675814343000
+        },
+        "geometry": {
+          "x": -77.05988910908482,
+          "y": 38.924897785601324
+        }
+      },
+      {
+        "attributes": {
+          "FACILITYID": "12392-300-3005-0194-000",
+          "SCI_NM": "Prunus serrulata 'Kwanzan'",
+          "CMMN_NM": "Kwanzan cherry",
+          "GENUS_NAME": "Prunus",
+          "DBH": 7.7,
+          "MAX_CROWN_HEIGHT": 62.09158801,
+          "LAST_EDITED_DATE": 1675814299000
+        },
+        "geometry": {
+          "x": -77.059854489747,
+          "y": 38.92487077837426
+        }
+      },
+      {
+        "attributes": {
+          "FACILITYID": null,
+          "SCI_NM": "Prunus serrulata 'Kwanzan'",
+          "CMMN_NM": "Kwanzan cherry",
+          "GENUS_NAME": "Prunus",
+          "DBH": 5.1,
+          "MAX_CROWN_HEIGHT": 43.07590674,
+          "LAST_EDITED_DATE": 1675814257000
+        },
+        "geometry": {
+          "x": -77.05980833067069,
+          "y": 38.92483476872199
+        }
+      },
+      {
+        "attributes": {
+          "FACILITYID": null,
+          "SCI_NM": "Prunus serrulata 'Kwanzan'",
+          "CMMN_NM": "Kwanzan cherry",
+          "GENUS_NAME": "Prunus",
+          "DBH": 7.1,
+          "MAX_CROWN_HEIGHT": 49.07307819,
+          "LAST_EDITED_DATE": 1675814151000
+        },
+        "geometry": {
+          "x": -77.05970448046199,
+          "y": 38.92476275525446
+        }
+      },
+      {
+        "attributes": {
+          "FACILITYID": "12392-300-3001-0113-000",
+          "SCI_NM": "Syringa reticulata",
+          "CMMN_NM": "Lilac",
+          "GENUS_NAME": "Syringa",
+          "DBH": 5.2,
+          "MAX_CROWN_HEIGHT": 25.91625786,
+          "LAST_EDITED_DATE": 1749595023000
+        },
+        "geometry": {
+          "x": -77.05969284269099,
+          "y": 38.92463664469821
+        }
+      },
+      {
+        "attributes": {
+          "FACILITYID": null,
+          "SCI_NM": "Prunus serrulata 'Kwanzan'",
+          "CMMN_NM": "Kwanzan cherry",
+          "GENUS_NAME": "Prunus",
+          "DBH": 9.5,
+          "MAX_CROWN_HEIGHT": 38.74014483,
+          "LAST_EDITED_DATE": 1675814097000
+        },
+        "geometry": {
+          "x": -77.05966985372147,
+          "y": 38.92472673965438
+        }
+      },
+      {
+        "attributes": {
+          "FACILITYID": "12392-300-3005-0503-000",
+          "SCI_NM": "Quercus rubra",
+          "CMMN_NM": "Red oak",
+          "GENUS_NAME": "Quercus",
+          "DBH": 17.8,
+          "MAX_CROWN_HEIGHT": 49.28633162,
+          "LAST_EDITED_DATE": 1749676483000
+        },
+        "geometry": {
+          "x": -77.0605123686752,
+          "y": 38.92551003034075
+        }
+      },
+      {
+        "attributes": {
+          "FACILITYID": "99999-999-9999-7059-4",
+          "SCI_NM": "Acer rubrum",
+          "CMMN_NM": "Red maple",
+          "GENUS_NAME": "Acer",
+          "DBH": 15.1,
+          "MAX_CROWN_HEIGHT": 39.63877133,
+          "LAST_EDITED_DATE": 1765232178000
+        },
+        "geometry": {
+          "x": -77.0609734841751,
+          "y": 38.92530259929129
+        }
+      },
+      {
+        "attributes": {
+          "FACILITYID": "12392-300-3001-0484-000",
+          "SCI_NM": "Quercus rubra",
+          "CMMN_NM": "Red oak",
+          "GENUS_NAME": "Quercus",
+          "DBH": 25.3,
+          "MAX_CROWN_HEIGHT": 72.12227347,
+          "LAST_EDITED_DATE": 1749594346000
+        },
+        "geometry": {
+          "x": -77.06062756929457,
+          "y": 38.92536583750642
+        }
+      },
+      {
+        "attributes": {
+          "FACILITYID": null,
+          "SCI_NM": "Prunus serrulata 'Kwanzan'",
+          "CMMN_NM": "Kwanzan cherry",
+          "GENUS_NAME": "Prunus",
+          "DBH": 2.0,
+          "MAX_CROWN_HEIGHT": null,
+          "LAST_EDITED_DATE": 1695058627000
+        },
+        "geometry": {
+          "x": -77.06054690443301,
+          "y": 38.925437945890444
+        }
+      },
+      {
+        "attributes": {
+          "FACILITYID": "12392-300-3005-0482-000",
+          "SCI_NM": "Ulmus americana",
+          "CMMN_NM": "American elm",
+          "GENUS_NAME": "Ulmus",
+          "DBH": 9.5,
+          "MAX_CROWN_HEIGHT": 40.25753231,
+          "LAST_EDITED_DATE": 1749676418000
+        },
+        "geometry": {
+          "x": -77.06046620885287,
+          "y": 38.92547402095263
+        }
+      },
+      {
+        "attributes": {
+          "FACILITYID": "12392-300-3005-0457-000",
+          "SCI_NM": "Prunus yedoensis",
+          "CMMN_NM": "Prunus x yedoensis",
+          "GENUS_NAME": "Prunus",
+          "DBH": 7.5,
+          "MAX_CROWN_HEIGHT": 15.60606189,
+          "LAST_EDITED_DATE": 1725389038000
+        },
+        "geometry": {
+          "x": -77.06045455434396,
+          "y": 38.92532989385591
+        }
+      },
+      {
+        "attributes": {
+          "FACILITYID": "12392-300-3005-0438-000",
+          "SCI_NM": "Prunus serrulata 'Kwanzan'",
+          "CMMN_NM": "Kwanzan cherry",
+          "GENUS_NAME": "Prunus",
+          "DBH": 7.5,
+          "MAX_CROWN_HEIGHT": 16.25867169,
+          "LAST_EDITED_DATE": 1675383177000
+        },
+        "geometry": {
+          "x": -77.06040839466746,
+          "y": 38.92529388444375
+        }
+      },
+      {
+        "attributes": {
+          "FACILITYID": "12392-290-3005-1068-000",
+          "SCI_NM": "Ulmus parvifolia",
+          "CMMN_NM": "Chinese elm",
+          "GENUS_NAME": "Ulmus",
+          "DBH": 13.2,
+          "MAX_CROWN_HEIGHT": 35.9320192,
+          "LAST_EDITED_DATE": 1749676370000
+        },
+        "geometry": {
+          "x": -77.06036234942312,
+          "y": 38.92539299976184
+        }
+      },
+      {
+        "attributes": {
+          "FACILITYID": "12392-300-3001-0373-000",
+          "SCI_NM": "Quercus palustris",
+          "CMMN_NM": "Pin oak",
+          "GENUS_NAME": "Quercus",
+          "DBH": 17.6,
+          "MAX_CROWN_HEIGHT": 37.26721711,
+          "LAST_EDITED_DATE": 1749594614000
+        },
+        "geometry": {
+          "x": -77.06035060364673,
+          "y": 38.92514077285095
+        }
+      },
+      {
+        "attributes": {
+          "FACILITYID": "12392-300-3003-0395-000",
+          "SCI_NM": "Prunus yedoensis",
+          "CMMN_NM": "Prunus x yedoensis",
+          "GENUS_NAME": "Prunus",
+          "DBH": 7.5,
+          "MAX_CROWN_HEIGHT": 33.68323802,
+          "LAST_EDITED_DATE": 1675383263000
+        },
+        "geometry": {
+          "x": -77.06030454318413,
+          "y": 38.9252218715156
+        }
+      },
+      {
+        "attributes": {
+          "FACILITYID": "12392-300-3005-0409-000",
+          "SCI_NM": "Magnolia grandiflora 'Brackens Brown Beauty'",
+          "CMMN_NM": "Bracken's Brown Beauty Magnolia",
+          "GENUS_NAME": "Magnolia",
+          "DBH": 2.0,
+          "MAX_CROWN_HEIGHT": 33.27808022,
+          "LAST_EDITED_DATE": 1749676314000
+        },
+        "geometry": {
+          "x": -77.0602815776453,
+          "y": 38.92533899153203
+        }
+      },
+      {
+        "attributes": {
+          "FACILITYID": "12392-300-3003-0374-000",
+          "SCI_NM": "Prunus yedoensis",
+          "CMMN_NM": "Prunus x yedoensis",
+          "GENUS_NAME": "Prunus",
+          "DBH": 6.7,
+          "MAX_CROWN_HEIGHT": 32.15278125,
+          "LAST_EDITED_DATE": 1675383312000
+        },
+        "geometry": {
+          "x": -77.06024684377786,
+          "y": 38.92517685967254
+        }
+      },
+      {
+        "attributes": {
+          "FACILITYID": "12392-300-3003-0340-000",
+          "SCI_NM": "Prunus yedoensis",
+          "CMMN_NM": "Prunus x yedoensis",
+          "GENUS_NAME": "Prunus",
+          "DBH": 8.7,
+          "MAX_CROWN_HEIGHT": 28.44032362,
+          "LAST_EDITED_DATE": 1675383365000
+        },
+        "geometry": {
+          "x": -77.06021223177578,
+          "y": 38.92515886086974
+        }
+      },
+      {
+        "attributes": {
+          "FACILITYID": "12392-300-3001-0310-000",
+          "SCI_NM": "Magnolia virginiana 'Moonglow'",
+          "CMMN_NM": "Moonglow Sweet Bay Magnolia",
+          "GENUS_NAME": "Magnolia",
+          "DBH": 2.0,
+          "MAX_CROWN_HEIGHT": 69.10878832,
+          "LAST_EDITED_DATE": 1760719297000
+        },
+        "geometry": {
+          "x": -77.06018905319885,
+          "y": 38.92502374799651
+        }
+      },
+      {
+        "attributes": {
+          "FACILITYID": "12392-300-3005-0368-000",
+          "SCI_NM": "Quercus bicolor",
+          "CMMN_NM": "Swamp white oak",
+          "GENUS_NAME": "Quercus",
+          "DBH": 19.8,
+          "MAX_CROWN_HEIGHT": 48.80901884,
+          "LAST_EDITED_DATE": 1749676298000
+        },
+        "geometry": {
+          "x": -77.06017771862199,
+          "y": 38.92525797017511
+        }
+      },
+      {
+        "attributes": {
+          "FACILITYID": "12392-300-3003-0305-000",
+          "SCI_NM": "Prunus yedoensis",
+          "CMMN_NM": "Prunus x yedoensis",
+          "GENUS_NAME": "Prunus",
+          "DBH": 9.9,
+          "MAX_CROWN_HEIGHT": 56.36405649,
+          "LAST_EDITED_DATE": 1675383426000
+        },
+        "geometry": {
+          "x": -77.0601083655,
+          "y": 38.92506883113146
+        }
+      },
+      {
+        "attributes": {
+          "FACILITYID": "12392-300-3001-0274-000",
+          "SCI_NM": "Magnolia virginiana 'Moonglow'",
+          "CMMN_NM": "Moonglow Sweet Bay Magnolia",
+          "GENUS_NAME": "Magnolia",
+          "DBH": 2.0,
+          "MAX_CROWN_HEIGHT": 67.03011157,
+          "LAST_EDITED_DATE": 1760719439000
+        },
+        "geometry": {
+          "x": -77.06009673455692,
+          "y": 38.92495172893988
+        }
+      },
+      {
+        "attributes": {
+          "FACILITYID": "12392-300-3005-0324-000",
+          "SCI_NM": "Tilia americana",
+          "CMMN_NM": "American linden",
+          "GENUS_NAME": "Tilia",
+          "DBH": 4.5,
+          "MAX_CROWN_HEIGHT": 8.99523604,
+          "LAST_EDITED_DATE": 1749676267000
+        },
+        "geometry": {
+          "x": -77.06007385224541,
+          "y": 38.92516794040781
+        }
+      },
+      {
+        "attributes": {
+          "FACILITYID": "12392-300-3001-0103-000",
+          "SCI_NM": "Lagerstroemia indica",
+          "CMMN_NM": "Crape myrtle",
+          "GENUS_NAME": "Lagerstroemia",
+          "DBH": 2.0,
+          "MAX_CROWN_HEIGHT": 62.51688124,
+          "LAST_EDITED_DATE": 1675813987000
+        },
+        "geometry": {
+          "x": -77.05956600380993,
+          "y": 38.92465472606234
+        }
+      },
+      {
+        "attributes": {
+          "FACILITYID": "12392-300-3001-0129-000",
+          "SCI_NM": "Prunus serrulata 'Kwanzan'",
+          "CMMN_NM": "Kwanzan cherry",
+          "GENUS_NAME": "Prunus",
+          "DBH": 6.8,
+          "MAX_CROWN_HEIGHT": 56.79914708,
+          "LAST_EDITED_DATE": 1675814044000
+        },
+        "geometry": {
+          "x": -77.05962369483163,
+          "y": 38.92469072992823
+        }
+      },
+      {
+        "attributes": {
+          "FACILITYID": "12392-300-3001-0145-000",
+          "SCI_NM": "Quercus rubra",
+          "CMMN_NM": "Red oak",
+          "GENUS_NAME": "Quercus",
+          "DBH": 28.5,
+          "MAX_CROWN_HEIGHT": 65.84162953,
+          "LAST_EDITED_DATE": 1762546811000
+        },
+        "geometry": {
+          "x": -77.05980824000277,
+          "y": 38.924726668911596
+        }
+      },
+      {
+        "attributes": {
+          "FACILITYID": "12392-290-3005-0724-000",
+          "SCI_NM": "Ulmus americana",
+          "CMMN_NM": "American elm",
+          "GENUS_NAME": "Ulmus",
+          "DBH": 43.5,
+          "MAX_CROWN_HEIGHT": 66.50728687,
+          "LAST_EDITED_DATE": 1748450609000
+        },
+        "geometry": {
+          "x": -77.05950840305962,
+          "y": 38.92472682198053
+        }
+      },
+      {
+        "attributes": {
+          "FACILITYID": "12392-300-3001-0194-000",
+          "SCI_NM": "Quercus rubra",
+          "CMMN_NM": "Red oak",
+          "GENUS_NAME": "Quercus",
+          "DBH": 20.9,
+          "MAX_CROWN_HEIGHT": 60.21510704,
+          "LAST_EDITED_DATE": 1762546800000
+        },
+        "geometry": {
+          "x": -77.05990055806195,
+          "y": 38.92479868819917
+        }
+      },
+      {
+        "attributes": {
+          "FACILITYID": "12392-300-3003-0147-000",
+          "SCI_NM": "Prunus serrulata 'Kwanzan'",
+          "CMMN_NM": "Kwanzan cherry",
+          "GENUS_NAME": "Prunus",
+          "DBH": 10.5,
+          "MAX_CROWN_HEIGHT": 46.1070884,
+          "LAST_EDITED_DATE": 1675814208000
+        },
+        "geometry": {
+          "x": -77.059762171641,
+          "y": 38.92479875905128
+        }
+      },
+      {
+        "attributes": {
+          "FACILITYID": "12392-300-3005-0155-000",
+          "SCI_NM": "Ulmus 'Accolade'",
+          "CMMN_NM": "Elm (Accolade)",
+          "GENUS_NAME": "Ulmus",
+          "DBH": 2.9,
+          "MAX_CROWN_HEIGHT": 50.52422778,
+          "LAST_EDITED_DATE": 1749676044000
+        },
+        "geometry": {
+          "x": -77.05965841950876,
+          "y": 38.92484385367019
+        }
+      },
+      {
+        "attributes": {
+          "FACILITYID": "12392-300-3001-0207-000",
+          "SCI_NM": "Quercus rubra",
+          "CMMN_NM": "Red oak",
+          "GENUS_NAME": "Quercus",
+          "DBH": 18.9,
+          "MAX_CROWN_HEIGHT": 55.44443834,
+          "LAST_EDITED_DATE": 1762546787000
+        },
+        "geometry": {
+          "x": -77.05998133651673,
+          "y": 38.924861705015154
+        }
+      },
+      {
+        "attributes": {
+          "FACILITYID": "12392-300-3003-0220-000",
+          "SCI_NM": "Prunus serrulata 'Kwanzan'",
+          "CMMN_NM": "Kwanzan cherry",
+          "GENUS_NAME": "Prunus",
+          "DBH": 5.7,
+          "MAX_CROWN_HEIGHT": 50.75074028,
+          "LAST_EDITED_DATE": 1675814389000
+        },
+        "geometry": {
+          "x": -77.05993527581444,
+          "y": 38.924942803538514
+        }
+      },
+      {
+        "attributes": {
+          "FACILITYID": "12392-300-3005-0214-000",
+          "SCI_NM": "Quercus rubra",
+          "CMMN_NM": "Red oak",
+          "GENUS_NAME": "Quercus",
+          "DBH": 36.0,
+          "MAX_CROWN_HEIGHT": 78.285505,
+          "LAST_EDITED_DATE": 1762546757000
+        },
+        "geometry": {
+          "x": -77.05979689666808,
+          "y": 38.924951882748985
+        }
+      },
+      {
+        "attributes": {
+          "FACILITYID": "12392-290-3005-0897-000",
+          "SCI_NM": "Quercus coccinea",
+          "CMMN_NM": "Scarlet oak",
+          "GENUS_NAME": "Quercus",
+          "DBH": 16.5,
+          "MAX_CROWN_HEIGHT": 51.14912885,
+          "LAST_EDITED_DATE": 1762546774000
+        },
+        "geometry": {
+          "x": -77.05994691406414,
+          "y": 38.925068914063395
+        }
+      },
+      {
+        "attributes": {
+          "FACILITYID": "19412-300-3005-0242-000",
+          "SCI_NM": "Syringa reticulata",
+          "CMMN_NM": "Lilac",
+          "GENUS_NAME": "Syringa",
+          "DBH": 2.3,
+          "MAX_CROWN_HEIGHT": 101.24737536,
+          "LAST_EDITED_DATE": 1748884944000
+        },
+        "geometry": {
+          "x": -77.0606959502618,
+          "y": 38.9244109199552
+        }
+      },
+      {
+        "attributes": {
+          "FACILITYID": "19412-300-3005-0242-000",
+          "SCI_NM": "Acer platanoides",
+          "CMMN_NM": "Norway maple",
+          "GENUS_NAME": "Acer",
+          "DBH": 10.1,
+          "MAX_CROWN_HEIGHT": null,
+          "LAST_EDITED_DATE": 1588020377000
+        },
+        "geometry": {
+          "x": -77.06066133085477,
+          "y": 38.924383912964686
+        }
+      },
+      {
+        "attributes": {
+          "FACILITYID": "19412-300-3001-0192-000",
+          "SCI_NM": null,
+          "CMMN_NM": null,
+          "GENUS_NAME": null,
+          "DBH": null,
+          "MAX_CROWN_HEIGHT": null,
+          "LAST_EDITED_DATE": 1748886079000
+        },
+        "geometry": {
+          "x": -77.06061507213825,
+          "y": 38.924230795489834
+        }
+      },
+      {
+        "attributes": {
+          "FACILITYID": "19412-300-3005-0185-000",
+          "SCI_NM": "Acer platanoides",
+          "CMMN_NM": "Norway maple",
+          "GENUS_NAME": "Acer",
+          "DBH": 12.0,
+          "MAX_CROWN_HEIGHT": 40.79448544,
+          "LAST_EDITED_DATE": 1748884830000
+        },
+        "geometry": {
+          "x": -77.06051132137172,
+          "y": 38.92427589087075
+        }
+      }
+    ]
+  },
+  "scope": "Public street tree records within 75 m. Not yet registered to the modeled trees; private-yard species remain unverified. Do not assign species or heights to a modeled crown without spatial/photo registration; record dates and tree size fields vary."
+}

@@ -1,0 +1,16 @@
+{
+  "source": "https://polyhaven.com/a/tree_small_02",
+  "license": "CC0",
+  "meshes": [
+    {
+      "name": "tree_small_02_LOD0",
+      "polygons": 2062487,
+      "uvLayers": [
+        "UVMap",
+        "UVMap.001"
+      ]
+    }
+  ],
+  "simplification": "None; preserve original leaf cards and UV seams",
+  "species": "Representative asset; species identity at the house remains unverified"
+}

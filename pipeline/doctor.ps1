@@ -20,6 +20,17 @@ $engines = @($engineCandidates | Where-Object { Test-Path -LiteralPath $_ } | Se
 $gpuCommand = Get-Command nvidia-smi -ErrorAction SilentlyContinue
 $gpu = if ($gpuCommand) { & $gpuCommand.Source --query-gpu=name,memory.total,driver_version --format=csv,noheader } else { 'NVIDIA driver utility unavailable' }
 $disk = Get-PSDrive -Name ([System.IO.Path]::GetPathRoot($projectRoot).Substring(0,1))
+$runtimeProject = Join-Path $projectRoot 'runtime\ClevelandReal\ClevelandReal.uproject'
+$runtimeReport = Join-Path $projectRoot 'reports\unreal-import.json'
+$runtimeStatus = if (Test-Path -LiteralPath $runtimeReport) {
+    (Get-Content -LiteralPath $runtimeReport -Raw | ConvertFrom-Json).status
+} elseif (Test-Path -LiteralPath $runtimeProject) {
+    'Project created; scene import and runtime validation pending'
+} elseif ($engines.Count -gt 0) {
+    'Engine installed; runtime project not created'
+} else {
+    'Engine installation not complete; runtime not built'
+}
 $result = [ordered]@{
     Project = $projectRoot
     UnrealEditors = $engines
@@ -27,6 +38,7 @@ $result = [ordered]@{
     NvidiaGpu = $gpu
     FreeDiskGB = [math]::Round($disk.Free / 1GB,1)
     EditableSceneExists = Test-Path (Join-Path $projectRoot 'SourceAssets\Cleveland-Reconstruction.blend')
-    RuntimeStatus = 'Not built or tested; engine installation required'
+    RuntimeProjectExists = Test-Path -LiteralPath $runtimeProject
+    RuntimeStatus = $runtimeStatus
 }
 if ($Json) { $result | ConvertTo-Json -Depth 4 } else { [pscustomobject]$result | Format-List }

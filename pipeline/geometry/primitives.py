@@ -127,7 +127,7 @@ def wall_with_openings(wall, base, height, material):
     delta = b - a
     length = delta.length
     direction = delta.normalized()
-    thickness = 0.25 if wall["ext"] else 0.15
+    thickness = wall.get("thickness", 0.25 if wall["ext"] else 0.15)
 
     def point(t):
         return a + direction * t

@@ -123,6 +123,18 @@ def build_layout():
             floor["walls"][1]["holes"][1].update(
                 a=[4.7624, 3.60], b=[4.7624, 2.18], sill=0.62, head=2.38, evidence=[7, 8]
             )
+            # The sink's paired casement in photos 18/19 is narrower than the old trace.
+            floor["walls"][7]["holes"][1].update(
+                a=[-5.5, 6.86], b=[-5.5, 5.50], sill=1.0, head=2.3, evidence=[18, 19, 22]
+            )
+            for wi, hi in [(7, 0), (7, 1), (6, 0), (4, 0)]:
+                floor["walls"][wi]["holes"][hi]["frame_finish"] = "white"
+            floor["walls"][4]["holes"][0].update(
+                a=[-0.97, 7.62], b=[-0.16, 7.62], evidence=[23, 24]
+            )
+            floor["walls"][8]["holes"][0].update(
+                a=[-2.46, 4.166], b=[-1.57, 4.166], evidence=[15, 16, 18, 19]
+            )
             # A real kitchen side exit is visible on the inside face of the wing.
             floor["walls"][5]["holes"] = [
                 {
@@ -139,6 +151,7 @@ def build_layout():
                 },
                 {
                     "id": "kitchen_court_window",
+                    "frame_finish": "white",
                     "a": [-2.75, 8.2],
                     "b": [-2.75, 9.45],
                     "window": True,
@@ -159,6 +172,13 @@ def build_layout():
                     "evidence": [5, 6, 25],
                 }
             ]
+    # The older trace added a secondary opening through the photographed shower.
+    # Keep the observed bedroom-side bathroom entrance and a continuous shower wall.
+    floors[1]["walls"][10]["holes"] = []
+    for wall in floors[1]["walls"]:
+        for opening in wall["holes"]:
+            opening["frame_finish"] = "white"
+    floors[1]["walls"][8]["holes"][0].update(sill=0, head=2.25, leaf_count=2)
     lower_outline = rect(-5.5, 0, -1.46, 11.2776)
     lower_walls = []
     for i, (a, b) in enumerate(zip(lower_outline, lower_outline[1:] + lower_outline[:1])):
@@ -177,6 +197,42 @@ def build_layout():
             "evidence": [51, 52],
         }
     ]
+    lower_walls.extend(
+        [
+            {
+                "id": "lower_bath_west",
+                "a": [-4.4, 6.35],
+                "b": [-4.4, 8.6],
+                "ext": False,
+                "holes": [],
+            },
+            {
+                "id": "lower_bath_north",
+                "a": [-4.4, 8.6],
+                "b": [-1.46, 8.6],
+                "ext": False,
+                "holes": [],
+            },
+            {
+                "id": "lower_bath_south",
+                "a": [-4.4, 6.35],
+                "b": [-1.46, 6.35],
+                "ext": False,
+                "holes": [
+                    {
+                        "id": "lower_bath_door",
+                        "a": [-3.85, 6.35],
+                        "b": [-2.99, 6.35],
+                        "sill": 0,
+                        "head": 2.04,
+                        "window": False,
+                        "operable": False,
+                        "evidence": [42, 55],
+                    }
+                ],
+            },
+        ]
+    )
     floors.append(
         {
             "id": "lower",

@@ -1,0 +1,115 @@
+{
+  "checks": [
+    {
+      "check": "tree_instance_transform",
+      "tree": "Estimated tree 0",
+      "maximumMatrixError": 0.0,
+      "pass": true
+    },
+    {
+      "check": "tree_instance_transform",
+      "tree": "Estimated tree 1",
+      "maximumMatrixError": 0.0,
+      "pass": true
+    },
+    {
+      "check": "tree_instance_transform",
+      "tree": "Estimated tree 2",
+      "maximumMatrixError": 0.0,
+      "pass": true
+    },
+    {
+      "check": "tree_instance_transform",
+      "tree": "Estimated tree 3",
+      "maximumMatrixError": 0.0,
+      "pass": true
+    },
+    {
+      "check": "tree_instance_transform",
+      "tree": "Estimated tree 4",
+      "maximumMatrixError": 0.0,
+      "pass": true
+    },
+    {
+      "check": "tree_instance_transform",
+      "tree": "Estimated tree 5",
+      "maximumMatrixError": 0.0,
+      "pass": true
+    },
+    {
+      "check": "tree_instance_transform",
+      "tree": "Estimated tree 6",
+      "maximumMatrixError": 0.0,
+      "pass": true
+    },
+    {
+      "check": "tree_instance_transform",
+      "tree": "Estimated tree 7",
+      "maximumMatrixError": 0.0,
+      "pass": true
+    },
+    {
+      "check": "tree_instance_transform",
+      "tree": "Estimated tree 8",
+      "maximumMatrixError": 0.0,
+      "pass": true
+    },
+    {
+      "check": "tree_instance_transform",
+      "tree": "Estimated tree 9",
+      "maximumMatrixError": 0.0,
+      "pass": true
+    },
+    {
+      "check": "tree_instance_transform",
+      "tree": "Estimated tree 10",
+      "maximumMatrixError": 0.0,
+      "pass": true
+    },
+    {
+      "check": "tree_instance_transform",
+      "tree": "Estimated tree 11",
+      "maximumMatrixError": 0.0,
+      "pass": true
+    },
+    {
+      "check": "tree_instance_transform",
+      "tree": "Estimated tree 12",
+      "maximumMatrixError": 0.0,
+      "pass": true
+    },
+    {
+      "check": "tree_instance_transform",
+      "tree": "Estimated tree 13",
+      "maximumMatrixError": 0.0,
+      "pass": true
+    },
+    {
+      "check": "foliage_opacity_exported",
+      "shader": "/Cleveland/_materials/tree_small_02_leaves_001/Principled_BSDF",
+      "pass": true
+    },
+    {
+      "check": "foliage_opacity_exported",
+      "shader": "/Cleveland/_materials/fir_tree_01_twig/Principled_BSDF",
+      "pass": true
+    }
+  ],
+  "passed": 16,
+  "failed": 0,
+  "foliageShaders": [
+    {
+      "shader": "/Cleveland/_materials/tree_small_02_leaves_001/Principled_BSDF",
+      "opacityConnections": [
+        "/Cleveland/_materials/tree_small_02_leaves_001/Verified_foliage_opacity.outputs:r"
+      ]
+    },
+    {
+      "shader": "/Cleveland/_materials/fir_tree_01_twig/Principled_BSDF",
+      "opacityConnections": [
+        "/Cleveland/_materials/fir_tree_01_twig/Verified_foliage_opacity.outputs:r"
+      ]
+    }
+  ],
+  "scope": "USD data validation; Unreal rendering remains unverified"
+}

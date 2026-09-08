@@ -62,18 +62,20 @@ and https://dev.epicgames.com/documentation/en-us/unreal-engine/path-tracer-in-u
 
 ## Installation status
 
-The existing Epic Games Launcher was found. Its log subsequently identified
-`FWindowsPlatformMisc::PlatformPreInit.ResolutionTooLow` on the remote display,
-and the process exits without exposing a window. Supported window-size arguments
-did not resolve it. A command-line client authenticated successfully to the
-existing Epic account, but its catalog contained no Unreal engine assets. The
-alternate Cosmos session discovery endpoint returned HTTP 404. No authentication
-or access protections were disabled. All account state remains in ignored local
-storage. Unreal has not been installed or tested. A usable local desktop/launcher
-session is needed to proceed with the official installation.
-Visual Studio Build Tools 2019 and Windows SDK 19041 were found; a C++ UE5.8
-build requires a newer supported toolchain. Geometry preparation can proceed
-without those installs.
+Unreal Engine 5.8.2 was installed through Epic Games Launcher at
+`C:/Unreal/UE_5.8`. The native project module compiles with Microsoft MSVC
+14.44.35228 and Windows SDK 10.0.26100.0. Microsoft packages were downloaded
+from their CDN, checksum-verified and extracted to a task-owned tools directory.
+Unreal AutoSDK junctions discover that toolchain without engine/registry changes.
+The standard VS2022 bootstrapper previously exited 1602; it is not the successful
+compiler installation. No account state or compiler redistribution is in Git.
+
+The original USD import created geometry assets but failed at native water
+material construction. The corrected water material passed an isolated Unreal
+Python probe. A subsequent full import exited during Windows PlatformPreInit
+with ResolutionTooLow before Python ran. Do not infer success from its zero
+process exit code. No final Unreal map, GPU view, walking test or phone stream
+has passed verification yet.
 
 ## Current review findings
 
@@ -86,10 +88,10 @@ checked against evaluated mesh geometry, not just the connection graph.
 
 The current renders remain visibly incomplete compared with the listing:
 mantel carving and chimney breast, artwork, patterned rugs, lamps, detailed
-cabinetry/appliances, upholstered shapes and exact window joinery require further
-work. The study recliner currently uses a representative brown scanned asset;
-the photograph shows green leather. Upper rooms and the basement interior are
-not fully furnished. Wind, circulation animation, Unreal import, runtime
+upholstered shapes and exact window joinery require further work. The new kitchen
+and bathroom assemblies include cabinets, sinks, appliances and sanitary fixtures. The study recliner currently uses a representative brown scanned asset;
+the photograph shows green leather. Upper rooms and the basement now have their principal furnishings, but exact
+textiles, artwork, small objects and some fitted cabinetry remain incomplete. Wind, circulation animation, Unreal import, runtime
 navigation and the new authenticated phone stream are not implemented.
 
 The pool's aerial trace is larger than the approximate 20-by-10-foot listing
@@ -97,3 +99,64 @@ label. Its current review placement has not yet been reconciled to the new
 unwarped GIS transform. The courtyard's individual stair counts and levels are
 inferred. Do not treat these as surveyed measurements or use these review views
 as validated quantitative daylight predictions.
+
+## Room reconstruction decisions in the second checkpoint
+
+All 56 saved Compass photographs were viewed in contact sheets; kitchen,
+bathroom and bedroom views were also inspected individually. The kitchen has
+hardwood flooring, white casement frames, paneled/glazed cupboards, range and
+microwave, apron sink, dishwasher, refrigerator and breakfast furniture.
+Four bathrooms have separate shower, vanity, toilet and laundry assemblies.
+The primary, blue and yellow bedrooms, office sunroom and lower library now
+have distinct furniture rather than empty shells. Surfaces and motifs remain
+representative; object presence is not proof of a photographic match.
+
+The old trace's secondary primary-bath opening intersected the photographed
+shower and was removed; the bedroom-side entrance remains. Lower bathroom
+partitions were inferred from photos 42–44 and plan 55, not a measured survey.
+Sunroom glass doors are now built despite being an internal opening.
+
+Review rendering exposed and corrected a stale transform evaluation that
+magnified fixture knobs, vanity/basin overlap, incorrect plaid on plain bedding,
+and duvet/mattress intersection. A rotated vegetation anchor was corrected.
+Revalidate these changes in the final saved scene and in Unreal.
+
+## Foliage opacity and crown correction
+
+The imported broadleaf material connected the alpha output of a JPG base-color
+image to opacity. JPG carries no alpha, so whole leaf polygons were visible.
+The reconstruction now uses Poly Haven's original grayscale leaf/needle masks,
+with non-color sampling and the original UV coordinates. Source URLs, CC0
+licenses and checksums are in reference/materials/foliage/sources.json.
+
+Tree height scaling had also enlarged crown widths beyond the aerial estimates.
+Height and crown width are now constrained separately. Crown radius is limited
+to leave 0.25 m building clearance; this is an explicit geometry assumption,
+not a statement about surveyed pruning or exact real-world canopy dimensions.
+The representative tree species still require reference matching.
+
+The prior source-library preparation also decimated the broadleaf mesh to
+110,000 polygons. This can collapse leaf cards and their UV boundaries. The
+new prepare_vegetation.py preserves the original mesh/UVs in a separate packed
+library. It does not change the old project's asset library.
+
+
+## Final room-detail review in the furnished checkpoint
+
+Photos 15 and 23 informed the dining hutch's north-wall position, adjacent
+kitchen doorway and powder-room window position. These are photographic
+inferences, not surveyed coordinates. The dining table is oval and a modeled
+fabric drum pendant hangs above it. The powder blind has individual slats.
+Three pictures use UV regions from the unmodified listing photos (15, 23, 35).
+These retain photographed illumination and are appearance proxies, not measured
+surface reflectance. Final dining, kitchen, powder and blue-bedroom review
+images were rendered after these changes. Other views predate this detail pass.
+
+The blue-bedroom window/bed orientation still requires multi-view registration.
+The primary bathroom still needs the reference's two-drawer flat-basin vanity,
+two side sconces, green marble/mosaic appearance and shutters. Rug motifs,
+chairs, bedding and smaller domestic objects remain representative.
+
+The nearby public street-tree inventory is saved as additional evidence only.
+Its records have not been registered to the modeled crowns, and its species
+and height fields have not been applied to private garden trees.

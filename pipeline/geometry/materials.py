@@ -72,6 +72,15 @@ def plaster():
 
 
 def palette():
+    towel = scanned("Looped ivory cotton", "fabric_pattern_05", 0.45, True)
+    towel_shader = towel.node_tree.nodes.get("Principled BSDF")
+    for link in list(towel_shader.inputs["Base Color"].links):
+        towel.node_tree.links.remove(link)
+    towel_shader.inputs["Base Color"].default_value = (0.82, 0.80, 0.73, 1)
+    lamp = plain("Warm practical lamp diffuser", (0.9, 0.79, 0.60), 0.3)
+    lamp_shader = lamp.node_tree.nodes.get("Principled BSDF")
+    lamp_shader.inputs["Emission Color"].default_value = (1, 0.78, 0.50, 1)
+    lamp_shader.inputs["Emission Strength"].default_value = 3
     glass = plain("Clear 4mm glass", (0.98, 0.99, 1), 0.03)
     p = glass.node_tree.nodes.get("Principled BSDF")
     p.inputs["Transmission Weight"].default_value = 1
@@ -86,6 +95,13 @@ def palette():
     vol.inputs["Density"].default_value = 0.15
     water.node_tree.links.new(vol.outputs[0], out.inputs["Volume"])
     return dict(
+        lamp=lamp,
+        ceramic=plain("Glazed white porcelain", (0.86, 0.87, 0.85), 0.19),
+        steel=plain("Brushed stainless steel", (0.56, 0.59, 0.61), 0.27, 1),
+        appliance_glass=plain("Dark appliance glass", (0.012, 0.016, 0.021), 0.12, 0.25),
+        worktop=plain("Warm quartz worktop", (0.49, 0.43, 0.33), 0.28),
+        mirror=plain("Silvered mirror", (0.96, 0.97, 0.98), 0.012, 1),
+        towel=towel,
         plaster=plaster(),
         stucco=scanned(
             "Exterior fine rough stucco", "white_stucco", 2, True, tint=(0.92, 0.89, 0.82)

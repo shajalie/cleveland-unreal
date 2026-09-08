@@ -1,0 +1,20 @@
+[
+  {
+    "asset": "tree_small_02",
+    "map": "leaves_alpha",
+    "source": "https://polyhaven.com/a/tree_small_02",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/tree_small_02/tree_small_02_leaves_alpha_2k.png",
+    "license": "CC0",
+    "sha256": "566484c7047ce67af5a4435c1e4da2b773578d73f83ae45dfad0fd442df7b9d5",
+    "file": "reference/materials/foliage/tree_small_02_leaves_alpha.png"
+  },
+  {
+    "asset": "fir_tree_01",
+    "map": "twig_alpha",
+    "source": "https://polyhaven.com/a/fir_tree_01",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/fir_tree_01/fir_tree_01_twig_alpha_2k.png",
+    "license": "CC0",
+    "sha256": "6eecd1cf1e059488be2a41d15bb3c8cb3d844765ed11be8087e6e02acd58b181",
+    "file": "reference/materials/foliage/fir_tree_01_twig_alpha.png"
+  }
+]

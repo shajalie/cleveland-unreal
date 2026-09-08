@@ -5,7 +5,7 @@
     "NVIDIA GeForce RTX 2060 with Max-Q Design"
   ],
   "samples": 128,
-  "objects": 2169,
+  "objects": 11672,
   "meshChecks": [
     {
       "check": "upper_stairwell_clear",
@@ -53,29 +53,39 @@
   ],
   "renders": [
     {
+      "view": "primary",
+      "seconds": 48.99,
+      "exposureStops": 2.0999999046325684
+    },
+    {
+      "view": "sunroom",
+      "seconds": 66.26,
+      "exposureStops": 2.0999999046325684
+    },
+    {
+      "view": "blue_bedroom",
+      "seconds": 69.51,
+      "exposureStops": 2.0999999046325684
+    },
+    {
+      "view": "yellow_bedroom",
+      "seconds": 63.34,
+      "exposureStops": 2.0999999046325684
+    },
+    {
+      "view": "primary_bath",
+      "seconds": 69.85,
+      "exposureStops": 2.0999999046325684
+    },
+    {
       "view": "living",
-      "seconds": 22.72,
-      "exposureStops": 2.0999999046325684
-    },
-    {
-      "view": "rear",
-      "seconds": 21.85,
-      "exposureStops": -0.20000000298023224
-    },
-    {
-      "view": "stair",
-      "seconds": 24.34,
-      "exposureStops": 2.0999999046325684
-    },
-    {
-      "view": "study",
-      "seconds": 27.11,
+      "seconds": 51.35,
       "exposureStops": 2.0999999046325684
     }
   ],
-  "status": "Authoring review; Unreal runtime is not installed.",
+  "status": "Authoring review; see unreal-import.json for the separate engine integration status.",
   "knownIncomplete": [
-    "Upper-floor furnishings",
+    "Exact furniture shapes, decorative objects, artwork and textile patterns",
     "Neighbor facade detailing and verified vegetation species",
     "Photo-calibrated cameras and materials",
     "Internal basement stair",

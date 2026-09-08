@@ -1,0 +1,243 @@
+{
+  "status": "Reference inventory, not a completion claim",
+  "reference": "Saved Compass photos reference/photos/00.webp through 55.webp",
+  "rooms": [
+    {
+      "room": "Kitchen",
+      "photos": [
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "modeled": [
+        "Paneled and glazed cabinets",
+        "Range and microwave",
+        "Sink and faucets",
+        "Dishwasher and refrigerator",
+        "Breakfast table, chair and bench",
+        "Backsplash, worktops and small appliances"
+      ],
+      "stillNeedsMatching": [
+        "Exact cabinet proportions and breakfast-nook layout",
+        "Window treatments and smaller countertop objects"
+      ]
+    },
+    {
+      "room": "Powder room",
+      "photos": [
+        23,
+        24
+      ],
+      "modeled": [
+        "Vanity, basin, mixer and mirror",
+        "Toilet",
+        "Practical vanity lights and towel",
+        "Framed New Yorker picture from photo 23",
+        "Venetian blind with slats and cords"
+      ],
+      "stillNeedsMatching": [
+        "Exact black faucet and vanity silhouette",
+        "Towel ring and exact blind proportions"
+      ]
+    },
+    {
+      "room": "Primary bathroom",
+      "photos": [
+        32,
+        33
+      ],
+      "modeled": [
+        "Shower enclosure and fittings",
+        "Vanity, basin, mirror and lights",
+        "Toilet and cast radiator",
+        "Stone tiles and floor"
+      ],
+      "stillNeedsMatching": [
+        "Exact green marble appearance and mosaic band",
+        "Two-drawer vanity and wall-sconce arrangement",
+        "Window shutters and hanging towels"
+      ]
+    },
+    {
+      "room": "Shared bathroom",
+      "photos": [
+        37,
+        41
+      ],
+      "modeled": [
+        "Vanity and mirror",
+        "Glass shower, head and valve",
+        "Toilet and radiator"
+      ],
+      "stillNeedsMatching": [
+        "Cane vanity front",
+        "White subway and hexagonal mosaic proportions",
+        "Exact blind, towels and sliding door"
+      ]
+    },
+    {
+      "room": "Laundry bathroom",
+      "photos": [
+        42
+      ],
+      "modeled": [
+        "Stacked washer and dryer",
+        "Shower, vanity and toilet"
+      ],
+      "stillNeedsMatching": [
+        "Surveyed lower partition layout",
+        "Terracotta floor and open vanity shelf",
+        "Track lighting and hanging towels"
+      ]
+    },
+    {
+      "room": "Primary bedroom",
+      "photos": [
+        27,
+        28,
+        29,
+        30
+      ],
+      "modeled": [
+        "Upholstered bed and blue duvet",
+        "Bedside chests and lamps",
+        "Foot bench",
+        "Dressers, TV and mirror",
+        "Brick chimney",
+        "Fan and dressing table"
+      ],
+      "stillNeedsMatching": [
+        "Exact upholstery folds, rug design and artwork",
+        "Built-in window cupboards",
+        "Photo-calibrated furniture placement"
+      ]
+    },
+    {
+      "room": "Sunroom",
+      "photos": [
+        31
+      ],
+      "modeled": [
+        "Desk and office chair",
+        "Lamps, books and pencil cup",
+        "Cabinets, printer and shelves",
+        "Fan and rug",
+        "Interior glass doors"
+      ],
+      "stillNeedsMatching": [
+        "Black-and-white window panel system",
+        "Exact desk shape and chair model",
+        "Files, photographs and smaller objects"
+      ]
+    },
+    {
+      "room": "Blue bedroom",
+      "photos": [
+        35,
+        36
+      ],
+      "modeled": [
+        "Bed and bedside furniture",
+        "Dresser and mirror",
+        "Desk and chair",
+        "Wardrobe and fan",
+        "Runner",
+        "Framed landscape from photo 35"
+      ],
+      "stillNeedsMatching": [
+        "Striped blanket and basketball details",
+        "Stuffed toys and clothing",
+        "Verify bed/window orientation against both reference views"
+      ]
+    },
+    {
+      "room": "Yellow bedroom",
+      "photos": [
+        38,
+        39,
+        40
+      ],
+      "modeled": [
+        "Storage bed and overhead shelves",
+        "Desk, chair and armchair",
+        "Rugs and lamp"
+      ],
+      "stillNeedsMatching": [
+        "Poster/collage wall and toys",
+        "Exact wardrobe arrangement",
+        "Paper pendant, bedding pattern and basket"
+      ]
+    },
+    {
+      "room": "Lower library",
+      "photos": [
+        43,
+        44
+      ],
+      "modeled": [
+        "Populated book wall",
+        "Writing desk, chair and plant",
+        "Media cabinet and TV",
+        "White sofa"
+      ],
+      "stillNeedsMatching": [
+        "Internal basement stairs",
+        "Artworks, display objects and rear bench",
+        "Photo-calibrated lower geometry"
+      ]
+    },
+    {
+      "room": "Living and study",
+      "photos": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "modeled": [
+        "Sofa, chairs and coffee table",
+        "Fireplace, mirror and curtains",
+        "Piano and bench",
+        "Study seating, TV and books",
+        "Side tables and lamps"
+      ],
+      "stillNeedsMatching": [
+        "Exact chair and recliner models",
+        "Carved mantel and painting",
+        "Artwork, shutters and soft-furnishing details"
+      ]
+    },
+    {
+      "room": "Dining room",
+      "photos": [
+        15,
+        16,
+        17
+      ],
+      "modeled": [
+        "Oval table and six chairs",
+        "Glazed hutch on north wall",
+        "Still-life artwork from photo 15",
+        "Fabric drum pendant",
+        "Kitchen doorway adjusted from photographs"
+      ],
+      "stillNeedsMatching": [
+        "Exact carved wooden chairs",
+        "Stone floor and Persian rug pattern",
+        "Curtains and table ornaments"
+      ]
+    }
+  ],
+  "accuracyLimits": [
+    "Dimensions and unseen arrangements partly inferred",
+    "Scanned materials are representative, not scans of this house",
+    "Photographic resemblance does not establish quantitative lighting accuracy",
+    "Unreal GPU walkthrough and new phone streaming are not yet verified"
+  ]
+}

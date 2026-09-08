@@ -1,0 +1,23 @@
+{
+  "asset": "marble_01",
+  "source": "https://polyhaven.com/a/marble_01",
+  "license": "CC0",
+  "resolution": "2k",
+  "maps": [
+    {
+      "file": "marble_01_diff.jpg",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/marble_01/marble_01_diff_2k.jpg",
+      "sha256": "d403786171716f86718bdd67eba923d4fb6125c0636bacef0e6a21dd5d623a48"
+    },
+    {
+      "file": "marble_01_rough.jpg",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/marble_01/marble_01_rough_2k.jpg",
+      "sha256": "1b970e033856c93ee7390d947da5340e101b489fc8c1463354ea9e6655ce039a"
+    },
+    {
+      "file": "marble_01_normal.jpg",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/marble_01/marble_01_nor_gl_2k.jpg",
+      "sha256": "d5e17ccb2913adbf28fcb781fddf0aa711259ddea6c1c918442f9a3589aa4660"
+    }
+  ]
+}

@@ -11,6 +11,91 @@ ROOT = Path(__file__).resolve().parents[2]
 FEET = 1200 / 3937
 
 
+def repair_foliage_opacity():
+    """The glTF JPG base color has no alpha; use the upstream cutout map."""
+    for material in bpy.data.materials:
+        name = material.name.lower()
+        key = (
+            "tree_small_02_leaves_alpha"
+            if "tree_small_02" in name and "leaves" in name
+            else "fir_tree_01_twig_alpha"
+            if "fir_tree_01" in name and "twig" in name
+            else None
+        )
+        if not key or not material.use_nodes:
+            continue
+        shader = material.node_tree.nodes.get("Principled BSDF")
+        if not shader:
+            continue
+        for old in list(material.node_tree.nodes):
+            if old.name.startswith("Verified foliage opacity"):
+                material.node_tree.nodes.remove(old)
+        original = shader.inputs["Base Color"].links[0].from_node
+        texture = material.node_tree.nodes.new("ShaderNodeTexImage")
+        texture.name = "Verified foliage opacity"
+        texture.image = bpy.data.images.load(
+            str(ROOT / "reference/materials/foliage" / (key + ".png")), check_existing=True
+        )
+        texture.image.colorspace_settings.name = "Non-Color"
+        if original.inputs.get("Vector") and original.inputs["Vector"].links:
+            material.node_tree.links.new(
+                original.inputs["Vector"].links[0].from_socket, texture.inputs["Vector"]
+            )
+        material.node_tree.links.new(texture.outputs["Color"], shader.inputs["Alpha"])
+        material["opacity_source"] = (
+            "Poly Haven original 2k grayscale opacity, connected as color rather than JPG alpha"
+        )
+
+
+def place_tree(obj, source, spec, index, model):
+    obj.scale = source.scale.copy()
+    obj.rotation_euler = source.rotation_euler.copy()
+    obj.rotation_euler.z += index * 2.39996
+    local_z = [v[2] * obj.scale.z for v in source.bound_box]
+    obj.scale.z *= spec["heightEstimate"] / max(0.01, max(local_z) - min(local_z))
+    rotated = [
+        obj.rotation_euler.to_matrix()
+        @ Vector((v[0] * obj.scale.x, v[1] * obj.scale.y, v[2] * obj.scale.z))
+        for v in source.bound_box
+    ]
+    radius = (
+        max(
+            max(v.x for v in rotated) - min(v.x for v in rotated),
+            max(v.y for v in rotated) - min(v.y for v in rotated),
+        )
+        / 2
+    )
+    # Crown estimates constrain horizontal growth independently of tree height.
+    # Keep a small building clearance; this is an explicit reconstruction assumption.
+    center = Vector(spec["center"])
+    distances = []
+    for floor in model["floors"][:2]:
+        outline = floor["outline"]
+        for aa, bb in zip(outline, outline[1:] + outline[:1]):
+            a, b = Vector(aa), Vector(bb)
+            t = min(1, max(0, (center - a).dot(b - a) / (b - a).length_squared))
+            distances.append((center - (a + t * (b - a))).length)
+    target = min(spec["crownRadiusEstimate"], max(0.5, min(distances) - 0.25))
+    factor = target / max(0.01, radius)
+    obj.scale.x *= factor
+    obj.scale.y *= factor
+    rotated = [
+        obj.rotation_euler.to_matrix()
+        @ Vector((v[0] * obj.scale.x, v[1] * obj.scale.y, v[2] * obj.scale.z))
+        for v in source.bound_box
+    ]
+    anchor = Vector(
+        (
+            (min(v.x for v in rotated) + max(v.x for v in rotated)) / 2,
+            (min(v.y for v in rotated) + max(v.y for v in rotated)) / 2,
+            min(v.z for v in rotated),
+        )
+    )
+    obj.location = Vector((*spec["center"], -1.65)) - anchor
+    obj["crown_radius_m"] = target
+    obj["crown_status"] = "Aerial estimate, limited to preserve building clearance; not surveyed"
+
+
 def site_data(model):
     data = json.loads((ROOT / "reference/model-data.json").read_text())
     old = data["indoor"]["floors"][0]["walls"][0]["holes"][-1]
@@ -107,6 +192,13 @@ def build_site(model, m):
                 name for name in src.objects if "fir_tree" in name or "tree_small" in name
             ]
         sources = [o for o in dst.objects if o and o.type == "MESH"]
+        original_broadleaf = ROOT / ".local/broadleaf-source.blend"
+        if original_broadleaf.exists():
+            with bpy.data.libraries.load(str(original_broadleaf), link=False) as (src, dst):
+                dst.objects = list(src.objects)
+            broadleaf = [o for o in dst.objects if o and o.type == "MESH"]
+            if broadleaf:
+                sources = [o for o in sources if "fir_tree" in o.name] + broadleaf
         # Linked mesh instances keep scanned leaf/needle detail within the 6 GB budget.
         for index, spec in enumerate(data["trees"]):
             pool = [o for o in sources if ("fir_tree" in o.name) == (index in [0, 8, 9, 10])]
@@ -117,18 +209,9 @@ def build_site(model, m):
             obj.data = source.data
             bpy.context.collection.objects.link(obj)
             obj.name = "Estimated tree " + str(index)
-            coords = [source.matrix_world @ Vector(v) for v in source.bound_box]
-            lo = Vector([min(v[i] for v in coords) for i in range(3)])
-            hi = Vector([max(v[i] for v in coords) for i in range(3)])
-            # Apply height scaling to the source transform, keeping natural relative branch proportions.
-            factor = spec["heightEstimate"] / max(0.01, hi.z - lo.z)
-            obj.scale = source.scale * factor
-            obj.rotation_euler.z += index * 2.39996
-            obj.location = (
-                Vector((*spec["center"], -1.65))
-                - Vector(((lo.x + hi.x) / 2, (lo.y + hi.y) / 2, lo.z)) * factor
-            )
+            place_tree(obj, source, spec, index, model)
             obj["tree_id"] = index
             obj["species_status"] = "Representative scanned vegetation; species not verified"
             obj["season"] = "Leaf-on review asset; no measured seasonal transmission yet"
+    repair_foliage_opacity()
     return data

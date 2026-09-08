@@ -1,0 +1,22 @@
+{
+  "engine": {
+    "MajorVersion": 5,
+    "MinorVersion": 8,
+    "PatchVersion": 2,
+    "Changelist": 56702186,
+    "CompatibleChangelist": 55116800,
+    "IsLicenseeVersion": 0,
+    "IsPromotedBuild": 1,
+    "BranchName": "++UE5+Release-5.8"
+  },
+  "compiler": "Microsoft MSVC 14.44.35228",
+  "windowsSdk": "10.0.26100.0",
+  "buildResult": "ClevelandRealEditor Development Win64 succeeded",
+  "latestBuildSeconds": 13.17,
+  "discovery": "UE_SDKS_ROOT AutoSDK junctions, scoped by build-runtime.ps1",
+  "packageSource": "Microsoft Visual Studio CDN, upstream package SHA256 checked",
+  "installerScriptSource": "https://gist.github.com/mmozeiko/7f3162ec2988e81e56d5c4e22cde9977",
+  "installerScriptRevision": "2ee035a22b3d8e1976ae725c8fc8b45638779910",
+  "distribution": "Compiler and engine excluded from repository and source archives",
+  "runtimeVerified": false
+}

@@ -33,7 +33,7 @@ $fields = [ordered]@{
     Width = @('Video width',640,3840,160)
     Height = @('Video height',360,2160,90)
     ScreenPercentage = @('Internal resolution (%)',25,100,5)
-    MaxFPS = @('Frame-rate limit',15,120,5)
+    MaxFPS = @('Frame-rate limit',2,120,1)
     MaxBitrateMbps = @('Video bitrate limit (Mbps)',2,80,2)
 }
 $controls = @{}

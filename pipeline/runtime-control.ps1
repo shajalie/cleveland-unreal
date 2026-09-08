@@ -14,9 +14,11 @@ if ($Action -eq 'Stop') {
     # Termination is asynchronous: wait for the game to release its executable
     # and GPU DLLs. Re-query because a bootstrapper can spawn the real game
     # between the first process snapshot and its termination.
-    for ($attempt = 0; $attempt -lt 3 -and $owned.Count; $attempt++) {
+    for ($attempt = 0; $attempt -lt 12 -and $owned.Count; $attempt++) {
         foreach ($process in $owned) { Stop-Process -Id $process.ProcessId -ErrorAction SilentlyContinue }
-        Wait-Process -Id $owned.ProcessId -Timeout 5 -ErrorAction SilentlyContinue
+        Wait-Process -Id $owned.ProcessId -Timeout 1 -ErrorAction SilentlyContinue
+        # Windows may keep a terminated bootstrapper's CIM record briefly.
+        Start-Sleep -Milliseconds 500
         $owned = @(Get-PreviewProcesses)
     }
     if ($owned.Count) { throw 'The renderer is still closing. Try again before replacing or restarting it.' }

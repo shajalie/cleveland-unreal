@@ -1,0 +1,8 @@
+{
+  "version": 3,
+  "prototypes": 50,
+  "instances": 1864,
+  "grassPatches": 693,
+  "continuousGroundManifold": true,
+  "source": "SourceAssets/Cleveland-Landscape-v3.blend"
+}

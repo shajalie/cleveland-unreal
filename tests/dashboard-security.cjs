@@ -26,6 +26,9 @@ async function main() {
       { width: 640.5 },
       { nanitePoolMB: 50000 },
       { rayTracingPoolMB: 0 },
+      { maxFPS: 1 },
+      { lightingQuality: 5 },
+      { virtualShadows: "false" },
     ])
       await assert.rejects(runtime.validate(input));
     const settings = await runtime.save({
@@ -36,6 +39,18 @@ async function main() {
     assert.equal(settings.virtualShadows, true);
     assert.equal((await runtime.settings()).maxFPS, 15);
     assert.equal((await runtime.settings()).rayTracingPoolMB, 1536);
+    const cinematic = await runtime.save({
+      profile: "Laptop",
+      maxFPS: 2,
+      lightingQuality: 4,
+      virtualShadows: true,
+      width: 768,
+      height: 432,
+    });
+    assert.equal(cinematic.lightingQuality, 4);
+    assert.equal(cinematic.virtualShadows, true);
+    assert.equal((await runtime.settings()).maxFPS, 2);
+    assert.equal((await runtime.settings()).width, 768);
 
     assert.deepEqual(
       normalizeEmails("OWNER@example.test; owner@example.test"),

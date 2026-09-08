@@ -1,3 +1,4 @@
+import { installEffectsControls } from "./effects.js";
 const zone = "America/New_York";
 const formatter = new Intl.DateTimeFormat("en-CA", {
   timeZone: zone,
@@ -75,6 +76,9 @@ export const rooms = [
       ["porch", "Front porch"],
       ["garden", "Back garden"],
       ["pool", "Pool terrace"],
+      ["front-lawn", "Front lawn"],
+      ["driveway", "Driveway"],
+      ["rear-lawn", "Rear lawn"],
     ],
   ],
 ];
@@ -83,6 +87,7 @@ export function installSceneControls({ stream, container, say }) {
   container.innerHTML = `
     <label for="room">Jump to a room or viewpoint</label><select id="room"></select>
     <button id="go-room">Go to viewpoint</button>
+    <button id="safe-ground">Return to safe ground</button>
     <label for="study-date">Date</label><input id="study-date" type="date" min="2020-01-01" max="2030-12-31">
     <div class="row seasons"><button data-day="03-20">Spring</button><button data-day="06-21">Summer</button><button data-day="09-22">Autumn</button><button data-day="12-21">Winter</button></div>
     <label for="study-time">Time in Washington, DC · <output id="time-label"></output></label>
@@ -90,6 +95,7 @@ export function installSceneControls({ stream, container, say }) {
     <div class="row times"><button data-time="540">9 AM</button><button data-time="720">Noon</button><button data-time="900">3 PM</button><button data-time="1080">6 PM</button></div>
     <p id="sun-status" class="hint" role="status">Waiting for scene controls…</p>
     <p id="lighting-version" class="hint"></p>
+    <p id="landscape-version" class="hint"></p>
     <details><summary>View brightness</summary><label for="exposure">Exposure compensation · <output id="exposure-label">−0.5 stops</output></label><input id="exposure" type="range" min="-3" max="3" value="-0.5" step="0.25"></details>
     <p class="hint">Clear-sky lighting preview. Date and time move the sun; trees currently retain their modeled foliage. The reconstruction is still being checked against the photos.</p>`;
   const $ = (id) => document.getElementById(id);
@@ -107,14 +113,20 @@ export function installSceneControls({ stream, container, say }) {
   const send = (action, args = {}) => {
     if (action !== "status" && !ready) {
       say("Wait for the live scene to connect.");
-      return;
+      return false;
     }
     stream.emitUIInteraction({
       protocol: "cleveland.scene.v1",
       action,
       ...args,
     });
+    return true;
   };
+  const effects = installEffectsControls({
+    container: $("visual-effects"),
+    send,
+    say,
+  });
   const labelTime = () => {
     const m = Number($("study-time").value),
       hour = Math.floor(m / 60);
@@ -158,6 +170,7 @@ export function installSceneControls({ stream, container, say }) {
     ($("exposure-label").textContent = `${$("exposure").value} stops`);
   $("exposure").onchange = () =>
     send("exposure", { value: Number($("exposure").value) });
+  $("safe-ground").onclick = () => send("recover");
   // Form keystrokes must not also walk the character through the SDK listener.
   container.addEventListener("keydown", (event) => event.stopPropagation());
   container.addEventListener("keyup", (event) => event.stopPropagation());
@@ -170,12 +183,20 @@ export function installSceneControls({ stream, container, say }) {
     }
     if (state.protocol !== "cleveland.scene.v1") return;
     ready = true;
+    effects.update(state.effects);
     $("lighting-version").textContent =
       state.lightingVersion === 2 && state.extendedExposureRange
         ? "Lighting v2 · automatic indoor/outdoor brightness"
         : "";
+    $("landscape-version").textContent =
+      state.landscapeVersion === 3
+        ? "Garden v3 · detailed planting and continuous ground"
+        : "";
+    $("safe-ground").disabled = state.landscapeVersion !== 3;
     $("location").textContent = names.get(state.room) || "Walkthrough";
     if (state.error) say(state.error);
+    else if (lastState && state.recoveryCount > lastState.recoveryCount)
+      say("Returned to your last safe standing spot.");
     else if (lastState && lastState.room !== state.room)
       say(`Viewing ${names.get(state.room) || state.room}.`);
     else if (pendingUtc !== null && state.utc === pendingUtc) {
@@ -204,6 +225,7 @@ export function installSceneControls({ stream, container, say }) {
   });
   stream.addEventListener("webRtcDisconnected", () => {
     ready = false;
+    effects.disconnect();
   });
   setInterval(() => {
     if (!document.hidden) send("status");

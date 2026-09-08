@@ -3,10 +3,11 @@
 This folder is a new reconstruction of 3014 Cleveland Avenue NW. It does not
 replace the preserved Cleveland Sun Study build, running host, or published site.
 
-**Current checkpoint: Lighting v2.** A packaged Unreal 5.8.2 walkthrough and mobile streaming
+**Current checkpoint: Garden v3.** A packaged Unreal 5.8.2 walkthrough and mobile streaming
 dashboard are running. The UI includes room shortcuts, Washington, DC date/time,
-exposure, touch movement, quality/FPS and memory settings. Chrome has decoded
-roughly 18–24 FPS with the 2060 More FPS preset. Furniture, photo matching,
+exposure, touch movement, independent lighting/geometry switches, resolution, a
+2–120 FPS limit and memory settings. Garden v3 streamed roughly 1–3 FPS at full HD
+on the 2060 during review; resolution can be lowered independently. Furniture, photo matching,
 lighting calibration and full circulation still need work. This is an early
 furnished reconstruction, not a finished photoreal digital twin.
 
@@ -16,6 +17,15 @@ exposure history, and fast time changes are applied reliably. See the
 [lighting change and visual review](docs/lighting-v2.md). The
 [previous build](https://github.com/shajalie/cleveland-unreal/releases/tag/streamed-walkthrough-2026-09-08)
 is retained for rollback.
+
+Garden v3 adds continuous outdoor ground, individual grass blades, layered scanned
+planting, front flower borders, curved stone/concrete approaches and aggregate pool
+paving. Falling outside the model automatically returns to a verified standing spot.
+The previous Lighting v2 build is preserved. See the
+[landscape changes and verification](docs/landscape-v3.md).
+The phone dashboard offers High, Epic and Cinematic Lumen quality, plus live switches
+for grass, planting, breeze, ray-traced sun shadows and reflections. The PC remembers
+these switches across renderer restarts. Changing resolution keeps the scene geometry.
 
 The scene import now succeeds: 11,516 mesh components, 11 operable door
 assemblies, three fan assemblies, native glass/water and 14 cutout tree-material
@@ -104,10 +114,10 @@ pools/resolution/frame-rate/bitrate, and save or start the stream. Settings appl
 on the next launch. Both presets keep the same complete source models and hardware
 ray tracing; neither permanently reduces the exported tree or house geometry.
 
-| Preset | Texture pool | Geometry pool | Video | FPS cap |
-| --- | ---: | ---: | --- | ---: |
-| RTX 2060 / 6 GB | 768 MB | 128 MB | 960x540, 67% internal resolution | 30 |
-| RTX 5090 / 32 GB | 8192 MB | 1024 MB | 1920x1080, 100% internal resolution | 60 |
+| Preset           | Texture pool | Geometry pool | Video                               | FPS cap |
+| ---------------- | -----------: | ------------: | ----------------------------------- | ------: |
+| RTX 2060 / 6 GB  |       768 MB |        128 MB | 960x540, 67% internal resolution    |      30 |
+| RTX 5090 / 32 GB |      8192 MB |       1024 MB | 1920x1080, 100% internal resolution |      60 |
 
 These are streaming-pool budgets, **not total VRAM limits**. Acceleration structures,
 render targets, drivers and other apps also consume memory. The 5090 preset is

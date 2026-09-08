@@ -6,7 +6,7 @@ param(
     [ValidateRange(640,3840)][int]$Width,
     [ValidateRange(360,2160)][int]$Height,
     [ValidateRange(25,100)][int]$ScreenPercentage,
-    [ValidateRange(15,120)][int]$MaxFPS,
+    [ValidateRange(2,120)][int]$MaxFPS,
     [ValidateRange(2,80)][int]$MaxBitrateMbps,
     [switch]$Save,
     [switch]$Json
@@ -30,7 +30,11 @@ foreach ($property in $catalog.profiles.$Profile.PSObject.Properties) { $setting
 $ranges = @{
     texturePoolMB = @(256,24576); nanitePoolMB = @(64,4096); rayTracingPoolMB = @(256,8192)
     width = @(640,3840); height = @(360,2160); screenPercentage = @(25,100)
-    maxFPS = @(15,120); maxBitrateMbps = @(2,80); lightingQuality = @(2,3)
+    maxFPS = @(2,120); maxBitrateMbps = @(2,80); lightingQuality = @(2,4)
+}
+if ($saved -and $null -ne $saved.virtualShadows) {
+    if ($saved.virtualShadows -isnot [bool]) { throw 'Invalid GPU setting: virtualShadows' }
+    $settings.virtualShadows = $saved.virtualShadows
 }
 foreach ($key in $ranges.Keys) {
     if ($saved -and $null -ne $saved.$key) { $settings[$key] = $saved.$key }

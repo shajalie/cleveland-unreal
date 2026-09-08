@@ -65,18 +65,39 @@
         </div>
         <div>
           <h2>Quality & performance</h2>
+          <div id="visual-effects"></div>
+          <h3>Resolution & lighting quality</h3>
           <label for="profile">Rendering PC</label
           ><select id="profile">
             <option value="Laptop">RTX 2060 / 6 GB</option>
             <option value="RTX5090">RTX 5090 / 32 GB</option></select
-          ><label for="quality">Picture quality</label
+          ><label for="quality">Video resolution preset</label
           ><select id="quality">
             <option value="balanced">Balanced</option>
-            <option value="performance">More FPS</option>
-            <option value="detail">More detail</option>
-            <option value="custom">Custom</option></select
-          ><label for="maxFPS">Frame-rate limit</label
+            <option value="performance">Lower resolution</option>
+            <option value="detail">Full HD</option>
+            <option value="custom">Custom</option>
+          </select>
+          <p class="hint">
+            Lower resolution keeps the same geometry and lighting effects.
+          </p>
+          <label for="lightingQuality"
+            >Indirect lighting and reflection quality</label
+          >
+          <select id="lightingQuality">
+            <option value="2">High</option>
+            <option value="3">Epic</option>
+            <option value="4">Cinematic · slowest</option>
+          </select>
+          <label class="effect-option"
+            ><input id="virtualShadows" type="checkbox" />Virtual shadow maps
+            for fallback shadows</label
+          >
+          <label for="maxFPS">Frame-rate limit</label
           ><select id="maxFPS">
+            <option>2</option>
+            <option>5</option>
+            <option>10</option>
             <option>15</option>
             <option>30</option>
             <option>60</option>
@@ -94,6 +115,21 @@
           </details>
           <button id="apply">Apply and restart renderer</button
           ><small>Changing these settings briefly interrupts the video.</small>
+          <details>
+            <summary>Windows power mode</summary>
+            <p id="power-status" class="hint">
+              Reading the rendering PC’s power plan…
+            </p>
+            <p class="hint">
+              Power saver can limit GPU speed. These buttons change the PC’s
+              Windows power plan.
+            </p>
+            <button id="power-balanced">Use Balanced power</button>
+            <button id="power-performance">Use High performance power</button>
+            <button id="power-restore" hidden>
+              Restore previous power plan
+            </button>
+          </details>
         </div>
       </section>
     </main>

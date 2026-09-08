@@ -62,6 +62,8 @@ function showSettings(settings) {
   draft = { ...settings };
   $("profile").value = settings.profile;
   $("maxFPS").value = settings.maxFPS;
+  $("lightingQuality").value = settings.lightingQuality;
+  $("virtualShadows").checked = settings.virtualShadows;
   for (const key of Object.keys(fieldSpec)) $(key).value = settings[key];
   $("quality").value =
     settings.width === 768 && settings.screenPercentage === 50
@@ -77,6 +79,8 @@ function values() {
     ...draft,
     profile: $("profile").value,
     maxFPS: Number($("maxFPS").value),
+    lightingQuality: Number($("lightingQuality").value),
+    virtualShadows: $("virtualShadows").checked,
   };
   for (const key of Object.keys(fieldSpec))
     settings[key] = Number($(key).value);
@@ -118,6 +122,17 @@ async function refresh() {
     $("start").disabled = current.job.busy;
     $("apply").disabled = current.job.busy || !current.owner;
     $("stop").disabled = !current.owner;
+    $("power-status").textContent =
+      `Windows power plan: ${current.power?.name || "Unavailable"}`;
+    $("power-balanced").disabled = !current.owner || current.power?.balanced;
+    $("power-performance").disabled =
+      !current.owner ||
+      !current.power?.performanceAvailable ||
+      current.power?.performance;
+    $("power-restore").hidden = !current.power?.canRestore;
+    $("power-restore").disabled = !current.owner;
+    $("power-restore").textContent =
+      `Restore ${current.power?.previousName || "previous plan"}`;
     if (!connected)
       $("waiting-message").textContent = current.rendererConnected
         ? "Connecting the video…"
@@ -200,6 +215,18 @@ action("apply", async () => {
   await api("runtime/restart", { settings: values() });
   say("Applying settings and restarting the renderer…");
 });
+action("power-balanced", async () => {
+  await api("power/balanced", {});
+  say("Windows is using Balanced power.");
+});
+action("power-restore", async () => {
+  await api("power/restore", {});
+  say("The previous Windows power plan is restored.");
+});
+action("power-performance", async () => {
+  await api("power/performance", {});
+  say("Windows is using High performance power.");
+});
 $("profile").onchange = () => {
   showSettings({
     ...current.profiles[$("profile").value],
@@ -214,7 +241,6 @@ $("quality").onchange = () => {
   $("width").value = detail ? 1920 : fast ? 768 : 960;
   $("height").value = detail ? 1080 : fast ? 432 : 540;
   $("screenPercentage").value = detail ? 100 : fast ? 50 : 67;
-  $("maxFPS").value = detail ? 30 : 60;
 };
 action("fullscreen", () => $("stage").requestFullscreen?.());
 $("connections").onclick = () => $("sharing").showModal();

@@ -9,11 +9,14 @@
 #include "OperableDoor.h"
 #include "WalkthroughProbe.h"
 #include "SceneControls.h"
+#include "DaylightExposure.h"
+#include "LandscapeProbe.h"
 
 AWalkingCharacter::AWalkingCharacter()
 {
     PrimaryActorTick.bCanEverTick = true;
     CreateDefaultSubobject<UWalkthroughProbe>(TEXT("OptInRuntimeProbe"));
+    CreateDefaultSubobject<ULandscapeProbe>(TEXT("OptInLandscapeProbe"));
     CreateDefaultSubobject<USceneControls>(TEXT("SceneControls"));
     GetCapsuleComponent()->InitCapsuleSize(23.f, 88.f);
     GetCharacterMovement()->MaxWalkSpeed = 140.f;
@@ -38,6 +41,21 @@ void AWalkingCharacter::BeginPlay()
 void AWalkingCharacter::Tick(float DeltaSeconds)
 {
     Super::Tick(DeltaSeconds);
+    // The lowest intended walking floor is -272 cm. Recovery is a last resort;
+    // continuous yard collision is authored separately, including the areaway.
+    if (GetActorLocation().Z < -700.f) RecoverToSafeGround();
+    if (GetCharacterMovement()->IsMovingOnGround() &&
+        GetCharacterMovement()->CurrentFloor.IsWalkableFloor())
+    {
+        GroundedSeconds += DeltaSeconds;
+        if (GroundedSeconds > 0.35f)
+        {
+            LastSafeLocation = GetActorLocation();
+            LastSafeView = Controller ? Controller->GetControlRotation() : GetActorRotation();
+            bHasSafeLocation = true;
+        }
+    }
+    else GroundedSeconds = 0.f;
     const float TargetZ = GetActorLocation().Z + 77.f;
     if (!GetCharacterMovement()->IsMovingOnGround() || FMath::Abs(TargetZ - SmoothedEyeZ) > 100.f)
         SmoothedEyeZ = TargetZ;
@@ -50,6 +68,28 @@ void AWalkingCharacter::Tick(float DeltaSeconds)
     const float Sway = bCameraSway ? Walking : 0.f;
     Camera->SetRelativeLocation(FVector(0.f, 0.3f * FMath::Sin(WalkPhase * .5f) * Sway,
         SmoothedEyeZ - GetActorLocation().Z + .5f * FMath::Sin(WalkPhase) * Sway));
+}
+
+bool AWalkingCharacter::RecoverToSafeGround()
+{
+    // PlayerStart is the fallback only before the pawn has stood on real ground.
+    const FVector Destination = bHasSafeLocation ? LastSafeLocation + FVector(0, 0, 3)
+        : FVector(300, -200, 100);
+    if (!TeleportTo(Destination, GetActorRotation(), false, false)) return false;
+    GetCharacterMovement()->StopMovementImmediately();
+    GetCharacterMovement()->SetMovementMode(MOVE_Falling);
+    if (Controller && bHasSafeLocation) Controller->SetControlRotation(LastSafeView);
+    SmoothedEyeZ = GetActorLocation().Z + 77.f;
+    GroundedSeconds = 0.f;
+    ++RecoveryCount;
+    DaylightExposure::ResetAfterJump(this);
+    UE_LOG(LogTemp, Display, TEXT("Cleveland recovered to safe ground: %s"), *Destination.ToString());
+    return true;
+}
+
+void AWalkingCharacter::FellOutOfWorld(const UDamageType& DamageType)
+{
+    RecoverToSafeGround();
 }
 
 void AWalkingCharacter::SetupPlayerInputComponent(UInputComponent* Input)

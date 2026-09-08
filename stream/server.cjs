@@ -128,6 +128,9 @@ async function main() {
       res.json({
         settings: await runtime.settings(),
         profiles: await runtime.catalog(),
+        power: await runtime
+          .power()
+          .catch(() => ({ name: "Unavailable", canRestore: false })),
         rendererConnected: !signalling.streamerRegistry.empty(),
         viewers: signalling.playerRegistry.count(),
         job: runtime.job,
@@ -159,6 +162,24 @@ async function main() {
       res.status(202).json({ accepted: true });
     } catch (error) {
       next(error);
+    }
+  });
+  app.post("/api/power/:mode", async (req, res, next) => {
+    try {
+      if (!req.identity.owner) return res.sendStatus(403);
+      const actions = {
+        balanced: "Balanced",
+        performance: "Performance",
+        restore: "Restore",
+      };
+      if (!Object.hasOwn(actions, req.params.mode)) return res.sendStatus(400);
+      res.json(await runtime.power(actions[req.params.mode]));
+    } catch {
+      next(
+        Error(
+          "Windows could not change the power plan. Check the rendering PC.",
+        ),
+      );
     }
   });
   app.post("/api/sharing/:action", async (req, res, next) => {

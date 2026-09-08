@@ -21,10 +21,14 @@ def main():
             file = (folder / relative).resolve()
             if not file.is_relative_to(folder) or file.is_symlink():
                 raise ValueError(f"Unexpected portable input: {relative}")
-            if relative.startswith(".local/") and not relative.startswith(".local/pixel-streaming-infrastructure/"):
+            if relative.startswith(".local/") and not relative.startswith(
+                ".local/pixel-streaming-infrastructure/"
+            ):
                 raise ValueError(f"Private PC state in manifest: {relative}")
             if file.suffix.lower() in {".dpapi", ".pem", ".key"} or file.name.startswith(".env"):
                 raise ValueError(f"Credential-shaped input: {relative}")
+            if "Saved" in Path(relative).parts or "Crashes" in Path(relative).parts:
+                raise ValueError(f"Runtime state in portable manifest: {relative}")
             with file.open("rb") as source:
                 digest = hashlib.file_digest(source, "sha256").hexdigest()
             if digest != entry["sha256"] or file.stat().st_size != entry["bytes"]:
@@ -38,7 +42,12 @@ def main():
     with output.open("rb") as source:
         digest = hashlib.file_digest(source, "sha256").hexdigest()
     (output.parent / "SHA256SUMS.txt").write_text(f"{digest}  {output.name}\n")
-    result = {"archive": str(output), "bytes": output.stat().st_size, "sha256": digest, "files": len(manifest["files"]) + 1}
+    result = {
+        "archive": str(output),
+        "bytes": output.stat().st_size,
+        "sha256": digest,
+        "files": len(manifest["files"]) + 1,
+    }
     (ROOT / ".local/latest-portable-archive.json").write_text(json.dumps(result, indent=2))
     print(json.dumps(result))
 

@@ -14,6 +14,8 @@ def main():
     tracked = subprocess.check_output(["git", "ls-files", "-z"], cwd=ROOT).decode().split("\0")
     files = {ROOT / name for name in tracked if name}
     files.add(ROOT / "SourceAssets/Cleveland-Reconstruction.blend")
+    files.add(ROOT / "SourceAssets/Cleveland-Landscape-v3.blend")
+    files.update((ROOT / "SourceAssets/Landscape-v3").rglob("*"))
     files.add(ROOT / ".local/realism-assets.blend")
     files.add(ROOT / ".local/broadleaf-source.blend")
     files.update((ROOT / ".local/model-assets").rglob("*"))

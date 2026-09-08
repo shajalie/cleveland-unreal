@@ -2,6 +2,7 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
+#include "SceneEffects.h"
 #include "SceneControls.generated.h"
 
 class ADirectionalLight;
@@ -13,6 +14,7 @@ class CLEVELANDREAL_API USceneControls : public UActorComponent
     GENERATED_BODY()
 public:
     USceneControls();
+    TSharedRef<FJsonObject> VerifyEffects();
 protected:
     virtual void BeginPlay() override;
 private:
@@ -32,4 +34,5 @@ private:
     float Azimuth = 0.f;
     float Exposure = -0.5f;
     double LastStatus = 0;
+    FSceneEffects Effects;
 };

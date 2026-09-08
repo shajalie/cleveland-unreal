@@ -10,9 +10,9 @@ const ranges = {
   width: [640, 3840],
   height: [360, 2160],
   screenPercentage: [25, 100],
-  maxFPS: [15, 120],
+  maxFPS: [2, 120],
   maxBitrateMbps: [2, 80],
-  lightingQuality: [2, 3],
+  lightingQuality: [2, 4],
 };
 
 class RuntimeController {
@@ -54,6 +54,11 @@ class RuntimeController {
       )
         throw Error(`Invalid ${key}`);
     }
+    if (input.virtualShadows !== undefined) {
+      if (typeof input.virtualShadows !== "boolean")
+        throw Error("Invalid virtualShadows");
+      result.virtualShadows = input.virtualShadows;
+    }
     return result;
   }
   async save(input) {
@@ -63,6 +68,30 @@ class RuntimeController {
     await fs.writeFile(file + ".tmp", JSON.stringify(settings, null, 2));
     await fs.rename(file + ".tmp", file);
     return settings;
+  }
+  async power(action = "Status") {
+    if (!["Status", "Balanced", "Performance", "Restore"].includes(action))
+      throw Error("Unknown power option");
+    if (
+      action === "Status" &&
+      this.powerCache &&
+      Date.now() - this.powerCache.at < 30000
+    )
+      return this.powerCache.value;
+    const { stdout } = await exec(
+      "powershell.exe",
+      [
+        "-NoProfile",
+        "-File",
+        path.join(this.root, "pipeline/power-mode.ps1"),
+        "-Action",
+        action,
+      ],
+      { cwd: this.root, windowsHide: true, timeout: 10000, maxBuffer: 10000 },
+    );
+    const value = JSON.parse(stdout);
+    this.powerCache = { at: Date.now(), value };
+    return value;
   }
   async command(action) {
     const { stdout } = await exec(
@@ -98,7 +127,9 @@ class RuntimeController {
           action === "stop" ? "Walkthrough stopped" : "Waiting for video";
       })
       .catch((error) => {
-        this.job.error = error.message;
+        this.job.error = error.message.includes("renderer is still closing")
+          ? "The renderer is still closing. Wait a moment, then try again."
+          : "The rendering PC could not apply that change. Try Start walkthrough again.";
         this.job.message = "Could not apply change";
       })
       .finally(() => {

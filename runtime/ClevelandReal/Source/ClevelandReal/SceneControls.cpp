@@ -1,6 +1,7 @@
 #include "SceneControls.h"
 #include "DaylightExposure.h"
 #include "WalkingCharacter.h"
+#include "LandscapeCluster.h"
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
 #include "Components/DirectionalLightComponent.h"
@@ -18,6 +19,7 @@
 #include "Serialization/JsonReader.h"
 #include "Serialization/JsonSerializer.h"
 #include "SunPosition.h"
+#include "TimerManager.h"
 #include "UObject/UnrealType.h"
 
 namespace
@@ -41,11 +43,16 @@ namespace
         {TEXT("lower"), {-2.4, 5.7, -2.72}, 150},
         {TEXT("porch"), {0.0, -1.5, -0.12}, -90},
         {TEXT("garden"), {4.5, 13.0, -0.55}, -145},
-        {TEXT("pool"), {-0.8, 17.0, -1.7}, -160}
+        {TEXT("pool"), {-0.8, 17.0, -1.62}, -160},
+        {TEXT("front-lawn"), {2.0, -10.0, -.6}, -107},
+        {TEXT("driveway"), {6.2, -8.0, -.58}, -100},
+        {TEXT("rear-lawn"), {7.5, 16.0, -.638}, -160}
     };
 }
 
 USceneControls::USceneControls() { PrimaryComponentTick.bCanEverTick = false; }
+
+TSharedRef<FJsonObject> USceneControls::VerifyEffects() { return Effects.Verify(GetWorld()); }
 
 void USceneControls::BeginPlay()
 {
@@ -72,6 +79,12 @@ void USceneControls::BeginPlay()
         DaylightExposure::Configure(*Walker->Camera, Exposure);
     }
     SetSun(Time);
+    Effects.Initialize(GetWorld());
+    // Reapply after startup scalability commands have settled.
+    FTimerHandle StartupEffects;
+    GetWorld()->GetTimerManager().SetTimer(StartupEffects, FTimerDelegate::CreateWeakLambda(this, [this]() {
+        Effects.Apply(GetWorld()); Respond();
+    }), 2.f, false);
     Respond();
 }
 
@@ -97,6 +110,17 @@ void USceneControls::HandleCommand(const FString& Descriptor)
         FString Id;
         if (!Input->TryGetStringField(TEXT("room"), Id) || !GoToRoom(Id))
             Error = TEXT("This viewpoint has no clear standing spot. Try another room.");
+    }
+    else if (Action == TEXT("recover"))
+    {
+        auto* Walker = Cast<AWalkingCharacter>(GetOwner());
+        if (!Walker || !Walker->RecoverToSafeGround()) Error = TEXT("Choose a room to return to a clear standing spot.");
+    }
+    else if (Action == TEXT("effects"))
+    {
+        const TSharedPtr<FJsonObject>* Options = nullptr;
+        if (!Input->TryGetObjectField(TEXT("effects"), Options) || !Effects.Update(GetWorld(), *Options))
+            Error = TEXT("Choose one of the available visual switches.");
     }
     else if (Action == TEXT("time"))
     {
@@ -214,6 +238,10 @@ void USceneControls::Respond(const FString& Error)
     State->SetNumberField(TEXT("azimuth"), Azimuth);
     State->SetNumberField(TEXT("exposure"), Exposure);
     State->SetNumberField(TEXT("lightingVersion"), DaylightExposure::Version);
+    State->SetNumberField(TEXT("landscapeVersion"), TActorIterator<ALandscapeCluster>(GetWorld()) ? 3 : 0);
+    State->SetObjectField(TEXT("effects"), Effects.Snapshot());
+    if (const auto* Walker = Cast<AWalkingCharacter>(GetOwner()))
+        State->SetNumberField(TEXT("recoveryCount"), Walker->GetRecoveryCount());
     const auto* Extended = IConsoleManager::Get().FindConsoleVariable(TEXT("r.DefaultFeature.AutoExposure.ExtendDefaultLuminanceRange"));
     State->SetBoolField(TEXT("extendedExposureRange"), Extended && Extended->GetInt() == 1);
     State->SetNumberField(TEXT("minEV100"), DaylightExposure::MinEV100);

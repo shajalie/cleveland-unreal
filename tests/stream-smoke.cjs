@@ -40,6 +40,32 @@ async function main() {
     ).status,
     403,
   );
+  assert.equal(
+    (
+      await fetch("http://127.0.0.1:5190/api/power/performance", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Origin: "https://untrusted.example",
+        },
+        body: "{}",
+      })
+    ).status,
+    403,
+  );
+  assert.equal(
+    (
+      await fetch("http://127.0.0.1:5190/api/power/arbitrary-plan", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Origin: "http://127.0.0.1:5190",
+        },
+        body: "{}",
+      })
+    ).status,
+    400,
+  );
   await new Promise((resolve, reject) => {
     const ws = new WebSocket("ws://127.0.0.1:5190", {
       origin: "https://untrusted.example",

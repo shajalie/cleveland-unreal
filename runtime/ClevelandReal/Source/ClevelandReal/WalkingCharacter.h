@@ -16,6 +16,11 @@ public:
     AWalkingCharacter();
     virtual void Tick(float DeltaSeconds) override;
     virtual void SetupPlayerInputComponent(UInputComponent* Input) override;
+    virtual void FellOutOfWorld(const UDamageType& DamageType) override;
+
+    /** Restores a verified grounded position without destroying the streamed pawn. */
+    bool RecoverToSafeGround();
+    int32 GetRecoveryCount() const { return RecoveryCount; }
 
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="View")
     TObjectPtr<UCameraComponent> Camera;
@@ -40,4 +45,9 @@ private:
     void ToggleSway();
     float SmoothedEyeZ = 0.f;
     float WalkPhase = 0.f;
+    FVector LastSafeLocation = FVector::ZeroVector;
+    FRotator LastSafeView = FRotator::ZeroRotator;
+    float GroundedSeconds = 0.f;
+    bool bHasSafeLocation = false;
+    int32 RecoveryCount = 0;
 };

@@ -1,0 +1,314 @@
+[
+  {
+    "id": "grass_bermuda_01",
+    "license": "CC0",
+    "source": "https://polyhaven.com/a/grass_bermuda_01",
+    "files": [
+      {
+        "path": ".local/model-assets/grass_bermuda_01/grass_bermuda_01_1k.gltf",
+        "sha256": "a1e5bb7fcf33721dc4844d7acacab80759fccec659f1ea643f8701afc542e207",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/grass_bermuda_01/grass_bermuda_01_1k.gltf"
+      },
+      {
+        "path": ".local/model-assets/grass_bermuda_01/textures/grass_bermuda_01_nor_gl_1k.jpg",
+        "sha256": "4475b37d6e4d217ce03547216f62d1ef6e65cafda2355fd0cb2aeb6d919b9338",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/grass_bermuda_01/grass_bermuda_01_nor_gl_1k.jpg"
+      },
+      {
+        "path": ".local/model-assets/grass_bermuda_01/textures/grass_bermuda_01_diff_1k.jpg",
+        "sha256": "ef202eeb8f8fb3312446009acecc87e5679a7d612e4dee859d8a849e00af5fcb",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/grass_bermuda_01/grass_bermuda_01_diff_1k.jpg"
+      },
+      {
+        "path": ".local/model-assets/grass_bermuda_01/textures/grass_bermuda_01_arm_1k.jpg",
+        "sha256": "38190d342fe951c33ff8c37dd2e3de37aca4cc7633e91be8b0d1c1f71057a641",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/grass_bermuda_01/grass_bermuda_01_arm_1k.jpg"
+      },
+      {
+        "path": ".local/model-assets/grass_bermuda_01/grass_bermuda_01.bin",
+        "sha256": "b98be48b43afb9d57f6c722d918a49996635064b829b16dc14ef4a48c0f04dae",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/grass_bermuda_01/grass_bermuda_01.bin"
+      },
+      {
+        "path": ".local/model-assets/grass_bermuda_01/textures/grass_bermuda_01_Alpha_alpha.png",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/grass_bermuda_01/grass_bermuda_01_alpha_1k.png",
+        "sha256": "e58b3052aad2f107cdd763e437f80ed8fb5a31bcc43b44023f7f767cb3d9888e"
+      }
+    ],
+    "selectionStatus": "Representative scanned leaves/ground cover; species not surveyed. Placement follows saved listing photos."
+  },
+  {
+    "id": "shrub_04",
+    "license": "CC0",
+    "source": "https://polyhaven.com/a/shrub_04",
+    "files": [
+      {
+        "path": ".local/model-assets/shrub_04/shrub_04_1k.gltf",
+        "sha256": "782832cbc57e96686b78c6ef9df6234c25f564f78421c8ed4bd42c3631f5aeae",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/shrub_04/shrub_04_1k.gltf"
+      },
+      {
+        "path": ".local/model-assets/shrub_04/textures/shrub_04_nor_gl_1k.jpg",
+        "sha256": "200d791e0474495bfc876ba1c289dade669c6a5b124647c55bc840a875f6b51c",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/shrub_04/shrub_04_nor_gl_1k.jpg"
+      },
+      {
+        "path": ".local/model-assets/shrub_04/textures/shrub_04_diff_1k.jpg",
+        "sha256": "0b0fa0a474753d13f3093858cea79d0de05da1e6a0c5d6e181cd351080980b6c",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/shrub_04/shrub_04_diff_1k.jpg"
+      },
+      {
+        "path": ".local/model-assets/shrub_04/textures/shrub_04_arm_1k.jpg",
+        "sha256": "d1085df021928b29b0f38dde7e58e9a2e304c4e8d838e390b37cf57f8aa492e8",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/shrub_04/shrub_04_arm_1k.jpg"
+      },
+      {
+        "path": ".local/model-assets/shrub_04/shrub_04.bin",
+        "sha256": "cb442c39682e54cc63f912aa78ab17a03566f947a61adbbbaaa6473166744f01",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/shrub_04/shrub_04.bin"
+      },
+      {
+        "path": ".local/model-assets/shrub_04/textures/shrub_04_Alpha_alpha.png",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/shrub_04/shrub_04_alpha_1k.png",
+        "sha256": "6ddd60dcdbdcf55d7258ae747866f68f5acc9d88a7735c9eb05b02d6dec527e3"
+      }
+    ],
+    "selectionStatus": "Representative scanned leaves/ground cover; species not surveyed. Placement follows saved listing photos."
+  },
+  {
+    "id": "fern_02",
+    "license": "CC0",
+    "source": "https://polyhaven.com/a/fern_02",
+    "files": [
+      {
+        "path": ".local/model-assets/fern_02/fern_02_1k.gltf",
+        "sha256": "33974295ee19670af4877705fc7d91f33f42d6302f0d44a625e072271223031f",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/fern_02/fern_02_1k.gltf"
+      },
+      {
+        "path": ".local/model-assets/fern_02/textures/fern_02_arm_1k.jpg",
+        "sha256": "ebfb5d76ce9cbdaec20bcd22dce9b755f0b1b8650ef29ca13555e3e6961025d7",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/fern_02/fern_02_arm_1k.jpg"
+      },
+      {
+        "path": ".local/model-assets/fern_02/textures/fern_02_diff_1k.jpg",
+        "sha256": "a828a6e7b4c01c826911e2eac4b3afc7457dab7b3b392a31c681ed88b7d50029",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/fern_02/fern_02_diff_1k.jpg"
+      },
+      {
+        "path": ".local/model-assets/fern_02/textures/fern_02_nor_gl_1k.jpg",
+        "sha256": "45bce132c6e96a0864bc89ab5da51361ab3f4afa83a6669ae499ab5ca811f621",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/fern_02/fern_02_nor_gl_1k.jpg"
+      },
+      {
+        "path": ".local/model-assets/fern_02/fern_02.bin",
+        "sha256": "fe1abb762bcbbc7ad9e86925c8080437a62add257d9280e9142fdc85c226e64c",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/fern_02/fern_02.bin"
+      },
+      {
+        "path": ".local/model-assets/fern_02/textures/fern_02_Alpha_alpha.png",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/fern_02/fern_02_alpha_1k.png",
+        "sha256": "ea3c64284c7ebdeedf484d2d816eae92825ec526140c3bb83859ddc7a64001f9"
+      }
+    ],
+    "selectionStatus": "Representative scanned leaves/ground cover; species not surveyed. Placement follows saved listing photos."
+  },
+  {
+    "id": "periwinkle_plant",
+    "license": "CC0",
+    "source": "https://polyhaven.com/a/periwinkle_plant",
+    "files": [
+      {
+        "path": ".local/model-assets/periwinkle_plant/periwinkle_plant_1k.gltf",
+        "sha256": "df781eea76123fc6eee97e6e8d466743e3a5fb08e1a2c3f5025a57e090d2cc55",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/periwinkle_plant/periwinkle_plant_1k.gltf"
+      },
+      {
+        "path": ".local/model-assets/periwinkle_plant/textures/periwinkle_plant_nor_gl_1k.jpg",
+        "sha256": "36d2464e7500f741500228b955c1fb0f26d954e869bd26f93dd25c0fafc5087d",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/periwinkle_plant/periwinkle_plant_nor_gl_1k.jpg"
+      },
+      {
+        "path": ".local/model-assets/periwinkle_plant/textures/periwinkle_plant_diff_1k.jpg",
+        "sha256": "32d61084e6c07fa3ca8e03b35b347a12717f971efc90e8fe1185931ee2298c56",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/periwinkle_plant/periwinkle_plant_diff_1k.jpg"
+      },
+      {
+        "path": ".local/model-assets/periwinkle_plant/textures/periwinkle_plant_arm_1k.jpg",
+        "sha256": "d964e2e1118c2ca88c137b45590f48d83d3471fef48e913cbd57bf7122bbe4a3",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/periwinkle_plant/periwinkle_plant_arm_1k.jpg"
+      },
+      {
+        "path": ".local/model-assets/periwinkle_plant/periwinkle_plant.bin",
+        "sha256": "f039855d84d59f764838285c2b041a5cf255d103afc856e219a62482826d9655",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/periwinkle_plant/periwinkle_plant.bin"
+      },
+      {
+        "path": ".local/model-assets/periwinkle_plant/textures/periwinkle_plant_opacity_alpha.png",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/periwinkle_plant/periwinkle_plant_opacity_1k.png",
+        "sha256": "e1dc2746b641606ae2772667c719e2b593b548759a51d86ce093322c22e903de"
+      }
+    ],
+    "selectionStatus": "Representative scanned leaves/ground cover; species not surveyed. Placement follows saved listing photos."
+  },
+  {
+    "id": "flower_gazania",
+    "license": "CC0",
+    "source": "https://polyhaven.com/a/flower_gazania",
+    "files": [
+      {
+        "path": ".local/model-assets/flower_gazania/flower_gazania_1k.gltf",
+        "sha256": "73c7f4094f2ad78ddfbe6373f8372ddb736a5d9fc6485db08ae32301edc95a24",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/flower_gazania/flower_gazania_1k.gltf"
+      },
+      {
+        "path": ".local/model-assets/flower_gazania/flower_gazania.bin",
+        "sha256": "a3864c51fce2dacb01629a0c364730e5988ac5a7a937acc0e2635c946d786797",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/flower_gazania/flower_gazania.bin"
+      },
+      {
+        "path": ".local/model-assets/flower_gazania/textures/flower_gazania_nor_gl_1k.jpg",
+        "sha256": "802d0f9234ccd778c537b3b5ea3714f219d73a80ab794ea77271ab47dbbc9789",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/flower_gazania/flower_gazania_nor_gl_1k.jpg"
+      },
+      {
+        "path": ".local/model-assets/flower_gazania/textures/flower_gazania_diff_1k.jpg",
+        "sha256": "9d3022ebe7bfe0493a3e46aad87ea4746ea51df8c8b3e19294f1bb718a3147bb",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/flower_gazania/flower_gazania_diff_1k.jpg"
+      },
+      {
+        "path": ".local/model-assets/flower_gazania/textures/flower_gazania_arm_1k.jpg",
+        "sha256": "80800dca73ad66b8c51b089db771b7a15c9e57dfd959e0da5cde434b3d8151b4",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/flower_gazania/flower_gazania_arm_1k.jpg"
+      },
+      {
+        "path": ".local/model-assets/flower_gazania/textures/flower_gazania_Alpha_alpha.png",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/flower_gazania/flower_gazania_alpha_1k.png",
+        "sha256": "b6e4db1c4925217bfbb7da0c030f88acb15cc28fbfbf977a585f6b35fb2cf711"
+      }
+    ],
+    "selectionStatus": "Representative scanned leaves/ground cover; species not surveyed. Placement follows saved listing photos."
+  },
+  {
+    "id": "planter_pot_clay",
+    "license": "CC0",
+    "source": "https://polyhaven.com/a/planter_pot_clay",
+    "files": [
+      {
+        "path": ".local/model-assets/planter_pot_clay/planter_pot_clay_1k.gltf",
+        "sha256": "f2989068dcff9737c9f3d49d435b70e36d553822ac87134daac055ae9706af1e",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/planter_pot_clay/planter_pot_clay_1k.gltf"
+      },
+      {
+        "path": ".local/model-assets/planter_pot_clay/textures/planter_pot_clay_diff_1k.jpg",
+        "sha256": "4f2962fd238401e49fd400596fdccd1ee9e2cca9ed21e44bb924dca3076f524c",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/planter_pot_clay/planter_pot_clay_diff_1k.jpg"
+      },
+      {
+        "path": ".local/model-assets/planter_pot_clay/planter_pot_clay.bin",
+        "sha256": "effd0a038a75a054e55e2f5f71a84c57c1c6efc4e453ae3e62d4ce5167a2913c",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/planter_pot_clay/planter_pot_clay.bin"
+      },
+      {
+        "path": ".local/model-assets/planter_pot_clay/textures/planter_pot_clay_arm_1k.jpg",
+        "sha256": "68e9e509db4e330b48924c606d4a9a99b54e105c1fe1690ff2811a05d95a0def",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/planter_pot_clay/planter_pot_clay_arm_1k.jpg"
+      },
+      {
+        "path": ".local/model-assets/planter_pot_clay/textures/planter_pot_clay_nor_gl_1k.jpg",
+        "sha256": "25a564e55b247a94863b513853b1aeaad5c894dd78e92e1fd89e794b83b483c4",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/planter_pot_clay/planter_pot_clay_nor_gl_1k.jpg"
+      }
+    ],
+    "selectionStatus": "Representative scanned leaves/ground cover; species not surveyed. Placement follows saved listing photos."
+  },
+  {
+    "id": "leafy_grass",
+    "source": "https://polyhaven.com/a/leafy_grass",
+    "license": "CC0",
+    "files": [
+      {
+        "path": "reference/materials/landscape/leafy_grass_diff.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/leafy_grass/leafy_grass_diff_2k.jpg",
+        "sha256": "8e1c6d21365d4b89bc5a35ab664da98a78dbc3ab9ba6100474881c8619a5b113"
+      },
+      {
+        "path": "reference/materials/landscape/leafy_grass_nor_gl.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/leafy_grass/leafy_grass_nor_gl_2k.jpg",
+        "sha256": "df0cf0ce96e653f033e5b934d5b12995464bda027aa53bd12e329be889aa9f45"
+      },
+      {
+        "path": "reference/materials/landscape/leafy_grass_rough.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/leafy_grass/leafy_grass_rough_2k.jpg",
+        "sha256": "34e1733bf4064b6950a575ff57e78c8b7ff71b63749eb48a49221bd65de6fb4f"
+      }
+    ]
+  },
+  {
+    "id": "pebble_embedded_pavement",
+    "source": "https://polyhaven.com/a/pebble_embedded_pavement",
+    "license": "CC0",
+    "files": [
+      {
+        "path": "reference/materials/landscape/pebble_embedded_pavement_diff.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/pebble_embedded_pavement/pebble_embedded_pavement_diff_2k.jpg",
+        "sha256": "d12fa34225e6d13f6d8f8f4aae4c4b3f6a187f78c4b10f953a8d703463b3df47"
+      },
+      {
+        "path": "reference/materials/landscape/pebble_embedded_pavement_nor_gl.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/pebble_embedded_pavement/pebble_embedded_pavement_nor_gl_2k.jpg",
+        "sha256": "11363b9802e8a1ece538d38a9179374f782aa71ff16c966de861afc5c7313689"
+      },
+      {
+        "path": "reference/materials/landscape/pebble_embedded_pavement_rough.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/pebble_embedded_pavement/pebble_embedded_pavement_rough_2k.jpg",
+        "sha256": "183bd5c7123084e300e334fed5e52e199c337e3330291e608b29d992762563e4"
+      }
+    ]
+  },
+  {
+    "id": "slate_floor_02",
+    "source": "https://polyhaven.com/a/slate_floor_02",
+    "license": "CC0",
+    "files": [
+      {
+        "path": "reference/materials/landscape/slate_floor_02_diff.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/slate_floor_02/slate_floor_02_diff_2k.jpg",
+        "sha256": "8442da3364bf1884a19830d6689e8b5fd1cde00aab33f03d999d762a3c4930f0"
+      },
+      {
+        "path": "reference/materials/landscape/slate_floor_02_nor_gl.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/slate_floor_02/slate_floor_02_nor_gl_2k.jpg",
+        "sha256": "3dc0ab6c01f0cfb5a174306140240fdd4b11fdce0e9a33e722fdf827e973ed22"
+      },
+      {
+        "path": "reference/materials/landscape/slate_floor_02_rough.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/slate_floor_02/slate_floor_02_rough_2k.jpg",
+        "sha256": "f9da62eeffb7841951444245d67674953778d1ea8efdab0a3904c2f094f56d06"
+      }
+    ]
+  },
+  {
+    "id": "Grass004",
+    "source": "https://ambientcg.com/a/Grass004",
+    "license": "CC0",
+    "licenseSource": "https://docs.ambientcg.com/license/",
+    "repeatMeters": 1.4,
+    "archiveUrl": "https://ambientcg.com/get?file=Grass004_2K-JPG.zip",
+    "archiveSha256": "d7d3f08e8bb1e59aed0c3dbb85ea0b46d5308481f89b6a3fd62c0ec9e862245b",
+    "files": [
+      {
+        "path": "reference/materials/landscape/Grass004_diff.jpg",
+        "sha256": "735b141c8f1972e70a45879424f1238fea9f887324173097785f4ac36e67e9a3"
+      },
+      {
+        "path": "reference/materials/landscape/Grass004_nor_gl.jpg",
+        "sha256": "15ccad231764049d6581a52076d02bb6b627df77895cb0508e4017d8a4877fef"
+      },
+      {
+        "path": "reference/materials/landscape/Grass004_rough.jpg",
+        "sha256": "c449fdf1e779eb7be5a19c1d58ee28cc155ed0523a141b151f3cbc843c4ae2e3"
+      }
+    ]
+  }
+]

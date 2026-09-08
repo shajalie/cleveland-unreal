@@ -259,6 +259,20 @@ dialog p {
   gap: 8px;
   margin: 10px 0;
 }
+.effect-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  margin: 4px 0;
+}
+.effect-option input {
+  flex: 0 0 22px;
+  width: 22px;
+  min-height: 22px;
+  height: 22px;
+  accent-color: #f3c16e;
+}
 @media (pointer: coarse) {
   #look {
     pointer-events: auto;

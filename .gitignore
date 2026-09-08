@@ -1,0 +1,17 @@
+.local/
+.env*
+!.env.example
+__pycache__/
+.ruff_cache/
+.vs/
+Binaries/
+Intermediate/
+DerivedDataCache/
+Saved/
+Builds/
+SourceAssets/
+*.blend1
+*.log
+*.zip
+*.bundle
+node_modules/

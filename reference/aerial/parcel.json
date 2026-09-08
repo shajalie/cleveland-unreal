@@ -1,0 +1,1696 @@
+{
+  "displayFieldName": "ASRNAME",
+  "fieldAliases": {
+    "OBJECTID": "OBJECTID",
+    "MAR_ID": "Master Address Repository Identifier",
+    "RECORDATION_DT": "Recordation Date",
+    "SQUARE": "Square",
+    "SUFFIX": "Suffix",
+    "RES": "Reservation",
+    "PAR": "Parcel",
+    "LOT": "Lot",
+    "LOT_TYPE": "Lot Type",
+    "OF_LOT_SEQ": "Of Lot Sequence",
+    "BOOK_NUM": "Book Number",
+    "PAGE_NUM": "Page Number",
+    "UNDERLIES_CONDO": "Underlies Condo",
+    "CONDO_BOOK_NUM": "Condo Book Number",
+    "CONDO_PAGE_NUM": "Condo Page Number",
+    "EFFECTIVETAXYEAR": "Effective Tax Year",
+    "QUADRANT": "Quadrant",
+    "COL": "Common Ownership",
+    "SSL": "Square, Suffix, Lot",
+    "ARN": "Assessor ID Number",
+    "ASRNAME": "Assessor Name",
+    "PROPTYPE": "Property Type",
+    "TRIGROUP": "Triennial Tax Assessment Group",
+    "USECODE": "Use Code",
+    "LANDAREA": "Land Area",
+    "PRMSWARD": "Premise Ward",
+    "PREMISEADD": "Premise Address",
+    "NBHD": "Neighborhood Assessment Code",
+    "NBHDNAME": "Neighborhood Assessment Name",
+    "SUBNBHD": "Sub-Neighborhood Assessment Name",
+    "UNITNUMBER": "Unit Number",
+    "OWNERNAME": "Owner Name",
+    "CAREOFNAME": "Care Of Name",
+    "ADDRESS1": "Tax Billing Address",
+    "ADDRESS2": "Tax Billing Address 2",
+    "CITYSTZIP": "City, State, Zip",
+    "OLDLAND": "Old Land Value",
+    "OLDIMPR": "Old Improvemnet Value",
+    "OLDTOTAL": "Old Total Value",
+    "NEWLAND": "Proposed Land value",
+    "NEWIMPR": "Proposed Improvement Value",
+    "NEWTOTAL": "Proposed Total Value",
+    "PHASELAND": "Current Land Value",
+    "PHASEBUILD": "Current Build Value",
+    "PARTPART": "Not Part and Part",
+    "VACLNDUSE": "Vacant Land Use",
+    "LOWNUMBER": "Low House Number",
+    "STREETNAME": "Street Name",
+    "QDRNTNAME": "Quadrant Name",
+    "DELCODE": "Delete Code",
+    "HSTDCODE": "Homestead Code",
+    "CLASSTYPE": "Class Type",
+    "TAXRATE": "Tas Rate",
+    "MIXEDUSE": "Mixed Use",
+    "MIX1TXTYPE": "Mix 1 Tax Type",
+    "MIX1CLASS": "Mix 1 Class",
+    "MIX1RATE": "Mix 1 Rate",
+    "MIX1LNDPCT": "Mix 1 Land Percentage",
+    "MIX1LNDVAL": "Mix 1 Land Value",
+    "MIX1BLDPCT": "Mix 1 Building Percentage",
+    "MIX1BLDVAL": "Mix 1 Building Value",
+    "MIX2TXTYPE": "Mix 2 Tax Type",
+    "MIX2CLASS": "Mix 2 Class",
+    "MIX2RATE": "Mix 2 Rate",
+    "MIX2LNDPCT": "Mix 2 Land Percentage",
+    "MIX2LNDVAL": "Mix 2 Land Value",
+    "MIX2BLDPCT": "Mix 2 Building Percentage",
+    "MIX2BLDVAL": "Mix 2 Building Value",
+    "OWNOCCT": "Owner-Occupied Units",
+    "COOPUNITS": "Occupied Co-Op Units",
+    "PCHILDCODE": "Parent Child Code",
+    "ABTLOTCODE": "Abutting Lot SSL",
+    "SALEPRICE": "Sale Price",
+    "SALEDATE": "Sale Date",
+    "INSTNO": "Instrument Number",
+    "ACCEPTCODE": "Acceptance Code",
+    "SALETYPE": "Sale Type",
+    "MORTGAGECO": "Mortgage Company Key",
+    "ASSESSMENT": "Assessment",
+    "ANNUALTAX": "Annual Tax",
+    "EXTRACTDAT": "Extract Date",
+    "CAPCURR": "Assessment Cap For Current Year",
+    "CAPPROP": "Assessment Cap For Proposed Year",
+    "CY1YEAR": "Current Year Description (1st Half)",
+    "CY1TXSALE": "Current Year Tax Sale Flag (1st Half)",
+    "CY1TAX": "Current Year Tax (1st Half)",
+    "CY1PEN": "Current Year Penalty (1st Half)",
+    "CY1INT": "Current Year Interest (1st Half)",
+    "CY1FEE": "Current Year Fee (1st Half)",
+    "CY1TOTDUE": "Current Year Total Due (1st Half)",
+    "CY1COLL": "Current Year Collection (1st Half)",
+    "CY1BAL": "Current Year Balance (1st Half)",
+    "CY1CR": "Current Year Credits Received (1st Half)",
+    "CY2YEAR": "Current Year Description (2nd Half)",
+    "CY2TXSALE": "Current Year Tax Sale Flag (2nd Half)",
+    "CY2TAX": "Current Year Tax (2nd Half)",
+    "CY2PEN": "Current Year Penalty (2nd Half)",
+    "CY2INT": "Current Year Interest (2ndHalf)",
+    "CY2FEE": "Current Year Fee (2nd Half)",
+    "CY2TOTDUE": "Current Year Total Due (2nd Half)",
+    "CY2COLL": "Current Year Collection (2nd Half)",
+    "CY2BAL": "Current Year Balance (2nd Half)",
+    "CY2CR": "Current Year Credits Received (2nd Half)",
+    "PY1YEAR": "Prior Year 1 Description",
+    "PY1TXSALE": "Prior Year 1 Tax Sale Flag",
+    "PY1TAX": "Prior Year 1 Tax",
+    "PY1PEN": "Prior Year 1 Penalty",
+    "PY1INT": "Prior Year 1 Interest",
+    "PY1FEE": "Prior Year 1 Fee",
+    "PY1TOTDUE": "Prior Year 1 Total Due",
+    "PY1COLL": "Prior Year 1 Collection",
+    "PY1BAL": "Prior Year 1 Balance",
+    "PY1CR": "Prior Year 1 Credits Received",
+    "PY2YEAR": "Prior Year 2 Description",
+    "PY2TXSALE": "Prior Year 2 Tax Sale Flag",
+    "PY2TAX": "Prior Year 2 Tax",
+    "PY2PEN": "Prior Year 2 Penalty",
+    "PY2INT": "Prior Year 2 Interest",
+    "PY2FEE": "Prior Year 2 Fee",
+    "PY2TOTDUE": "Prior Year 2 Total Due",
+    "PY2COLL": "Prior Year 2 Collection",
+    "PY2BAL": "Prior Year 2 Balance",
+    "PY2CR": "Prior Year 2 Credits Received",
+    "PY3YEAR": "Prior Year 3 Description",
+    "PY3TXSALE": "Prior Year 3 Tax Sale Flag",
+    "PY3TAX": "Prior Year 3 Tax",
+    "PY3PEN": "Prior Year 3 Penalty",
+    "PY3INT": "Prior Year 3 Interest",
+    "PY3FEE": "Prior Year 3 Fee",
+    "PY3TOTDUE": "Prior Year 3 Total Due",
+    "PY3COLL": "Prior Year 3 Collection",
+    "PY3BAL": "Prior Year 3 Balance",
+    "PY3CR": "Prior Year 3 Credits Received",
+    "PY4YEAR": "Prior Year 4 Description",
+    "PY4TXSALE": "Prior Year 4 Tax Sale Flag",
+    "PY4TAX": "Prior Year 4 Tax",
+    "PY4PEN": "Prior Year 4 Penalty",
+    "PY4INT": "Prior Year 4 Interest",
+    "PY4FEE": "Prior Year 4 Fee",
+    "PY4TOTDUE": "Prior Year 4 Total Due",
+    "PY4COLL": "Prior Year 4 Collection",
+    "PY4BAL": "Prior Year 4 Balance",
+    "PY4CR": "Prior Year 4 Credits Received",
+    "PY5YEAR": "Prior Year 5 Description",
+    "PY5TXSALE": "Prior Year 5 Tax Sale Flag",
+    "PY5TAX": "Prior Year 5 Tax",
+    "PY5PEN": "Prior Year 5 Penalty",
+    "PY5INT": "Prior Year 5 Interest",
+    "PY5FEE": "Prior Year 5 Fee",
+    "PY5TOTDUE": "Prior Year 5 Total Due",
+    "PY5COLL": "Prior Year 5 Collection",
+    "PY5BAL": "Prior Year 5 Balance",
+    "PY5CR": "Prior Year 5 Credits Received",
+    "PY6YEAR": "Prior Year 6 Description",
+    "PY6TXSALE": "Prior Year 6 Tax Sale Flag",
+    "PY6TAX": "Prior Year 6 Tax",
+    "PY6PEN": "Prior Year 6 Penalty",
+    "PY6INT": "Prior Year 6 Interest",
+    "PY6FEE": "Prior Year 6 Fee",
+    "PY6TOTDUE": "Prior Year 6 Total Due",
+    "PY6COLL": "Prior Year 6 Collection",
+    "PY6BAL": "Prior Year 6 Balance",
+    "PY6CR": "Prior Year 6 Credits Received",
+    "PY7YEAR": "Prior Year 7 Description",
+    "PY7TXSALE": "Prior Year 7 Tax Sale Flag",
+    "PY7TAX": "Prior Year 7 Tax",
+    "PY7PEN": "Prior Year 7 Penalty",
+    "PY7INT": "Prior Year 7 Interest",
+    "PY7FEE": "Prior Year 7 Fee",
+    "PY7TOTDUE": "Prior Year 7 Total Due",
+    "PY7COLL": "Prior Year 7 Collection",
+    "PY7BAL": "Prior Year 7 Balance",
+    "PY7CR": "Prior Year 7 Credits Received",
+    "PY8YEAR": "Prior Year 8 Description",
+    "PY8TXSALE": "Prior Year 8 Tax Sale Flag",
+    "PY8TAX": "Prior Year 8 Tax",
+    "PY8PEN": "Prior Year 8 Penalty",
+    "PY8INT": "Prior Year 8 Interest",
+    "PY8FEE": "Prior Year 8 Fee",
+    "PY8TOTDUE": "Prior Year 8 Total Due",
+    "PY8COLL": "Prior Year 8 Collection",
+    "PY8BAL": "Prior Year 8 Balance",
+    "PY8CR": "Prior Year 8 Credits Received",
+    "PY9YEAR": "Prior Year 9 Description",
+    "PY9TXSALE": "Prior Year 9 Tax Sale Flag",
+    "PY9TAX": "Prior Year 9 Tax",
+    "PY9PEN": "Prior Year 9 Penalty",
+    "PY9INT": "Prior Year 9 Interest",
+    "PY9FEE": "Prior Year 9 Fee",
+    "PY9TOTDUE": "Prior Year 9 Total Due",
+    "PY9COLL": "Prior Year 9 Collection",
+    "PY9BAL": "Prior Year 9 Balance",
+    "PY9CR": "Prior Year 9 Credits Received",
+    "PY10YEAR": "Prior Year 10 Description",
+    "PY10TXSALE": "Prior Year 10 Tax Sale Flag",
+    "PY10TAX": "Prior Year 10 Tax",
+    "PY10PEN": "Prior Year 10 Penalty",
+    "PY10INT": "Prior Year 10 Interest",
+    "PY10FEE": "Prior Year 10 Fee",
+    "PY10TOTDUE": "Prior Year 10 Total Due",
+    "PY10COLL": "Prior Year 10 Collection",
+    "PY10BAL": "Prior Year 10 Balance",
+    "PY10CR": "Prior Year 10 Credits Received",
+    "OWNNAME2": "Owner Name 2",
+    "DEEDS": "Deeds",
+    "CONDOLOT": "Condo Lot",
+    "CONDO_REGIME_NUM": "Condo Regime Number",
+    "CREATEDBYRECORD": "Created By Record",
+    "RETIREDBYRECORD": "Retired By Record",
+    "STATEDAREA": "Stated Area",
+    "STATEDAREAUNIT": "Stated Area Unit",
+    "CALCULATEDAREA": "Calculated Area",
+    "CREATED_DATE": "Created Date",
+    "LAST_EDITED_DATE": "Modified Date",
+    "ISHISTORIC": "Is Historic",
+    "RECORD": "Record",
+    "RETIRING_RECORD": "Retiring Record",
+    "SE_ANNO_CAD_DATA": "SE_ANNO_CAD_DATA",
+    "GLOBALID": "GLOBALID",
+    "SHAPE.AREA": "SHAPE.AREA",
+    "SHAPE.LEN": "SHAPE.LEN"
+  },
+  "geometryType": "esriGeometryPolygon",
+  "spatialReference": {
+    "wkid": 26985,
+    "latestWkid": 26985
+  },
+  "fields": [
+    {
+      "name": "OBJECTID",
+      "type": "esriFieldTypeOID",
+      "alias": "OBJECTID"
+    },
+    {
+      "name": "MAR_ID",
+      "type": "esriFieldTypeDouble",
+      "alias": "Master Address Repository Identifier"
+    },
+    {
+      "name": "RECORDATION_DT",
+      "type": "esriFieldTypeDate",
+      "alias": "Recordation Date",
+      "length": 8
+    },
+    {
+      "name": "SQUARE",
+      "type": "esriFieldTypeString",
+      "alias": "Square",
+      "length": 50
+    },
+    {
+      "name": "SUFFIX",
+      "type": "esriFieldTypeString",
+      "alias": "Suffix",
+      "length": 50
+    },
+    {
+      "name": "RES",
+      "type": "esriFieldTypeString",
+      "alias": "Reservation",
+      "length": 50
+    },
+    {
+      "name": "PAR",
+      "type": "esriFieldTypeString",
+      "alias": "Parcel",
+      "length": 50
+    },
+    {
+      "name": "LOT",
+      "type": "esriFieldTypeString",
+      "alias": "Lot",
+      "length": 40
+    },
+    {
+      "name": "LOT_TYPE",
+      "type": "esriFieldTypeInteger",
+      "alias": "Lot Type"
+    },
+    {
+      "name": "OF_LOT_SEQ",
+      "type": "esriFieldTypeInteger",
+      "alias": "Of Lot Sequence"
+    },
+    {
+      "name": "BOOK_NUM",
+      "type": "esriFieldTypeString",
+      "alias": "Book Number",
+      "length": 40
+    },
+    {
+      "name": "PAGE_NUM",
+      "type": "esriFieldTypeString",
+      "alias": "Page Number",
+      "length": 40
+    },
+    {
+      "name": "UNDERLIES_CONDO",
+      "type": "esriFieldTypeInteger",
+      "alias": "Underlies Condo"
+    },
+    {
+      "name": "CONDO_BOOK_NUM",
+      "type": "esriFieldTypeString",
+      "alias": "Condo Book Number",
+      "length": 40
+    },
+    {
+      "name": "CONDO_PAGE_NUM",
+      "type": "esriFieldTypeString",
+      "alias": "Condo Page Number",
+      "length": 40
+    },
+    {
+      "name": "EFFECTIVETAXYEAR",
+      "type": "esriFieldTypeDate",
+      "alias": "Effective Tax Year",
+      "length": 8
+    },
+    {
+      "name": "QUADRANT",
+      "type": "esriFieldTypeString",
+      "alias": "Quadrant",
+      "length": 40
+    },
+    {
+      "name": "COL",
+      "type": "esriFieldTypeString",
+      "alias": "Common Ownership",
+      "length": 2
+    },
+    {
+      "name": "SSL",
+      "type": "esriFieldTypeString",
+      "alias": "Square, Suffix, Lot",
+      "length": 50
+    },
+    {
+      "name": "ARN",
+      "type": "esriFieldTypeString",
+      "alias": "Assessor ID Number",
+      "length": 3
+    },
+    {
+      "name": "ASRNAME",
+      "type": "esriFieldTypeString",
+      "alias": "Assessor Name",
+      "length": 25
+    },
+    {
+      "name": "PROPTYPE",
+      "type": "esriFieldTypeString",
+      "alias": "Property Type",
+      "length": 30
+    },
+    {
+      "name": "TRIGROUP",
+      "type": "esriFieldTypeString",
+      "alias": "Triennial Tax Assessment Group",
+      "length": 1
+    },
+    {
+      "name": "USECODE",
+      "type": "esriFieldTypeString",
+      "alias": "Use Code",
+      "length": 3
+    },
+    {
+      "name": "LANDAREA",
+      "type": "esriFieldTypeDouble",
+      "alias": "Land Area"
+    },
+    {
+      "name": "PRMSWARD",
+      "type": "esriFieldTypeString",
+      "alias": "Premise Ward",
+      "length": 3
+    },
+    {
+      "name": "PREMISEADD",
+      "type": "esriFieldTypeString",
+      "alias": "Premise Address",
+      "length": 50
+    },
+    {
+      "name": "NBHD",
+      "type": "esriFieldTypeString",
+      "alias": "Neighborhood Assessment Code",
+      "length": 3
+    },
+    {
+      "name": "NBHDNAME",
+      "type": "esriFieldTypeString",
+      "alias": "Neighborhood Assessment Name",
+      "length": 30
+    },
+    {
+      "name": "SUBNBHD",
+      "type": "esriFieldTypeString",
+      "alias": "Sub-Neighborhood Assessment Name",
+      "length": 1
+    },
+    {
+      "name": "UNITNUMBER",
+      "type": "esriFieldTypeString",
+      "alias": "Unit Number",
+      "length": 6
+    },
+    {
+      "name": "OWNERNAME",
+      "type": "esriFieldTypeString",
+      "alias": "Owner Name",
+      "length": 70
+    },
+    {
+      "name": "CAREOFNAME",
+      "type": "esriFieldTypeString",
+      "alias": "Care Of Name",
+      "length": 40
+    },
+    {
+      "name": "ADDRESS1",
+      "type": "esriFieldTypeString",
+      "alias": "Tax Billing Address",
+      "length": 40
+    },
+    {
+      "name": "ADDRESS2",
+      "type": "esriFieldTypeString",
+      "alias": "Tax Billing Address 2",
+      "length": 40
+    },
+    {
+      "name": "CITYSTZIP",
+      "type": "esriFieldTypeString",
+      "alias": "City, State, Zip",
+      "length": 40
+    },
+    {
+      "name": "OLDLAND",
+      "type": "esriFieldTypeDouble",
+      "alias": "Old Land Value"
+    },
+    {
+      "name": "OLDIMPR",
+      "type": "esriFieldTypeDouble",
+      "alias": "Old Improvemnet Value"
+    },
+    {
+      "name": "OLDTOTAL",
+      "type": "esriFieldTypeDouble",
+      "alias": "Old Total Value"
+    },
+    {
+      "name": "NEWLAND",
+      "type": "esriFieldTypeDouble",
+      "alias": "Proposed Land value"
+    },
+    {
+      "name": "NEWIMPR",
+      "type": "esriFieldTypeDouble",
+      "alias": "Proposed Improvement Value"
+    },
+    {
+      "name": "NEWTOTAL",
+      "type": "esriFieldTypeDouble",
+      "alias": "Proposed Total Value"
+    },
+    {
+      "name": "PHASELAND",
+      "type": "esriFieldTypeDouble",
+      "alias": "Current Land Value"
+    },
+    {
+      "name": "PHASEBUILD",
+      "type": "esriFieldTypeDouble",
+      "alias": "Current Build Value"
+    },
+    {
+      "name": "PARTPART",
+      "type": "esriFieldTypeString",
+      "alias": "Not Part and Part",
+      "length": 1
+    },
+    {
+      "name": "VACLNDUSE",
+      "type": "esriFieldTypeString",
+      "alias": "Vacant Land Use",
+      "length": 1
+    },
+    {
+      "name": "LOWNUMBER",
+      "type": "esriFieldTypeString",
+      "alias": "Low House Number",
+      "length": 4
+    },
+    {
+      "name": "STREETNAME",
+      "type": "esriFieldTypeString",
+      "alias": "Street Name",
+      "length": 40
+    },
+    {
+      "name": "QDRNTNAME",
+      "type": "esriFieldTypeString",
+      "alias": "Quadrant Name",
+      "length": 30
+    },
+    {
+      "name": "DELCODE",
+      "type": "esriFieldTypeString",
+      "alias": "Delete Code",
+      "length": 1
+    },
+    {
+      "name": "HSTDCODE",
+      "type": "esriFieldTypeString",
+      "alias": "Homestead Code",
+      "length": 1
+    },
+    {
+      "name": "CLASSTYPE",
+      "type": "esriFieldTypeString",
+      "alias": "Class Type",
+      "length": 3
+    },
+    {
+      "name": "TAXRATE",
+      "type": "esriFieldTypeDouble",
+      "alias": "Tas Rate"
+    },
+    {
+      "name": "MIXEDUSE",
+      "type": "esriFieldTypeString",
+      "alias": "Mixed Use",
+      "length": 1
+    },
+    {
+      "name": "MIX1TXTYPE",
+      "type": "esriFieldTypeString",
+      "alias": "Mix 1 Tax Type",
+      "length": 2
+    },
+    {
+      "name": "MIX1CLASS",
+      "type": "esriFieldTypeString",
+      "alias": "Mix 1 Class",
+      "length": 3
+    },
+    {
+      "name": "MIX1RATE",
+      "type": "esriFieldTypeDouble",
+      "alias": "Mix 1 Rate"
+    },
+    {
+      "name": "MIX1LNDPCT",
+      "type": "esriFieldTypeDouble",
+      "alias": "Mix 1 Land Percentage"
+    },
+    {
+      "name": "MIX1LNDVAL",
+      "type": "esriFieldTypeDouble",
+      "alias": "Mix 1 Land Value"
+    },
+    {
+      "name": "MIX1BLDPCT",
+      "type": "esriFieldTypeDouble",
+      "alias": "Mix 1 Building Percentage"
+    },
+    {
+      "name": "MIX1BLDVAL",
+      "type": "esriFieldTypeDouble",
+      "alias": "Mix 1 Building Value"
+    },
+    {
+      "name": "MIX2TXTYPE",
+      "type": "esriFieldTypeString",
+      "alias": "Mix 2 Tax Type",
+      "length": 2
+    },
+    {
+      "name": "MIX2CLASS",
+      "type": "esriFieldTypeString",
+      "alias": "Mix 2 Class",
+      "length": 3
+    },
+    {
+      "name": "MIX2RATE",
+      "type": "esriFieldTypeDouble",
+      "alias": "Mix 2 Rate"
+    },
+    {
+      "name": "MIX2LNDPCT",
+      "type": "esriFieldTypeDouble",
+      "alias": "Mix 2 Land Percentage"
+    },
+    {
+      "name": "MIX2LNDVAL",
+      "type": "esriFieldTypeDouble",
+      "alias": "Mix 2 Land Value"
+    },
+    {
+      "name": "MIX2BLDPCT",
+      "type": "esriFieldTypeDouble",
+      "alias": "Mix 2 Building Percentage"
+    },
+    {
+      "name": "MIX2BLDVAL",
+      "type": "esriFieldTypeDouble",
+      "alias": "Mix 2 Building Value"
+    },
+    {
+      "name": "OWNOCCT",
+      "type": "esriFieldTypeDouble",
+      "alias": "Owner-Occupied Units"
+    },
+    {
+      "name": "COOPUNITS",
+      "type": "esriFieldTypeDouble",
+      "alias": "Occupied Co-Op Units"
+    },
+    {
+      "name": "PCHILDCODE",
+      "type": "esriFieldTypeString",
+      "alias": "Parent Child Code",
+      "length": 1
+    },
+    {
+      "name": "ABTLOTCODE",
+      "type": "esriFieldTypeString",
+      "alias": "Abutting Lot SSL",
+      "length": 12
+    },
+    {
+      "name": "SALEPRICE",
+      "type": "esriFieldTypeDouble",
+      "alias": "Sale Price"
+    },
+    {
+      "name": "SALEDATE",
+      "type": "esriFieldTypeDate",
+      "alias": "Sale Date",
+      "length": 8
+    },
+    {
+      "name": "INSTNO",
+      "type": "esriFieldTypeString",
+      "alias": "Instrument Number",
+      "length": 8
+    },
+    {
+      "name": "ACCEPTCODE",
+      "type": "esriFieldTypeString",
+      "alias": "Acceptance Code",
+      "length": 25
+    },
+    {
+      "name": "SALETYPE",
+      "type": "esriFieldTypeString",
+      "alias": "Sale Type",
+      "length": 30
+    },
+    {
+      "name": "MORTGAGECO",
+      "type": "esriFieldTypeString",
+      "alias": "Mortgage Company Key",
+      "length": 3
+    },
+    {
+      "name": "ASSESSMENT",
+      "type": "esriFieldTypeDouble",
+      "alias": "Assessment"
+    },
+    {
+      "name": "ANNUALTAX",
+      "type": "esriFieldTypeDouble",
+      "alias": "Annual Tax"
+    },
+    {
+      "name": "EXTRACTDAT",
+      "type": "esriFieldTypeDate",
+      "alias": "Extract Date",
+      "length": 8
+    },
+    {
+      "name": "CAPCURR",
+      "type": "esriFieldTypeDouble",
+      "alias": "Assessment Cap For Current Year"
+    },
+    {
+      "name": "CAPPROP",
+      "type": "esriFieldTypeDouble",
+      "alias": "Assessment Cap For Proposed Year"
+    },
+    {
+      "name": "CY1YEAR",
+      "type": "esriFieldTypeString",
+      "alias": "Current Year Description (1st Half)",
+      "length": 50
+    },
+    {
+      "name": "CY1TXSALE",
+      "type": "esriFieldTypeString",
+      "alias": "Current Year Tax Sale Flag (1st Half)",
+      "length": 2
+    },
+    {
+      "name": "CY1TAX",
+      "type": "esriFieldTypeDouble",
+      "alias": "Current Year Tax (1st Half)"
+    },
+    {
+      "name": "CY1PEN",
+      "type": "esriFieldTypeDouble",
+      "alias": "Current Year Penalty (1st Half)"
+    },
+    {
+      "name": "CY1INT",
+      "type": "esriFieldTypeDouble",
+      "alias": "Current Year Interest (1st Half)"
+    },
+    {
+      "name": "CY1FEE",
+      "type": "esriFieldTypeDouble",
+      "alias": "Current Year Fee (1st Half)"
+    },
+    {
+      "name": "CY1TOTDUE",
+      "type": "esriFieldTypeDouble",
+      "alias": "Current Year Total Due (1st Half)"
+    },
+    {
+      "name": "CY1COLL",
+      "type": "esriFieldTypeDouble",
+      "alias": "Current Year Collection (1st Half)"
+    },
+    {
+      "name": "CY1BAL",
+      "type": "esriFieldTypeDouble",
+      "alias": "Current Year Balance (1st Half)"
+    },
+    {
+      "name": "CY1CR",
+      "type": "esriFieldTypeDouble",
+      "alias": "Current Year Credits Received (1st Half)"
+    },
+    {
+      "name": "CY2YEAR",
+      "type": "esriFieldTypeString",
+      "alias": "Current Year Description (2nd Half)",
+      "length": 50
+    },
+    {
+      "name": "CY2TXSALE",
+      "type": "esriFieldTypeString",
+      "alias": "Current Year Tax Sale Flag (2nd Half)",
+      "length": 50
+    },
+    {
+      "name": "CY2TAX",
+      "type": "esriFieldTypeDouble",
+      "alias": "Current Year Tax (2nd Half)"
+    },
+    {
+      "name": "CY2PEN",
+      "type": "esriFieldTypeDouble",
+      "alias": "Current Year Penalty (2nd Half)"
+    },
+    {
+      "name": "CY2INT",
+      "type": "esriFieldTypeDouble",
+      "alias": "Current Year Interest (2ndHalf)"
+    },
+    {
+      "name": "CY2FEE",
+      "type": "esriFieldTypeDouble",
+      "alias": "Current Year Fee (2nd Half)"
+    },
+    {
+      "name": "CY2TOTDUE",
+      "type": "esriFieldTypeDouble",
+      "alias": "Current Year Total Due (2nd Half)"
+    },
+    {
+      "name": "CY2COLL",
+      "type": "esriFieldTypeDouble",
+      "alias": "Current Year Collection (2nd Half)"
+    },
+    {
+      "name": "CY2BAL",
+      "type": "esriFieldTypeDouble",
+      "alias": "Current Year Balance (2nd Half)"
+    },
+    {
+      "name": "CY2CR",
+      "type": "esriFieldTypeDouble",
+      "alias": "Current Year Credits Received (2nd Half)"
+    },
+    {
+      "name": "PY1YEAR",
+      "type": "esriFieldTypeString",
+      "alias": "Prior Year 1 Description",
+      "length": 50
+    },
+    {
+      "name": "PY1TXSALE",
+      "type": "esriFieldTypeString",
+      "alias": "Prior Year 1 Tax Sale Flag",
+      "length": 50
+    },
+    {
+      "name": "PY1TAX",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 1 Tax"
+    },
+    {
+      "name": "PY1PEN",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 1 Penalty"
+    },
+    {
+      "name": "PY1INT",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 1 Interest"
+    },
+    {
+      "name": "PY1FEE",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 1 Fee"
+    },
+    {
+      "name": "PY1TOTDUE",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 1 Total Due"
+    },
+    {
+      "name": "PY1COLL",
+      "type": "esriFieldTypeInteger",
+      "alias": "Prior Year 1 Collection"
+    },
+    {
+      "name": "PY1BAL",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 1 Balance"
+    },
+    {
+      "name": "PY1CR",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 1 Credits Received"
+    },
+    {
+      "name": "PY2YEAR",
+      "type": "esriFieldTypeString",
+      "alias": "Prior Year 2 Description",
+      "length": 50
+    },
+    {
+      "name": "PY2TXSALE",
+      "type": "esriFieldTypeString",
+      "alias": "Prior Year 2 Tax Sale Flag",
+      "length": 50
+    },
+    {
+      "name": "PY2TAX",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 2 Tax"
+    },
+    {
+      "name": "PY2PEN",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 2 Penalty"
+    },
+    {
+      "name": "PY2INT",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 2 Interest"
+    },
+    {
+      "name": "PY2FEE",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 2 Fee"
+    },
+    {
+      "name": "PY2TOTDUE",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 2 Total Due"
+    },
+    {
+      "name": "PY2COLL",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 2 Collection"
+    },
+    {
+      "name": "PY2BAL",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 2 Balance"
+    },
+    {
+      "name": "PY2CR",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 2 Credits Received"
+    },
+    {
+      "name": "PY3YEAR",
+      "type": "esriFieldTypeString",
+      "alias": "Prior Year 3 Description",
+      "length": 50
+    },
+    {
+      "name": "PY3TXSALE",
+      "type": "esriFieldTypeString",
+      "alias": "Prior Year 3 Tax Sale Flag",
+      "length": 50
+    },
+    {
+      "name": "PY3TAX",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 3 Tax"
+    },
+    {
+      "name": "PY3PEN",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 3 Penalty"
+    },
+    {
+      "name": "PY3INT",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 3 Interest"
+    },
+    {
+      "name": "PY3FEE",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 3 Fee"
+    },
+    {
+      "name": "PY3TOTDUE",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 3 Total Due"
+    },
+    {
+      "name": "PY3COLL",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 3 Collection"
+    },
+    {
+      "name": "PY3BAL",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 3 Balance"
+    },
+    {
+      "name": "PY3CR",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 3 Credits Received"
+    },
+    {
+      "name": "PY4YEAR",
+      "type": "esriFieldTypeString",
+      "alias": "Prior Year 4 Description",
+      "length": 50
+    },
+    {
+      "name": "PY4TXSALE",
+      "type": "esriFieldTypeString",
+      "alias": "Prior Year 4 Tax Sale Flag",
+      "length": 50
+    },
+    {
+      "name": "PY4TAX",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 4 Tax"
+    },
+    {
+      "name": "PY4PEN",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 4 Penalty"
+    },
+    {
+      "name": "PY4INT",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 4 Interest"
+    },
+    {
+      "name": "PY4FEE",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 4 Fee"
+    },
+    {
+      "name": "PY4TOTDUE",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 4 Total Due"
+    },
+    {
+      "name": "PY4COLL",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 4 Collection"
+    },
+    {
+      "name": "PY4BAL",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 4 Balance"
+    },
+    {
+      "name": "PY4CR",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 4 Credits Received"
+    },
+    {
+      "name": "PY5YEAR",
+      "type": "esriFieldTypeString",
+      "alias": "Prior Year 5 Description",
+      "length": 50
+    },
+    {
+      "name": "PY5TXSALE",
+      "type": "esriFieldTypeString",
+      "alias": "Prior Year 5 Tax Sale Flag",
+      "length": 50
+    },
+    {
+      "name": "PY5TAX",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 5 Tax"
+    },
+    {
+      "name": "PY5PEN",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 5 Penalty"
+    },
+    {
+      "name": "PY5INT",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 5 Interest"
+    },
+    {
+      "name": "PY5FEE",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 5 Fee"
+    },
+    {
+      "name": "PY5TOTDUE",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 5 Total Due"
+    },
+    {
+      "name": "PY5COLL",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 5 Collection"
+    },
+    {
+      "name": "PY5BAL",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 5 Balance"
+    },
+    {
+      "name": "PY5CR",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 5 Credits Received"
+    },
+    {
+      "name": "PY6YEAR",
+      "type": "esriFieldTypeString",
+      "alias": "Prior Year 6 Description",
+      "length": 50
+    },
+    {
+      "name": "PY6TXSALE",
+      "type": "esriFieldTypeString",
+      "alias": "Prior Year 6 Tax Sale Flag",
+      "length": 50
+    },
+    {
+      "name": "PY6TAX",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 6 Tax"
+    },
+    {
+      "name": "PY6PEN",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 6 Penalty"
+    },
+    {
+      "name": "PY6INT",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 6 Interest"
+    },
+    {
+      "name": "PY6FEE",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 6 Fee"
+    },
+    {
+      "name": "PY6TOTDUE",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 6 Total Due"
+    },
+    {
+      "name": "PY6COLL",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 6 Collection"
+    },
+    {
+      "name": "PY6BAL",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 6 Balance"
+    },
+    {
+      "name": "PY6CR",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 6 Credits Received"
+    },
+    {
+      "name": "PY7YEAR",
+      "type": "esriFieldTypeString",
+      "alias": "Prior Year 7 Description",
+      "length": 50
+    },
+    {
+      "name": "PY7TXSALE",
+      "type": "esriFieldTypeString",
+      "alias": "Prior Year 7 Tax Sale Flag",
+      "length": 50
+    },
+    {
+      "name": "PY7TAX",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 7 Tax"
+    },
+    {
+      "name": "PY7PEN",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 7 Penalty"
+    },
+    {
+      "name": "PY7INT",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 7 Interest"
+    },
+    {
+      "name": "PY7FEE",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 7 Fee"
+    },
+    {
+      "name": "PY7TOTDUE",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 7 Total Due"
+    },
+    {
+      "name": "PY7COLL",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 7 Collection"
+    },
+    {
+      "name": "PY7BAL",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 7 Balance"
+    },
+    {
+      "name": "PY7CR",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 7 Credits Received"
+    },
+    {
+      "name": "PY8YEAR",
+      "type": "esriFieldTypeString",
+      "alias": "Prior Year 8 Description",
+      "length": 50
+    },
+    {
+      "name": "PY8TXSALE",
+      "type": "esriFieldTypeString",
+      "alias": "Prior Year 8 Tax Sale Flag",
+      "length": 50
+    },
+    {
+      "name": "PY8TAX",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 8 Tax"
+    },
+    {
+      "name": "PY8PEN",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 8 Penalty"
+    },
+    {
+      "name": "PY8INT",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 8 Interest"
+    },
+    {
+      "name": "PY8FEE",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 8 Fee"
+    },
+    {
+      "name": "PY8TOTDUE",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 8 Total Due"
+    },
+    {
+      "name": "PY8COLL",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 8 Collection"
+    },
+    {
+      "name": "PY8BAL",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 8 Balance"
+    },
+    {
+      "name": "PY8CR",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 8 Credits Received"
+    },
+    {
+      "name": "PY9YEAR",
+      "type": "esriFieldTypeString",
+      "alias": "Prior Year 9 Description",
+      "length": 50
+    },
+    {
+      "name": "PY9TXSALE",
+      "type": "esriFieldTypeString",
+      "alias": "Prior Year 9 Tax Sale Flag",
+      "length": 50
+    },
+    {
+      "name": "PY9TAX",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 9 Tax"
+    },
+    {
+      "name": "PY9PEN",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 9 Penalty"
+    },
+    {
+      "name": "PY9INT",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 9 Interest"
+    },
+    {
+      "name": "PY9FEE",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 9 Fee"
+    },
+    {
+      "name": "PY9TOTDUE",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 9 Total Due"
+    },
+    {
+      "name": "PY9COLL",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 9 Collection"
+    },
+    {
+      "name": "PY9BAL",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 9 Balance"
+    },
+    {
+      "name": "PY9CR",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 9 Credits Received"
+    },
+    {
+      "name": "PY10YEAR",
+      "type": "esriFieldTypeString",
+      "alias": "Prior Year 10 Description",
+      "length": 50
+    },
+    {
+      "name": "PY10TXSALE",
+      "type": "esriFieldTypeString",
+      "alias": "Prior Year 10 Tax Sale Flag",
+      "length": 50
+    },
+    {
+      "name": "PY10TAX",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 10 Tax"
+    },
+    {
+      "name": "PY10PEN",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 10 Penalty"
+    },
+    {
+      "name": "PY10INT",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 10 Interest"
+    },
+    {
+      "name": "PY10FEE",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 10 Fee"
+    },
+    {
+      "name": "PY10TOTDUE",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 10 Total Due"
+    },
+    {
+      "name": "PY10COLL",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 10 Collection"
+    },
+    {
+      "name": "PY10BAL",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 10 Balance"
+    },
+    {
+      "name": "PY10CR",
+      "type": "esriFieldTypeDouble",
+      "alias": "Prior Year 10 Credits Received"
+    },
+    {
+      "name": "OWNNAME2",
+      "type": "esriFieldTypeString",
+      "alias": "Owner Name 2",
+      "length": 70
+    },
+    {
+      "name": "DEEDS",
+      "type": "esriFieldTypeDouble",
+      "alias": "Deeds"
+    },
+    {
+      "name": "CONDOLOT",
+      "type": "esriFieldTypeString",
+      "alias": "Condo Lot",
+      "length": 1
+    },
+    {
+      "name": "CONDO_REGIME_NUM",
+      "type": "esriFieldTypeString",
+      "alias": "Condo Regime Number",
+      "length": 50
+    },
+    {
+      "name": "CREATEDBYRECORD",
+      "type": "esriFieldTypeGUID",
+      "alias": "Created By Record",
+      "length": 38
+    },
+    {
+      "name": "RETIREDBYRECORD",
+      "type": "esriFieldTypeGUID",
+      "alias": "Retired By Record",
+      "length": 38
+    },
+    {
+      "name": "STATEDAREA",
+      "type": "esriFieldTypeDouble",
+      "alias": "Stated Area"
+    },
+    {
+      "name": "STATEDAREAUNIT",
+      "type": "esriFieldTypeInteger",
+      "alias": "Stated Area Unit"
+    },
+    {
+      "name": "CALCULATEDAREA",
+      "type": "esriFieldTypeDouble",
+      "alias": "Calculated Area"
+    },
+    {
+      "name": "CREATED_DATE",
+      "type": "esriFieldTypeDate",
+      "alias": "Created Date",
+      "length": 8
+    },
+    {
+      "name": "LAST_EDITED_DATE",
+      "type": "esriFieldTypeDate",
+      "alias": "Modified Date",
+      "length": 8
+    },
+    {
+      "name": "ISHISTORIC",
+      "type": "esriFieldTypeInteger",
+      "alias": "Is Historic"
+    },
+    {
+      "name": "RECORD",
+      "type": "esriFieldTypeString",
+      "alias": "Record",
+      "length": 255
+    },
+    {
+      "name": "RETIRING_RECORD",
+      "type": "esriFieldTypeString",
+      "alias": "Retiring Record",
+      "length": 255
+    },
+    {
+      "name": "SE_ANNO_CAD_DATA",
+      "type": "esriFieldTypeBlob",
+      "alias": "SE_ANNO_CAD_DATA"
+    },
+    {
+      "name": "GLOBALID",
+      "type": "esriFieldTypeGlobalID",
+      "alias": "GLOBALID",
+      "length": 38
+    },
+    {
+      "name": "SHAPE.AREA",
+      "type": "esriFieldTypeDouble",
+      "alias": "SHAPE.AREA"
+    },
+    {
+      "name": "SHAPE.LEN",
+      "type": "esriFieldTypeDouble",
+      "alias": "SHAPE.LEN"
+    }
+  ],
+  "features": [
+    {
+      "attributes": {
+        "OBJECTID": 12378023,
+        "MAR_ID": null,
+        "RECORDATION_DT": null,
+        "SQUARE": "2125",
+        "SUFFIX": null,
+        "RES": null,
+        "PAR": null,
+        "LOT": "0816",
+        "LOT_TYPE": 2,
+        "OF_LOT_SEQ": null,
+        "BOOK_NUM": "3627",
+        "PAGE_NUM": "f",
+        "UNDERLIES_CONDO": 0,
+        "CONDO_BOOK_NUM": null,
+        "CONDO_PAGE_NUM": null,
+        "EFFECTIVETAXYEAR": null,
+        "QUADRANT": "NW",
+        "COL": "Y",
+        "SSL": "2125    0816",
+        "ARN": "209",
+        "ASRNAME": "Juyoung Moon",
+        "PROPTYPE": "Residential-Single Family (Det",
+        "TRIGROUP": null,
+        "USECODE": "012",
+        "LANDAREA": 8610.0,
+        "PRMSWARD": "3",
+        "PREMISEADD": "3014 CLEVELAND AVE NW WASHINGTON DC 20008-3531",
+        "NBHD": "034",
+        "NBHDNAME": "Massachusetts Avenue Heights",
+        "SUBNBHD": null,
+        "UNITNUMBER": null,
+        "OWNERNAME": "STREITWIESER, BERNHARD",
+        "CAREOFNAME": null,
+        "ADDRESS1": "3014 CLEVELAND AVE NW",
+        "ADDRESS2": null,
+        "CITYSTZIP": "WASHINGTON DC 20008-3531",
+        "OLDLAND": 1244920.0,
+        "OLDIMPR": 845850.0,
+        "OLDTOTAL": 2090770.0,
+        "NEWLAND": 1251210.0,
+        "NEWIMPR": 888350.0,
+        "NEWTOTAL": 2139560.0,
+        "PHASELAND": 1251210.0,
+        "PHASEBUILD": 859720.0,
+        "PARTPART": "N",
+        "VACLNDUSE": null,
+        "LOWNUMBER": "3014",
+        "STREETNAME": "CLEVELAND AVE",
+        "QDRNTNAME": "NW",
+        "DELCODE": "N",
+        "HSTDCODE": "1",
+        "CLASSTYPE": "1B",
+        "TAXRATE": 0.85,
+        "MIXEDUSE": null,
+        "MIX1TXTYPE": null,
+        "MIX1CLASS": null,
+        "MIX1RATE": 0.0,
+        "MIX1LNDPCT": 0.0,
+        "MIX1LNDVAL": 0.0,
+        "MIX1BLDPCT": 0.0,
+        "MIX1BLDVAL": 0.0,
+        "MIX2TXTYPE": null,
+        "MIX2CLASS": null,
+        "MIX2RATE": 0.0,
+        "MIX2LNDPCT": 0.0,
+        "MIX2LNDVAL": 0.0,
+        "MIX2BLDPCT": 0.0,
+        "MIX2BLDVAL": 0.0,
+        "OWNOCCT": 0.0,
+        "COOPUNITS": 0.0,
+        "PCHILDCODE": null,
+        "ABTLOTCODE": null,
+        "SALEPRICE": 1849000.0,
+        "SALEDATE": 1486702800000,
+        "INSTNO": null,
+        "ACCEPTCODE": "Market Sale",
+        "SALETYPE": "Improved",
+        "MORTGAGECO": null,
+        "ASSESSMENT": 2110930.0,
+        "ANNUALTAX": 17161.34,
+        "EXTRACTDAT": 1787716800000,
+        "CAPCURR": 2018980.0,
+        "CAPPROP": 2047610.0,
+        "CY1YEAR": "2026",
+        "CY1TXSALE": null,
+        "CY1TAX": 8580.67,
+        "CY1PEN": 0.0,
+        "CY1INT": 0.0,
+        "CY1FEE": 0.0,
+        "CY1TOTDUE": 8580.67,
+        "CY1COLL": 8580.67,
+        "CY1BAL": 0.0,
+        "CY1CR": 0.0,
+        "CY2YEAR": "2026",
+        "CY2TXSALE": null,
+        "CY2TAX": 8580.67,
+        "CY2PEN": 0.0,
+        "CY2INT": 0.0,
+        "CY2FEE": 0.0,
+        "CY2TOTDUE": 8580.67,
+        "CY2COLL": 8580.67,
+        "CY2BAL": 0.0,
+        "CY2CR": 0.0,
+        "PY1YEAR": "2025",
+        "PY1TXSALE": null,
+        "PY1TAX": 17007.82,
+        "PY1PEN": 0.0,
+        "PY1INT": 0.0,
+        "PY1FEE": 0.0,
+        "PY1TOTDUE": 17007.82,
+        "PY1COLL": 17008,
+        "PY1BAL": 0.0,
+        "PY1CR": 0.0,
+        "PY2YEAR": "2024",
+        "PY2TXSALE": null,
+        "PY2TAX": 16559.96,
+        "PY2PEN": 0.0,
+        "PY2INT": 0.0,
+        "PY2FEE": 0.0,
+        "PY2TOTDUE": 16559.96,
+        "PY2COLL": 16559.96,
+        "PY2BAL": 0.0,
+        "PY2CR": 0.0,
+        "PY3YEAR": "2023",
+        "PY3TXSALE": null,
+        "PY3TAX": 16233.3,
+        "PY3PEN": 0.0,
+        "PY3INT": 0.0,
+        "PY3FEE": 0.0,
+        "PY3TOTDUE": 16233.3,
+        "PY3COLL": 16233.3,
+        "PY3BAL": 0.0,
+        "PY3CR": 0.0,
+        "PY4YEAR": "2022",
+        "PY4TXSALE": null,
+        "PY4TAX": 15914.64,
+        "PY4PEN": 795.73,
+        "PY4INT": 238.72,
+        "PY4FEE": 0.0,
+        "PY4TOTDUE": 16949.09,
+        "PY4COLL": 16949.09,
+        "PY4BAL": 0.0,
+        "PY4CR": 0.0,
+        "PY5YEAR": "2021",
+        "PY5TXSALE": null,
+        "PY5TAX": 15868.14,
+        "PY5PEN": 793.41,
+        "PY5INT": 238.02,
+        "PY5FEE": 0.0,
+        "PY5TOTDUE": 16899.57,
+        "PY5COLL": 16899.57,
+        "PY5BAL": 0.0,
+        "PY5CR": 0.0,
+        "PY6YEAR": "2020",
+        "PY6TXSALE": null,
+        "PY6TAX": 15353.3,
+        "PY6PEN": 0.0,
+        "PY6INT": 0.0,
+        "PY6FEE": 0.0,
+        "PY6TOTDUE": 15353.3,
+        "PY6COLL": 15353.3,
+        "PY6BAL": 0.0,
+        "PY6CR": 0.0,
+        "PY7YEAR": "2019",
+        "PY7TXSALE": null,
+        "PY7TAX": 15191.96,
+        "PY7PEN": 759.6,
+        "PY7INT": 179.46,
+        "PY7FEE": 0.0,
+        "PY7TOTDUE": 16131.02,
+        "PY7COLL": 16131.02,
+        "PY7BAL": 0.0,
+        "PY7CR": 0.0,
+        "PY8YEAR": "2018",
+        "PY8TXSALE": null,
+        "PY8TAX": 16325.52,
+        "PY8PEN": 0.0,
+        "PY8INT": 0.0,
+        "PY8FEE": 0.0,
+        "PY8TOTDUE": 16325.52,
+        "PY8COLL": 16325.52,
+        "PY8BAL": 0.0,
+        "PY8CR": 0.0,
+        "PY9YEAR": "2017",
+        "PY9TXSALE": null,
+        "PY9TAX": 0.0,
+        "PY9PEN": 0.0,
+        "PY9INT": 0.0,
+        "PY9FEE": 0.0,
+        "PY9TOTDUE": 0.0,
+        "PY9COLL": 0.0,
+        "PY9BAL": 0.0,
+        "PY9CR": 0.0,
+        "PY10YEAR": "2016",
+        "PY10TXSALE": null,
+        "PY10TAX": 0.0,
+        "PY10PEN": 0.0,
+        "PY10INT": 0.0,
+        "PY10FEE": 0.0,
+        "PY10TOTDUE": 0.0,
+        "PY10COLL": 0.0,
+        "PY10BAL": 0.0,
+        "PY10CR": 0.0,
+        "OWNNAME2": "WARNER, MARY B",
+        "DEEDS": null,
+        "CONDOLOT": "N",
+        "CONDO_REGIME_NUM": null,
+        "CREATEDBYRECORD": "{5A76E86F-F32E-4C34-8D3A-1C2400D62223}",
+        "RETIREDBYRECORD": null,
+        "STATEDAREA": 8610.0,
+        "STATEDAREAUNIT": 109405,
+        "CALCULATEDAREA": null,
+        "CREATED_DATE": 1157774400000,
+        "LAST_EDITED_DATE": 1772996080000,
+        "ISHISTORIC": null,
+        "RECORD": null,
+        "RETIRING_RECORD": null,
+        "SE_ANNO_CAD_DATA": null,
+        "GLOBALID": "{A7DBA066-D03F-4FC8-9E1E-6A01136F2B11}",
+        "SHAPE.AREA": 0,
+        "SHAPE.LEN": 0
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              394765.3418064698,
+              139645.70627740957
+            ],
+            [
+              394763.6304064727,
+              139643.96917740908
+            ],
+            [
+              394758.36090647086,
+              139649.2345774062
+            ],
+            [
+              394748.53750646836,
+              139659.04997741058
+            ],
+            [
+              394750.24890646944,
+              139660.78707740642
+            ],
+            [
+              394767.36180647026,
+              139678.15697740857
+            ],
+            [
+              394774.8490064729,
+              139685.75657740794
+            ],
+            [
+              394789.9419064714,
+              139670.6757774111
+            ],
+            [
+              394782.4547064698,
+              139663.07617740706
+            ],
+            [
+              394765.3418064698,
+              139645.70627740957
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

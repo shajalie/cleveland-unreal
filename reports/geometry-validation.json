@@ -1,0 +1,214 @@
+{
+  "checks": [
+    {
+      "check": "stair_headroom_2m",
+      "step": 1,
+      "pass": true,
+      "obstacle": null
+    },
+    {
+      "check": "stair_headroom_2m",
+      "step": 2,
+      "pass": true,
+      "obstacle": null
+    },
+    {
+      "check": "stair_headroom_2m",
+      "step": 3,
+      "pass": true,
+      "obstacle": null
+    },
+    {
+      "check": "stair_headroom_2m",
+      "step": 4,
+      "pass": true,
+      "obstacle": null
+    },
+    {
+      "check": "stair_headroom_2m",
+      "step": 5,
+      "pass": true,
+      "obstacle": null
+    },
+    {
+      "check": "stair_headroom_2m",
+      "step": 6,
+      "pass": true,
+      "obstacle": null
+    },
+    {
+      "check": "stair_headroom_2m",
+      "step": 7,
+      "pass": true,
+      "obstacle": null
+    },
+    {
+      "check": "stair_headroom_2m",
+      "step": 8,
+      "pass": true,
+      "obstacle": null
+    },
+    {
+      "check": "stair_headroom_2m",
+      "step": 9,
+      "pass": true,
+      "obstacle": null
+    },
+    {
+      "check": "stair_headroom_2m",
+      "step": 10,
+      "pass": true,
+      "obstacle": null
+    },
+    {
+      "check": "stair_headroom_2m",
+      "step": 11,
+      "pass": true,
+      "obstacle": null
+    },
+    {
+      "check": "stair_headroom_2m",
+      "step": 12,
+      "pass": true,
+      "obstacle": null
+    },
+    {
+      "check": "stair_headroom_2m",
+      "step": 13,
+      "pass": true,
+      "obstacle": null
+    },
+    {
+      "check": "stair_headroom_2m",
+      "step": 14,
+      "pass": true,
+      "obstacle": null
+    },
+    {
+      "check": "stair_headroom_2m",
+      "step": 15,
+      "pass": true,
+      "obstacle": null
+    },
+    {
+      "check": "stair_headroom_2m",
+      "step": 16,
+      "pass": true,
+      "obstacle": null
+    },
+    {
+      "check": "stair_headroom_2m",
+      "step": 17,
+      "pass": true,
+      "obstacle": null
+    },
+    {
+      "check": "stair_headroom_2m",
+      "step": 18,
+      "pass": true,
+      "obstacle": null
+    },
+    {
+      "check": "door_leaf_registered",
+      "door": "basement_garden_door_hinge_0",
+      "distanceFromPortalMeters": 0.0437,
+      "pass": true
+    },
+    {
+      "check": "door_leaf_moves_about_hinge",
+      "door": "basement_garden_door_hinge_0",
+      "pass": true
+    },
+    {
+      "check": "door_leaf_registered",
+      "door": "dining_porch_doors_hinge_0",
+      "distanceFromPortalMeters": 0.4277,
+      "pass": true
+    },
+    {
+      "check": "door_leaf_moves_about_hinge",
+      "door": "dining_porch_doors_hinge_0",
+      "pass": true
+    },
+    {
+      "check": "door_leaf_registered",
+      "door": "dining_porch_doors_hinge_1",
+      "distanceFromPortalMeters": 0.4277,
+      "pass": true
+    },
+    {
+      "check": "door_leaf_moves_about_hinge",
+      "door": "dining_porch_doors_hinge_1",
+      "pass": true
+    },
+    {
+      "check": "door_leaf_registered",
+      "door": "front_door_hinge",
+      "distanceFromPortalMeters": 0.0155,
+      "pass": true
+    },
+    {
+      "check": "door_leaf_moves_about_hinge",
+      "door": "front_door_hinge",
+      "pass": true
+    },
+    {
+      "check": "door_leaf_registered",
+      "door": "kitchen_rear_door_hinge_0",
+      "distanceFromPortalMeters": 0.0354,
+      "pass": true
+    },
+    {
+      "check": "door_leaf_moves_about_hinge",
+      "door": "kitchen_rear_door_hinge_0",
+      "pass": true
+    },
+    {
+      "check": "door_leaf_registered",
+      "door": "living_porch_doors_hinge_0",
+      "distanceFromPortalMeters": 0.3306,
+      "pass": true
+    },
+    {
+      "check": "door_leaf_moves_about_hinge",
+      "door": "living_porch_doors_hinge_0",
+      "pass": true
+    },
+    {
+      "check": "door_leaf_registered",
+      "door": "living_porch_doors_hinge_1",
+      "distanceFromPortalMeters": 0.3306,
+      "pass": true
+    },
+    {
+      "check": "door_leaf_moves_about_hinge",
+      "door": "living_porch_doors_hinge_1",
+      "pass": true
+    },
+    {
+      "check": "door_leaf_registered",
+      "door": "study_rear_door_hinge_0",
+      "distanceFromPortalMeters": 0.2951,
+      "pass": true
+    },
+    {
+      "check": "door_leaf_moves_about_hinge",
+      "door": "study_rear_door_hinge_0",
+      "pass": true
+    },
+    {
+      "check": "door_leaf_registered",
+      "door": "study_rear_door_hinge_1",
+      "distanceFromPortalMeters": 0.2951,
+      "pass": true
+    },
+    {
+      "check": "door_leaf_moves_about_hinge",
+      "door": "study_rear_door_hinge_1",
+      "pass": true
+    }
+  ],
+  "passed": 36,
+  "failed": 0,
+  "scope": "Geometry-only checks; not a runtime navigation, collision or lighting validation."
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "asset": "sofa_02",
+    "boundsMeters": [
+      1.8071672916412354,
+      0.817751407623291,
+      0.7094888687133789
+    ],
+    "faces": 2728,
+    "meshObjects": 2
+  },
+  {
+    "asset": "sofa_03",
+    "boundsMeters": [
+      2.73117733001709,
+      0.9250842332839966,
+      1.118264079093933
+    ],
+    "faces": 8003,
+    "meshObjects": 1
+  },
+  {
+    "asset": "modern_arm_chair_01",
+    "boundsMeters": [
+      0.8203444480895996,
+      0.98656165599823,
+      1.0228520631790161
+    ],
+    "faces": 8916,
+    "meshObjects": 1
+  },
+  {
+    "asset": "mid_century_lounge_chair",
+    "boundsMeters": [
+      1.0086143016815186,
+      1.1903107166290283,
+      1.1690846681594849
+    ],
+    "faces": 6148,
+    "meshObjects": 1
+  },
+  {
+    "asset": "outdoor_table_chair_set_01",
+    "boundsMeters": [
+      0.7760046124458313,
+      1.8310472965240479,
+      0.8585816025733948
+    ],
+    "faces": 9828,
+    "meshObjects": 3
+  },
+  {
+    "asset": "dining_chair_02",
+    "boundsMeters": [
+      0.4335707724094391,
+      0.5764201283454895,
+      0.9733777046203613
+    ],
+    "faces": 22013,
+    "meshObjects": 1
+  },
+  {
+    "asset": "Rockingchair_01",
+    "boundsMeters": [
+      0.7081280946731567,
+      0.833482027053833,
+      0.9949284791946411
+    ],
+    "faces": 11866,
+    "meshObjects": 1
+  }
+]

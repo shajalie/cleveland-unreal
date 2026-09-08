@@ -1,0 +1,311 @@
+{
+  "baselineRepository": "https://github.com/shajalie/cleveland-sun-study",
+  "baselineCommit": "d565a515320ac6f5355b23a1cd9749e3b9ea8368",
+  "existingSite": "https://cleveland-sun-study.sammyhajalie2g.chatgpt.site/",
+  "scope": "Separate rebuild; baseline source, running host, website, and releases stay intact.",
+  "referencePhotos": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55
+  ],
+  "excludedPhotoNumbers": "56 and above belong to unrelated properties",
+  "files": [
+    {
+      "path": "reference/model-data.json",
+      "sha256": "0f29e342664fd34509cf40e74269c1e64bac31e654a7d8330445dc4816dd1f67"
+    },
+    {
+      "path": "reference/reference-sources.json",
+      "sha256": "4d2765315b4374ee169b961441b5e2fd6125ee90b155eedd4937051fd2b7f532"
+    },
+    {
+      "path": "reference/aerial/neighborhood.png",
+      "sha256": "59633fc7c90b3a5ba93dcecb5de1e60c12350ef82672972c365581851e16d6fe"
+    },
+    {
+      "path": "reference/aerial/parcel.json",
+      "sha256": "03ae7833843643adb764023966a6f9baf282d69993caa82eca272ad46f9dbb3a"
+    },
+    {
+      "path": "reference/aerial/source.json",
+      "sha256": "827db690aa15fbefcf8603e5193473952c7f6cd2ff778818519a84f4c43e8725"
+    },
+    {
+      "path": "reference/photos/00.webp",
+      "sha256": "5903952a3dca967de5ed733da2f5259f3b49c0ba8f67cc83a79ed66caccebbea"
+    },
+    {
+      "path": "reference/photos/01.webp",
+      "sha256": "3276c958589e9329ac7c000468213707104ff46276cd1a8e8e4c6c06d8ff1f7c"
+    },
+    {
+      "path": "reference/photos/02.webp",
+      "sha256": "3276c958589e9329ac7c000468213707104ff46276cd1a8e8e4c6c06d8ff1f7c"
+    },
+    {
+      "path": "reference/photos/03.webp",
+      "sha256": "eeeac35811e9b9fcc0687ac292e9d7f36ece2896c07a929b5c30a10a908a77ab"
+    },
+    {
+      "path": "reference/photos/04.webp",
+      "sha256": "08fbade329730f9b4f0a3c72f77294077e180e8e8d69dc694ebb69b4cd1bce3e"
+    },
+    {
+      "path": "reference/photos/05.webp",
+      "sha256": "074ebdd6e2eb0995d6d3c7f8c20b270d04fd395bba2b2e6c298a26bbb88c2dd7"
+    },
+    {
+      "path": "reference/photos/06.webp",
+      "sha256": "3204021c6459a060533ef5dfbfffc3310b7668e4bdc22c5ba2192541fcf99814"
+    },
+    {
+      "path": "reference/photos/07.webp",
+      "sha256": "b14c3169cacd9d39756b32ae3b0cf188d058e900353226d3b050af055e04883c"
+    },
+    {
+      "path": "reference/photos/08.webp",
+      "sha256": "a0d178655e266cf2aaa953616e6dffe3351c5894143b44dce09cd858b681112f"
+    },
+    {
+      "path": "reference/photos/09.webp",
+      "sha256": "7735b70f885b2d4400524e5cf5948c54fcc9fd7dc2b23e87d5d4048f7e76c411"
+    },
+    {
+      "path": "reference/photos/10.webp",
+      "sha256": "f651637c14c32330eb3b290a81963b33f5b745daf053b00aecddf12c71be1f72"
+    },
+    {
+      "path": "reference/photos/11.webp",
+      "sha256": "3b0b2f25bcfdb079f3c238bcf6c9a51827ae50566db738681575d4c06df73b23"
+    },
+    {
+      "path": "reference/photos/12.webp",
+      "sha256": "0a03625e143576c9ea44ebb5ebc95c5fcfec13b2bd4ed61d8381d2fabeda41bc"
+    },
+    {
+      "path": "reference/photos/13.webp",
+      "sha256": "6d187c4dfbae87c9cfd8dde963067334cf09265404a23b94280c80a2b0848c32"
+    },
+    {
+      "path": "reference/photos/14.webp",
+      "sha256": "52a1c566bbcb9d84e5bbbae3625d118d753b386d93c61ae5307a704ac01897b9"
+    },
+    {
+      "path": "reference/photos/15.webp",
+      "sha256": "8a232a02989ee0b78e58478c41217e0d91d615b5423a9e22f1e4b4b57d0190cb"
+    },
+    {
+      "path": "reference/photos/16.webp",
+      "sha256": "38498380e9039f69b65d437221747af8b8b37fa2c800aeac332fe8ea3210f690"
+    },
+    {
+      "path": "reference/photos/17.webp",
+      "sha256": "adf734def5be4eafb3f8a120431377ac50e7a6327073ec59c86b579e653974a8"
+    },
+    {
+      "path": "reference/photos/18.webp",
+      "sha256": "a3c15040a2c7cef1cbc31c583dd3179148e32fa621858b5ef423d0d12e19379d"
+    },
+    {
+      "path": "reference/photos/19.webp",
+      "sha256": "f2172838550f64a71e15093f5448ff57630c483aee0cc4fbf8cecb084dd4c56f"
+    },
+    {
+      "path": "reference/photos/20.webp",
+      "sha256": "858a7fc52fb4359fa71bd4c4f7565c7859eb03b1fc39aadd750ecc053c085cb6"
+    },
+    {
+      "path": "reference/photos/21.webp",
+      "sha256": "d4fced846f621f84abe957c067cc540c86c326cbfaf1b9e2d972537270f9a69e"
+    },
+    {
+      "path": "reference/photos/22.webp",
+      "sha256": "83f990a080acb9ba80eeee356b008b3fbb5cf87bbf11faa82d681d8a87d5c39f"
+    },
+    {
+      "path": "reference/photos/23.webp",
+      "sha256": "13b8be051d0ec5e8d97bf94ff5eb1bd5bbf03b8d67cc8612c10db73013ede3d1"
+    },
+    {
+      "path": "reference/photos/24.webp",
+      "sha256": "a709b0e005365ec7d32b455a6e8cebcfa12c65db75f994a87e8a988483baffe8"
+    },
+    {
+      "path": "reference/photos/25.webp",
+      "sha256": "6302622c994edd6df149c36936a1ed5ce02828b9ae5cdf096af8c6bc117bb517"
+    },
+    {
+      "path": "reference/photos/26.webp",
+      "sha256": "981b7f388d953dda5cd4370071974502596d8a1932a34447d9cd537d2bd399bc"
+    },
+    {
+      "path": "reference/photos/27.webp",
+      "sha256": "bba028f25e062cb1180d4f05901df0651ac15062661a9797f869f43671e921f6"
+    },
+    {
+      "path": "reference/photos/28.webp",
+      "sha256": "f4b4c6ed04a88a8d9c0211a46baf90e84b507379bd70ad653cca2f089232f280"
+    },
+    {
+      "path": "reference/photos/29.webp",
+      "sha256": "94632348d106581abe03c5e8c9a19ec48e63da2170b9ecf6d8fd7bbbbc0ce656"
+    },
+    {
+      "path": "reference/photos/30.webp",
+      "sha256": "2c191b20ceea6595ced39402c719178655a5d74b8e13e2f583c2af429b863aed"
+    },
+    {
+      "path": "reference/photos/31.webp",
+      "sha256": "860c22772f701112229e1fbc71b0b677a9afb9840c2cb224a26abd1314bd2446"
+    },
+    {
+      "path": "reference/photos/32.webp",
+      "sha256": "953975dd0c25c0c55742619af1912aa130f491abeeea30ea02a0ae9f4e7a7eb8"
+    },
+    {
+      "path": "reference/photos/33.webp",
+      "sha256": "c4a26951d4b6271cfd525ad952d4a6fc1b3b50848b46202fd1e5767bd477bbf1"
+    },
+    {
+      "path": "reference/photos/34.webp",
+      "sha256": "dae4e251e11b67459990f1ac5246ec07097629391d47123cbd879a931838965c"
+    },
+    {
+      "path": "reference/photos/35.webp",
+      "sha256": "e15553b8815eab96a97f3955692fe2bfd61db63680c18bee1e9f5caadcf24baa"
+    },
+    {
+      "path": "reference/photos/36.webp",
+      "sha256": "7e9d764dad6e8465fa77c9b7ef14a7c2043a18652dbc10387404dce192571667"
+    },
+    {
+      "path": "reference/photos/37.webp",
+      "sha256": "0abcd78db72887d70c5d2be854f4fca6c75c6e79a1aae4baed3d6f434a90c8dc"
+    },
+    {
+      "path": "reference/photos/38.webp",
+      "sha256": "d68153170ad1362fd020395250cd80fac351cb3068377b6c2c864983a1180b72"
+    },
+    {
+      "path": "reference/photos/39.webp",
+      "sha256": "54e62e9898005af07cd48d08ba4792ac73406d52cb416c2b260afd263f621898"
+    },
+    {
+      "path": "reference/photos/40.webp",
+      "sha256": "15e3c40a20d500fd56c9f848b9d45f0ba714de2d9cf7cdf28f2cabc334a4147b"
+    },
+    {
+      "path": "reference/photos/41.webp",
+      "sha256": "6e5d931f3253f9856722d950dfe637b7f08936afbf79f90b0aef535156046cd2"
+    },
+    {
+      "path": "reference/photos/42.webp",
+      "sha256": "5929b09aa1f62efe142244f838fc79fdedc61f2b15b32ca9c705773f7a41b8d9"
+    },
+    {
+      "path": "reference/photos/43.webp",
+      "sha256": "1034e2b023a35ad5dc43ec529f8c1e293381ef4b1312ac8725c5904a64ec02ed"
+    },
+    {
+      "path": "reference/photos/44.webp",
+      "sha256": "82fa65761e014fb76a03563c2882e222fcd67ce47c9380e42b16fcd0c3bcedde"
+    },
+    {
+      "path": "reference/photos/45.webp",
+      "sha256": "e3958b55c7e4afac95b4b066f0d30815bfe4676ee75256d3e9fb4f0b9efcc93f"
+    },
+    {
+      "path": "reference/photos/46.webp",
+      "sha256": "b6f69a594ed18f09be5a7bb52a779ba7f479b9e79b35ea4f72671b4618ea665c"
+    },
+    {
+      "path": "reference/photos/47.webp",
+      "sha256": "6569b29c466ef0783a681b43ff66611b8c3b15795d243b8ccafdff52750ebab9"
+    },
+    {
+      "path": "reference/photos/48.webp",
+      "sha256": "180c9aef23a1b28bfec92fa0c42003491ba87d77abb45f1c098844840c898b78"
+    },
+    {
+      "path": "reference/photos/49.webp",
+      "sha256": "86f865e2449ffcd1b144a185b7ebb2da844c9ba58606db7508c11c8688d6ef30"
+    },
+    {
+      "path": "reference/photos/50.webp",
+      "sha256": "3f45678717622e23e78d218134bac3be5dc8b5412f2b5e2a9be7d4418caebf99"
+    },
+    {
+      "path": "reference/photos/51.webp",
+      "sha256": "507aa38f43fee7740ad40413b405a9173209be8c5463e8cda3b481b77f1858d9"
+    },
+    {
+      "path": "reference/photos/52.webp",
+      "sha256": "6c2f68cd7bca424355fce0751876002e5057a2ef9b46aecf4d46267502497200"
+    },
+    {
+      "path": "reference/photos/53.webp",
+      "sha256": "8c7c00d0c592125a80df6ade08750d325af9d53dccc0c2dcb56c4e4e34d31ed9"
+    },
+    {
+      "path": "reference/photos/54.webp",
+      "sha256": "c5c02f095fa3aabc5c9ddccb110f194bd4c149c8649cbdd9ac355de735cac283"
+    },
+    {
+      "path": "reference/photos/55.webp",
+      "sha256": "5a9511fd754a30fa3be8fd37dc1b5e5cb0b9c78b278a44661ac654a82c38ffc2"
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "engine": "4.5.13 LTS",
+  "device": "OPTIX",
+  "gpus": [
+    "NVIDIA GeForce RTX 2060 with Max-Q Design"
+  ],
+  "samples": 128,
+  "objects": 2169,
+  "meshChecks": [
+    {
+      "check": "upper_stairwell_clear",
+      "point": [
+        0.13,
+        3.0
+      ],
+      "pass": true
+    },
+    {
+      "check": "upper_stairwell_clear",
+      "point": [
+        0.13,
+        4.2
+      ],
+      "pass": true
+    },
+    {
+      "check": "upper_stairwell_clear",
+      "point": [
+        0.13,
+        5.8
+      ],
+      "pass": true
+    },
+    {
+      "check": "carport_floor_removed",
+      "pass": true
+    },
+    {
+      "check": "separate_hinged_leaves",
+      "portal": "study_rear_door",
+      "pass": true
+    },
+    {
+      "check": "separate_hinged_leaves",
+      "portal": "kitchen_rear_door",
+      "pass": true
+    },
+    {
+      "check": "separate_hinged_leaves",
+      "portal": "basement_garden_door",
+      "pass": true
+    }
+  ],
+  "renders": [
+    {
+      "view": "living",
+      "seconds": 22.72,
+      "exposureStops": 2.0999999046325684
+    },
+    {
+      "view": "rear",
+      "seconds": 21.85,
+      "exposureStops": -0.20000000298023224
+    },
+    {
+      "view": "stair",
+      "seconds": 24.34,
+      "exposureStops": 2.0999999046325684
+    },
+    {
+      "view": "study",
+      "seconds": 27.11,
+      "exposureStops": 2.0999999046325684
+    }
+  ],
+  "status": "Authoring review; Unreal runtime is not installed.",
+  "knownIncomplete": [
+    "Upper-floor furnishings",
+    "Neighbor facade detailing and verified vegetation species",
+    "Photo-calibrated cameras and materials",
+    "Internal basement stair",
+    "Runtime interaction and streaming",
+    "Date/time sun calibration",
+    "Dynamic wind/water"
+  ]
+}
